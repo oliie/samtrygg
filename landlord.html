@@ -1,0 +1,190 @@
+<!doctype html>
+
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head><body id="landlord">
+  <!-- Nav -->
+  <nav id="nav" class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name"><a href="index.html" class="nav-logo"><img src="img/logo.svg" alt=""></a></li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span class="icon icon-hamburger_menu"></span><span class="icon icon-cross2"></span></a></li>
+    </ul>
+    <div class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li><a class="button radius rent" href="landlord.html">Hyr Ut</a></li>
+        <li><a class="button radius search" href="search.html">Sök boende</a></li>
+        <li><a href="help.html">Hjälp</a></li>
+        <li><a href="signup.html">Skapa Konto</a></li>
+        <li><a href="login.html">Logga In</a></li>
+      </ul>
+    </div>
+  </nav>	<header class="parallax">
+		<div class="landlord-wrapper row" data-wow-delay="400ms">
+			<div class="info-circle circle">
+				<h3 class="total-ops counter">13750</h3>
+				<hr>
+				<p>Antal bostadssökande hos Samtrygg</p>
+			</div>
+			<div class="calculator columns large-6">
+				<h1 class="cal-value"><span class="counter">14000</span>:-</h1>
+				<p>Beräkna din egendom inkomster över tiden</p>
+				<form action="">
+					<span class="icon icon-MAPPIN"></span><input class="location" type="text" placeholder="Skriv ditt område" autocomplete="on">
+					<select name="time">
+						<option value="" disabled selected>Hur länge kommer du hyra ditt utrymme</option>
+						<option value="tillsvidare">Tillsvidare</option>
+						<option value="1">1 månader</option>
+						<option value="2">2 månader</option>
+						<option value="3">3 månader</option>
+						<option value="4">4 månader</option>
+						<option value="5">5 månader</option>
+						<option value="6">6 månader</option>
+						<option value="7">7 månader</option>
+						<option value="8">8 månader</option>
+						<option value="9">9 månader</option>
+						<option value="10">10 månader</option>
+						<option value="11">11 månader</option>
+						<option value="12">12 månader</option>
+					</select>
+					<select name="type" id="">
+						<option value="" disabled selected>Typ av bostad</option>
+						<option value=""></option>
+						<option value=""></option>
+					</select>
+					<select name="furnish" id="">
+						<option value="" disabled selected>Möblerad</option>
+						<option value="yes">Yes</option>
+						<option value="no">No</option>
+					</select>
+					<select name="area" id="">
+						<option value="" disabled selected>Område</option>
+						<option value="20">20m&sup2;</option>
+						<option value="30">30m&sup2;</option>
+					</select>
+					<hr>
+					<input type="submit" value="Hyr Ut" class="button login">
+				</form>
+			</div>
+		</div>
+	</header>
+
+	<section id="points" class="row">
+		<h1>För dig som uthyrare</h1>
+		<p>Tryggt, enkelt och kostnadsfritt!</p>
+		<div class="columns large-4" data-wow-delay="200ms">
+			<span class="icon-city icon"></span>
+			<p class="building"><em>Hyr ut ditt boende med Samtrygg</em>Smidigt system för visningsbokningar och hyreskontrakt</p>
+		</div>
+		<div class="columns large-4" data-wow-delay="400ms">
+			<span class="icon-wallet icon"></span>
+			<p class="wallet"><em>Betalningsgaranti</em>Samtrygg betalar hyran tills gräva jag tre gånger dagligen varje månad . Hyresgästen betalar tills Samtrygg</p>
+		</div>
+		<div class="columns large-4" data-wow-delay="600ms">
+			<span class="icon-papers icon"></span>
+			<p class="papers"><em>Hemförsäkring ingår</em>Vi hjälper till med hela uthyrningen, hyreskontrakt signeras enkelt med bankID eller E-legitimation</p>
+		</div>
+	</section>
+
+	<!-- <section id="info-text">
+		<div class="row">
+			<h4>Hur fungerar det?</h4>
+			<p>Samtrygg är en annonsplats för andrahandsuthyrning av bostäder. Som tillägg erbjuder vi vårt trygghetspaket med hyresgaranti, hem- & allriskförsäkring och trygga hyreskontrakt. Samtrygg har även ett enkelt system för att boka visningar och få information nya inkomna bostäder. Att söka bostad och att annonsera är helt kostnadsfritt, väljer man sedan att använda vårt trygghetspaket så lägger vi på en avgift om 15% ovanpå hyran. Efter visningarna bestämmer du som uthyrare vilken av bostadssökande som du anser mest lämpad och Samtrygg genomför en kreditprövning. Ifall den bostadssökande är kreditvärdig, signerar ni det standardiserade hyreskontraktet online med BankID eller e-legitimation. Samtrygg har utformat ett standardiserat hyreskontrakt som tar hänsyn till båda parter. När båda parter har signerat hyreskontraktet med hjälp av BankID/e-legitimation, tecknar Samtrygg en omfattande hemförsäkring med allrisk från Gjensidige Forsikring AS samt att Samtrygg garanterar att uthyraren får betalt innan förfallodatum.</p>
+			<h4>Hyresgaranti</h4>
+			<p>Om hyresgästen inte har möjlighet att betala hyran, behöver du inte oroa dig. Samtrygg betalar upp till två månadshyror innan förfallodatum, trots att inte hyresgästen kan betala i tid.</p>
+			<h4>Hemförsäkring</h4>
+			<p>Oftast omfattar inte din hemförsäkring en eventuell andrahandshyresgäst. Samtrygg har i samarbete med Gjensidige försäkring upprättat en omfattande hemförsäkring inklusive allrisk. Detta innebär att ditt hem samt lösöre är försäkrat med upp till 1 000 000 kr. Samtrygg står för premien till försäkringsbolaget (Gjensidige), vilket möjliggör att din bostad är försäkrad, även i de fall hyresgästen skulle ha missat en betalning till försäkringsbolaget.</p>
+		</div>
+	</section> -->
+	
+  <!-- Footer -->
+  <footer id="footer">
+      <div class="row">
+
+          <div class="medium-11 medium-centered columns">
+
+            <div class="medium-6 columns blurb">
+              <p>Samtrygg är en trygg och enkel marknadsplats för bostadsuthyrning. Bolaget grundades 2011 och har tusentals nöjda hyresgäster och uthyrare över hela Sverige. </p>
+              <hr/>
+              <ul>
+                <li><span class="icon icon-check"></span>Personlig service</li>
+                <li><span class="icon icon-check"></span>Garanterade hyresbetalningar</li>
+                <li><span class="icon icon-check"></span>2 månaders hyresgaranti</li>
+                <li><span class="icon icon-check"></span>Andrahandsförsäkring</li>
+                <li><span class="icon icon-check"></span>Trygga hyresavtal</li>
+                <li><span class="icon icon-check"></span>Depositionsfritt</li>
+              </ul>
+            </div>
+
+            <div class="medium-6 columns">
+              <div class="medium-6 columns">
+                <ul> 
+                    <li class="title">Info</li>
+                    <li><a href="help.html">FAQ</a></li>
+                    <li><a href="help.html">Hur Det Fungerar</a></li>
+                    <li><a href="video.html">Video rekomendationer</a></li>
+                    <li><a href="basic-page.html">Regler och Policy</a></li>
+                </ul>
+                </div>
+                <div class="medium-6 columns">
+                <ul>
+                    <li class="title">Företag</li>
+                    <li><a href="basic-page.html">Om Oss</a></li>
+                    <li><a href="basic-page.html">Press</a></li>
+                    <li><a href="basic-page.html">Jobb</a></li>
+                    <li><a href="help.html">Kontakta Oss</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+      </div>
+
+      <div class="row">
+            <div class="medium-11 medium-centered small-12 columns">
+            <div class="row extra">
+              <hr>
+              <div class="medium-6 columns numbers">
+                <div>Antal bostadssökande:<span>39 456</span></div>
+                <div>Antal lediga bostäder:<span>189</span></div>
+              </div>
+              <div class="medium-6 columns partners">
+                <img src="img/bankid-logo.svg" alt="">
+                <img src="img/arvato-logo.svg" alt="">
+              </div> 
+            </div>
+              <hr>
+              <div class="medium-12 medium-centered v-card columns">
+                <span class="tel">+46 (0) 8446801 85</span>
+                <a class="email" href="mailto:sally@example.com">kundtjanst@samtrygg.se</a>
+                <span>Weekdays 9-11 & 14-16</span>
+                <div class="social-icons">
+                    <a href="#" class="fb"><span class="icon-fb"></span></a>
+                    <a href="#" class="instagram"><span class="icon-instagram"></span></a>
+                </div>
+              </div>
+            </div>
+      </div>
+
+      <div class="copyright">
+        <p>All rights reserved Copyright © 2015 Samtrygg AB</p>
+      </div>
+
+  </footer><script src="js/min/app-min.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>

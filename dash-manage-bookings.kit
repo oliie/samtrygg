@@ -1,0 +1,379 @@
+<!-- @include header -->
+<body id="dashboard">
+<!-- @include nav_dashboard -->
+	<div id="panel" class="dashboard-wrapper row">
+		
+		<!-- @include nav_dash_sidebar -->
+		
+		<div class="dash-content col medium-10 small-12">
+			
+			<div class="module rental-times">
+				<div class="mod-header">
+					<h1>Välj tider för visning</h1>
+				</div>
+				<div class="mod-content">
+					<div class="row">
+						<h6>Storgatan 44, 114 55 Stockholm</h6>
+					</div>
+					<hr>
+					<div class="row">
+						<p class="info">När en bostadssökande bokar in en tid kontaktar Samtrygg dig per SMS och epost om vilken tid som är bokad samt information om den bostadssökande.</p>
+					</div>
+					<hr>
+					<div class="row">
+						<p>När kan du ha visningar? (du kan alltid avboka en visning)</p>
+					</div>
+					<form action="submit">
+						<div class="row">
+							<div class="block time-select col medium-4"><input type="checkbox" id="op1" class="tm"><label for="op1"><span>Vardagskvällar <em>(18-21)</em></span></label></div>
+							<div class="block time-select col medium-4"><input type="checkbox" id="op2" class="tm"><label for="op2"><span>Helger <em>(11-18)</em></span></label></div>
+							<div class="block time-select col medium-4"><input type="checkbox" id="op3" class="tm"><label for="op3"><span>Vardagsförmiddagar <em>(09-12)</em></span></label></div>
+							<div class="block time-select col medium-4 end"><input type="checkbox" id="op4" class="tm"><label for="op4"><span>Vardagseftermiddagar <em>(12-18)</em></span></label></div>
+						</div>
+						<hr>
+						<a href="#specific-times" class="show">Välja enskilda datum och tider här</a>
+						
+						<div id="specific-times" class="row hidden">
+
+							<div class="timeblock col medium-4 small-12">
+								<h6>Visningstid 1:</h6>
+								<input type="text" value="" class="datepicker date">
+								<select>
+									<option value="" selected="selected">Välj klockslag</option>
+									<option value="07:00" >07:00 - 08:00</option>
+									<option value="08:00" >08:00 - 09:00</option>
+									<option value="09:00" >09:00 - 10:00</option>
+									<option value="10:00" >10:00 - 11:00</option>
+									<option value="11:00" >11:00 - 12:00</option>
+									<option value="12:00" >12:00 - 13:00</option>
+									<option value="13:00" >13:00 - 14:00</option>
+									<option value="14:00" >14:00 - 15:00</option>
+									<option value="15:00" >15:00 - 16:00</option>
+									<option value="16:00" >16:00 - 17:00</option>
+									<option value="17:00" >17:00 - 18:00</option>
+									<option value="18:00" >18:00 - 19:00</option>
+									<option value="19:00" >19:00 - 20:00</option>
+									<option value="20:00" >20:00 - 21:00</option>
+									<option value="21:00" >21:00 - 22:00</option>
+									<option value="22:00" >22:00 - 23:00</option>
+									<option value="23:00" >23:00 - 24:00</option>
+								</select>
+								<a href="#" class="close"><span class="icon icon-cross-circle"></span></a>
+								<div class="repeat-time">
+									<input type="checkbox" value="" />
+									<label >Samma tid/veckodag efterföljande veckor</label>
+								</div>
+							</div>
+
+							<div class="timeblock timeblock-block col medium-4 small-12">
+								<h6>Visningstid 2:</h6>
+								<input type="text" class="datepicker date">
+								<select>
+									<option value="" selected="selected">Välj klockslag</option>
+									<option value="07:00" >07:00 - 08:00</option>
+									<option value="08:00" >08:00 - 09:00</option>
+									<option value="09:00" >09:00 - 10:00</option>
+									<option value="10:00" >10:00 - 11:00</option>
+									<option value="11:00" >11:00 - 12:00</option>
+									<option value="12:00" >12:00 - 13:00</option>
+									<option value="13:00" >13:00 - 14:00</option>
+									<option value="14:00" >14:00 - 15:00</option>
+									<option value="15:00" >15:00 - 16:00</option>
+									<option value="16:00" >16:00 - 17:00</option>
+									<option value="17:00" >17:00 - 18:00</option>
+									<option value="18:00" >18:00 - 19:00</option>
+									<option value="19:00" >19:00 - 20:00</option>
+									<option value="20:00" >20:00 - 21:00</option>
+									<option value="21:00" >21:00 - 22:00</option>
+									<option value="22:00" >22:00 - 23:00</option>
+									<option value="23:00" >23:00 - 24:00</option>
+								</select>
+								<a href="#" class="close"><span class="icon icon-cross-circle"></span></a>
+								<div class="repeat-time">
+									<input type="checkbox" value="" />
+									<label>Samma tid/veckodag efterföljande veckor</label>
+								</div>
+							</div>
+							
+							<div class="col medium-12 button-add">
+								<a href="#" class="button-outline add-button">+ Lägg till ytterligare ett tidsblock</a>
+							</div>
+							
+							<span class="sm-break"></span>
+								<hr/>
+							<span class="sm-break"></span>
+						</div>
+						<input type="submit" value="Spara" class="bottom button">
+					</form>
+				</div>
+			</div> <!-- End module (rental-times) -->
+
+			<div class="module manage-bookings">
+				<div class="mod-header">
+					<h1>Bokning och recensioner</h1>
+				</div>
+
+				<div class="mod-content">
+
+					<div class="header row">
+						<div class="name col medium-4">Namn</div>
+						<div class="time col medium-4">Tid</div>
+						<div class="phone col medium-4">Telefon</div>
+					</div>
+					<hr/>
+					
+					<div class="booked-tenant accordion">
+						<div class="accord-header row">
+							<div class="name col medium-4">John Doe</div>
+							<div class="time col medium-4"><span>Lördag</span><span>2014-01-04</span>15:40</div>
+							<div class="phone col medium-4">+46(0)703606105 <span class="icon-arrow_right_gallery arrow-close"></span></div>
+						</div>
+						<div class="accord-content row">
+							<div class="profile-pic col medium-3"><img class="plholder" src="img/profile-placeholder.jpg" height="250" width="220" alt=""></div>
+							<div class="profile-description col medium-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat dolores laudantium hic, consequuntur beatae blanditiis inventore.</div>
+							<div class="profile-buttons col medium-4">
+								<a href="profile.html" class="button profile lightbox" data-featherlight="ajax">Visa profil</a>
+								<a href="#" data-featherlight="#cancel" class="button cancel">Avboka</a>
+								<a href="#" data-featherlight="#rebook" class="button rebook">Omboka</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="booked-tenant accordion">
+						<div class="accord-header row">
+							<div class="name col medium-4">John Doe</div>
+							<div class="time col medium-4"><span>Lördag</span><span>2014-01-04</span>15:40</div>
+							<div class="phone col medium-4">+46(0)703606105 <span class="icon-arrow_right_gallery arrow-close"></span></div>
+						</div>
+						<div class="accord-content row">
+							<div class="profile-pic col medium-3"><img class="plholder" src="img/profile-placeholder.jpg" height="250" width="220" alt=""></div>
+							<div class="profile-description col medium-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat dolores laudantium hic, consequuntur beatae blanditiis inventore.</div>
+							<div class="profile-buttons col medium-4">
+								<a href="profile.html" class="button profile lightbox" data-featherlight="ajax">Visa profil</a>
+								<a href="#" data-featherlight="#cancel" class="button cancel">Avboka</a>
+								<a href="#" data-featherlight="#rebook" class="button rebook">Omboka</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="booked-tenant accordion">
+						<div class="accord-header row">
+							<div class="name col medium-4">John Doe</div>
+							<div class="time col medium-4"><span>Lördag</span><span>2014-01-04</span>15:40</div>
+							<div class="phone col medium-4">+46(0)703606105 <span class="icon-arrow_right_gallery arrow-close"></span></div>
+						</div>
+						<div class="accord-content row">
+							<div class="profile-pic col medium-3"><img class="plholder" src="img/profile-placeholder.jpg" height="250" width="220" alt=""></div>
+							<div class="profile-description col medium-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat dolores laudantium hic, consequuntur beatae blanditiis inventore.</div>
+							<div class="profile-buttons col medium-4">
+								<a href="profile.html" class="button profile lightbox" data-featherlight="ajax">Visa profil</a>
+								<a href="cancel.html" data-featherlight="ajax" class="button cancel">Avboka</a>
+								<a href="rebook.html" data-featherlight="iframe" class="button rebook">Omboka</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div> <!-- End module (bookings) -->
+
+			<div class="module reviews">
+				<div class="mod-header">
+					<h1>Recensioner</h1>
+				</div>
+				<div class="mod-content">
+				<form action="submit" class="row">
+					<p>Du har nyligen haft visning/visningar. Vad är din inställning till att hyra ut till någon av dessa bostadssökande? Om båda parter är positiva kontaktar Samtrygg dig inom kort för att gå igenom förutsättningarna för hyresavtalet.</p>
+
+					<div class="profile-card col medium-6 small-12">
+						<div class="row">
+							<div class="profile col medium-6">
+								<div class="name">John Doe</div>
+								<div class="phone">+46(0)703606105</div>
+								<div class="email"><a href="mailto:john.doe@email.com">john.doe@email.com</a></div>
+							</div>
+							<div class="profile-reviews col medium-6">
+								<div class="yes col medium-6"><input type="checkbox" name="rating1" value="" id="yes1" ><label for="yes1">Ja tack!</label></div>
+								<div class="no col medium-6"><input type="checkbox" name="rating1" value="" id="no1" ><label for="no1">Nej</label></div>
+								<div class="col medium-12"></div>
+							</div>
+						</div>
+						<div class="row lower-card">
+							<div class="col medium-6">
+								<div class="profile-image plholder">
+									<a href="profile.html" class="lightbox" data-featherlight="ajax"><img src="img/profile-placeholder.jpg" height="250" width="220" alt=""></a>
+								</div>
+							</div>
+							<div class="col medium-6 options">
+								<input type="button" value="Bestämt ny tid" class="button new-time">
+								<a href="#no-show-panel1" class="button button-outline show">Kom inte:</a>
+								<div id="no-show-panel1" class="hidden">
+									<label for=""><input type="radio" name="reason1" class=""><span>Hörde ej av sig</span></label>
+									<label for=""><input type="radio" name="reason1" class=""><span>Avbokade i god tid</span></label>
+									<label for=""><input type="radio" name="reason1" class=""><span>Avbokade nära inpå visning</span></label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="profile-card col medium-6 small-12">
+						<div class="row">
+							<div class="profile col medium-6">
+								<div class="name">Wilhelm Arnander</div>
+								<div class="phone">+46(0)703606105</div>
+								<div class="email"><a href="mailto:john.doe@email.com">john.doe@email.com</a></div>
+							</div>
+							<div class="profile-reviews col medium-6">
+								<div class="yes col medium-6"><input type="checkbox" name="rating2" value="" id="yes2" ><label for="yes2">Ja tack!</label></div>
+								<div class="no col medium-6"><input type="checkbox" name="rating2" value="" id="no2" ><label for="no2">Nej</label></div>
+								<div class="col medium-12"></div>
+							</div>
+						</div>
+						<div class="row lower-card">
+							<div class="col medium-6">
+								<div class="profile-image plholder">
+									<a href="profile.html" class="lightbox" data-featherlight="ajax"><img src="img/profile-placeholder.jpg" height="250" width="220" alt=""></a>
+								</div>
+							</div>
+							<div class="col medium-6 options">
+								<input type="button" value="Bestämt ny tid" class="button new-time">
+								<a href="#no-show-panel2" class="button button-outline show">Kom inte:</a>
+								<div id="no-show-panel2" class="hidden">
+									<label for=""><input type="radio" name="reason2" class=""><span>Hörde ej av sig</span></label>
+									<label for=""><input type="radio" name="reason2" class=""><span>Avbokade i god tid</span></label>
+									<label for=""><input type="radio" name="reason2" class=""><span>Avbokade nära inpå visning</span></label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="profile-card col medium-6 small-12">
+						<div class="row">
+							<div class="profile col medium-6">
+								<div class="name">John Doe</div>
+								<div class="phone">+46(0)703606105</div>
+								<div class="email"><a href="mailto:john.doe@email.com">john.doe@email.com</a></div>
+							</div>
+							<div class="profile-reviews col medium-6">
+								<div class="yes col medium-6"><input type="checkbox" name="rating3" value="" id="yes3" ><label for="yes3">Ja tack!</label></div>
+								<div class="no col medium-6"><input type="checkbox" name="rating3" value="" id="no3" ><label for="no3">Nej</label></div>
+								<div class="col medium-12"></div>
+							</div>
+						</div>
+						<div class="row lower-card">
+							<div class="col medium-6">
+								<div class="profile-image plholder">
+									<a href="profile.html" class="lightbox" data-featherlight="ajax"><img src="img/profile-placeholder.jpg" height="250" width="220" alt=""></a>
+								</div>
+							</div>
+							<div class="col medium-6 options">
+								<input type="button" value="Bestämt ny tid" class="button new-time">
+								<a href="#no-show-panel3" class="button button-outline show">Kom inte:</a>
+								<div id="no-show-panel3" class="hidden">
+									<label for=""><input type="radio" name="reason3" class=""><span>Hörde ej av sig</span></label>
+									<label for=""><input type="radio" name="reason3" class=""><span>Avbokade i god tid</span></label>
+									<label for=""><input type="radio" name="reason3" class=""><span>Avbokade nära inpå visning</span></label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="profile-card col medium-6 small-12">
+						<div class="row">
+							<div class="profile col medium-6">
+								<div class="name">Yasmin Haitot</div>
+								<div class="phone">+46(0)703606105</div>
+								<div class="email"><a href="mailto:john.doe@email.com">john.doe@email.com</a></div>
+							</div>
+							<div class="profile-reviews col medium-6">
+								<div class="yes col medium-6"><input type="checkbox" name="rating4" value="" id="yes4" ><label for="yes4">Ja tack!</label></div>
+								<div class="no col medium-6"><input type="checkbox" name="rating4" value="" id="no4" ><label for="no4">Nej</label></div>
+								<div class="col medium-12"></div>
+							</div>
+						</div>
+						<div class="row lower-card">
+							<div class="col medium-6">
+								<div class="profile-image plholder">
+									<a href="profile.html" class="lightbox" data-featherlight="ajax"><img src="img/profile-placeholder.jpg" height="250" width="220" alt=""></a>
+								</div>
+							</div>
+							<div class="col medium-6 options">
+								<input type="button" value="Bestämt ny tid" class="button new-time">
+								<a href="#no-show-panel4" class="button button-outline show">Kom inte:</a>
+								<div id="no-show-panel4" class="hidden">
+									<label for=""><input type="radio" name="reason4" class=""><span>Hörde ej av sig</span></label>
+									<label for=""><input type="radio" name="reason4" class=""><span>Avbokade i god tid</span></label>
+									<label for=""><input type="radio" name="reason4" class=""><span>Avbokade nära inpå visning</span></label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+						<span class="sm-break"></span>
+							<hr/>
+						<span class="sm-break"></span>
+						
+						<div class="row">
+							<input type="submit" value="Spara recensioner" class="bottom button right">
+						</div>
+
+				</form>
+				</div>
+			</div> <!-- End module (reviews) -->
+
+			<div id="cancel" class="module cancel hidden">
+				<div class="mod-header">
+					<h1>Avboka</h1>
+				</div>
+				<div class="mod-content cancel">
+					<form action="/Timebooking/HVO/x2bp6HK9WYCX05kSeH23" method="post">					
+						<input type="hidden" name="action" value="cancel" />
+						<p>Du har valt att avboka tiden<br /><span id="cancel-time">Sundag 2016-01-30 15:40</span> för <span id="cancel-name">John Doe</span>.<br />Skriv in en orsak nedan och tryck "Avboka":</p>
+						<input type="hidden" name="cancelId" id="cancelId" />
+						<textarea name="cancelReason" id="cancel-reason" placeholder="Skriv din orsak här"></textarea>
+						<div class="row">
+							<input type="checkbox" class="custom-checkbox" name="okAgain" value="" id="okAgain" />
+							<label for="okAgain">Kryssa för om du vill uppmana den bostadssökande att boka in en ny tid.</label>
+						</div>
+						<div class="row">
+							<input type="checkbox" class="custom-checkbox" name="block" value="" id="block" />
+							<label for="block">Kryssa för om du inte vill att den bostadssökande ska kunna boka in en ny tid.</label>
+						</div>
+						<hr>	
+						<input type="submit" value="Avboka" class="button bottom" />
+					</form>	
+				</div>		
+			</div> <!-- End cancel -->
+
+
+			<div id="rebook" class="module rebook hidden">
+				<div class="mod-header">
+					<h1>Avboka</h1>
+				</div>
+				<div class="mod-content rebook">
+					<form action="/Timebooking/HVO/x2bp6HK9WYCX05kSeH23" method="post">					
+						<input type="hidden" name="action" value="rebook" />
+						<p>Du har valt att ändra tiden<br /><span id="rebook-time">Sundag 2016-01-30 15:40</span> för <span id="rebook-name">John Doe</span>.<br />Välj en ny tid, skriv in en orsak nedan och tryck "Omboka".</p>
+						<p>Vänligen observera att om du inte vill ta in andra bostadssökande på visning på den tid som nu blir ledig, kom ihåg att ta bort denna högst upp på sidan.</p>
+						<input type="hidden" name="rebookId" id="rebookId" />
+						<div class="row">
+							<div class="col medium-2">Datum</div>
+							<div class="col medium-4 end"><input type="text" name="rebookNewDate" id="rebookNewDate" class="datepicker"/></div>
+						</div>
+						<div class="row">
+							<div class="col medium-2">Tid (hh:mm)</div>
+							<div class="col medium-4 end"><input type="text" name="rebookNewTime" id="rebookNewTime" /></div>
+						</div>
+						<textarea name="rebookReason" id="rebook-reason" placeholder="Skriv din orsak här"></textarea>
+						<hr>
+						<input type="submit" value="Omboka" class="button bottom" />
+					</form>	
+				</div>
+			</div> <!-- End rebook -->
+			
+		</div><!-- End Dash-content -->
+
+	</div> <!-- End Panel -->
+	
+<!-- @include footer -->
+</body>
+<!-- @include base

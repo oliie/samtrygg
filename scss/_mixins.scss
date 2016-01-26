@@ -1,0 +1,103 @@
+@mixin background-size-cover{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+@mixin  border-radius($radius) {
+	-webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+      	border-radius: $radius;		
+}
+
+@mixin border-top-radius($radius)	{
+	-moz-border-top-radius: $radius;
+	 -webkit-border-top-radius: $radius;
+	  border-top-radius: $radius;
+}
+
+@mixin border-box{
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+@mixin transition-hover{ 
+	-webkit-transition: background-color 100ms ease;
+    -moz-transition: background-color 100ms ease;
+    -o-transition: background-color 100ms ease;
+    -ms-transition: background-color 100ms ease;
+    transition: background-color 100ms ease;
+}
+
+@mixin transition{
+	-webkit-transition: all 100ms ease;
+	-moz-transition: all 100ms ease;
+	-ms-transition: all 100ms ease; /* IE10 is actually unprefixed */
+	-o-transition: all 100ms ease;
+	transition: all 100ms ease;
+}
+
+@mixin placeholder ($color, $font: $lato) {
+	::-webkit-input-placeholder{ font-family:$font; color:$color; }
+	:-moz-placeholder{ font-family:$font; color:$color; }
+	::-moz-placeholder{ font-family:$font; color:$color; }
+	:-ms-input-placeholder{ font-family:$font; color:$color; }
+}
+
+@mixin placeholder-size ($padding, $size){
+	::-webkit-input-placeholder{ padding-left:$padding; font-size: $size; }
+	:-moz-placeholder{ padding-left:$padding; font-size: $size;}
+	::-moz-placeholder{ padding-left:$padding; font-size: $size;}
+	:-ms-input-placeholder{ padding-left:$padding; font-size: $size;}
+}
+
+
+@mixin vendor-animation($duration, $delay, $count: infinite){
+	-webkit-animation-duration: $duration;
+ 	-webkit-animation-delay: $delay;
+ 	-webkit-animation-iteration-count: $count;
+
+ 	-moz-animation-duration: $duration;
+ 	-moz-animation-delay: $delay;
+ 	-moz-animation-iteration-count: $count;
+
+ 	-o-animation-duration: $duration;
+ 	-o-animation-delay: $delay;
+ 	-o-animation-iteration-count: $count;
+
+ 	-ms-animation-duration: $duration;
+ 	-ms-animation-delay: $delay;
+ 	-ms-animation-iteration-count: $count;
+
+}
+
+@mixin user-select{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+@mixin transform($deg){
+	-ms-transform: rotate($deg); /* IE 9 */
+    -webkit-transform: rotate($deg); /* Chrome, Safari, Opera */
+    transform: rotate($deg);
+}
+
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}

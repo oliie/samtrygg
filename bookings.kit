@@ -1,0 +1,63 @@
+<div id="dashboard" class="booking">
+
+	<div id="panel" class="dashboard-wrapper row">
+
+		<div class="module booking">
+			<div class="mod-header">
+				<h1>Välj tid för visning</h1>
+			</div>
+			<div class="mod-content">
+				<h2>Efter bokad visning kommer du få en bekräftelse med nödvändig information.</h2>
+				<div class="row object">
+					<div class="col medium-2 pic"><img src="img/prop_2.jpg" alt=""></div>
+					<div class="col medium-2 town">Stockholm</div>
+					<div class="col medium-3 address">Vegagatan 12, 172 34 Sundbyberg</div>
+					<div class="col medium-1 area">120m&sup2;</div>
+					<div class="col medium-2 rooms">3&nbsp;rum</div>
+					<div class="col medium-2 price">14 000:-</div>
+				</div>
+				<form action="submit" class="time-slot">
+
+					<div class="row">
+						<div class="col medium-6"><span class="day">Lördag</span><span class="date">2016-01-23</span><span class="time">11:00 - 11:20</span></div>
+						<div class="col medium-6">
+							<input type="radio" class="custom-toggle" name="timeVal" id="time1" value=""  />
+							<label class="button-outline" for="time1">Välj</label>
+						</div>					
+					</div>
+
+					<div class="row">
+						<div class="col medium-6"><span class="day">Lördag</span><span class="date">2016-01-23</span><span class="time">11:00 - 11:20</span></div>
+						<div class="col medium-6">
+							<input type="radio" class="custom-toggle" name="timeVal" id="time2" value=""  />
+							<label class="button-outline" for="time2">Välj</label>
+						</div>					
+					</div>
+
+					<div class="row">
+						<div class="col medium-6"><span class="day">Lördag</span><span class="date">2016-01-23</span><span class="time">11:00 - 11:20</span></div>
+						<div class="col medium-6">
+							<label for="time3">
+								<input type="radio" class="custom-toggle" name="timeVal" id="time3" value=""  />
+								<label class="button-outline" for="time3">Välj</label>
+							</label>
+						</div>					
+					</div>
+
+					<div class="row"><input type="submit" class="submit button" value="Boka"></div>
+				</form>
+			</div>
+		</div>
+		<script class="hidden">
+		      $('.time-slot div input[type="radio"]').change(function(){
+		          if($(this).is(":checked")) {
+		              $(this).parents('div.row').addClass('selected');
+		              $(this).parents('div.row').siblings().removeClass('selected');
+		          } else {
+		              $(this).parents('div.row').removeClass('selected');
+		          }
+		      });
+		</script>
+
+	</div>
+</div>

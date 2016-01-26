@@ -1,0 +1,21 @@
+/* ==========================================================================
+ 
+ 	Dependencies and Libraries 
+
+========================================================================== */
+@import '../bower_components/foundation/scss/normalize.scss';
+@import '../bower_components/foundation/scss/app.scss';
+@import '../bower_components/owlcarousel/owl-carousel/owl.carousel.css';
+@import '../bower_components/owlcarousel/owl-carousel/owl.theme.css';
+@import '../bower_components/featherlight/src/featherlight.gallery.scss';
+@import '../bower_components/featherlight/src/featherlight.scss';
+@import '../bower_components/animate.css/animate.min.scss';
+@import '../bower_components/video.js/dist/video-js.min.css';
+
+.col{ @extend .columns;}
+// .m-3{ @extend .medium-3;}
+// .m-9{ @extend .medium-9;}
+// .m-4{ @extend .medium-4;}
+// .m-6{ @extend .medium-6;}
+// .m-8{ @extend .medium-8;}
+// .m-12{ @extend .medium-12;}
