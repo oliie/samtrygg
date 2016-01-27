@@ -512,7 +512,7 @@ Help Pages
 	.button.red{ background-color:$red-clr;}
 	.button.red:hover{ background-color:$red-clr-hover;}
 	.section-wrapper:nth-child(even){ background-color:$vapor;}
-	header{ height: 440px; width:100%; z-index:0; background-color:$vapor; padding-top:20px; background-attachment: fixed; display:table;
+	header{ height: 440px; width:100%; z-index:0; background-color:$vapor; padding-top:20px; display:table;
 		.header-wrap{ display:table-cell; vertical-align:middle;}
 		h1{ text-align: center; color: #fff; text-shadow: $text-shadow; font-size:62px; }
 		h2{ text-align: center; color: #fff; text-shadow: $text-shadow; font-size:42px;}

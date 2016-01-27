@@ -167,7 +167,7 @@ $pad: 0.9375em;
 	}
 
 	#support{
-		header{ height:220px; background-position: center; background-size:cover;}
+		header{ height:220px; background-attachment:scroll!important;}
 		section{ padding:0 1.75rem 50px 1.75rem;}
 		.header-wrap{
 			h1{ margin-bottom:0.5rem;}
@@ -317,6 +317,7 @@ $pad: 0.9375em;
 
 	#dashboard .module .viewing-times .list-item div a.button{ padding:0.8rem 1rem 0.6rem 1rem;}
 	#property .description{ padding-left:$pad;}
+	#support header{ background-attachment:scroll!important;}
 
 }
 
