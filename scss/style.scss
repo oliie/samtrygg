@@ -259,7 +259,7 @@ Property Page
 			.owl-prev{ float:left; background-color: transparent;}
 			.owl-next{ float:right; background-color: transparent;}
 		}
-		.g-price{ color: #fff; font-weight: bold; background: $trans-black; width: 250px; height: 60px; text-align: center; font-size: 22px; position: absolute; top: 0px/* 520px */; line-height: 60px;}
+		.g-price{ color: #fff; font-weight: bold; background: $trans-black; width: 250px; height: 60px; text-align: center; font-size: 22px; position: relative; top: -60px; line-height: 60px;}
 		.icon-chevron-right, .icon-chevron-left{ font-size:47px; color: #fff; /* width:90px; height:111px; */ padding:35px; }
 	}
 	.description{ padding-left:0;
