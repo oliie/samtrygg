@@ -22807,6 +22807,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/error.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/error.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/error.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/error.kit",
+		"outputAbbreviatedPath": "\/error.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/help.html": {
 		"fileType": 8192,
 		"ignore": 1,
