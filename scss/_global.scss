@@ -15,6 +15,8 @@ img[src='Error.src']{
     display: none;
 }
 
+$pad: 0.9375em;
+
 /*  Topbar / Navigation - Front Pages  */
 nav#nav.top-bar.logged{
     li.logged{ margin-left: 40px; }
@@ -144,6 +146,7 @@ nav#nav.top-bar.dashboard{
       .partners{
         img{ max-height:50px; max-width:115px;}
         img.bankid{ width:70px; margin-right:40px;}
+        img:nth-child(even){padding-left:$pad;}
 
       }
       .title{ font-weight:bold; margin-bottom: 10px;}
@@ -153,7 +156,7 @@ nav#nav.top-bar.dashboard{
       }
       hr{ margin:2.25rem 0 3.1875rem;}
       .numbers{
-        div{ color:$soft-grey;}
+        div{ color:$soft-grey; padding-left:$pad;}
         span{ color:$red-clr; font-weight:bold; margin-left:10px; font-size:18px;}
       }
       .extra{
