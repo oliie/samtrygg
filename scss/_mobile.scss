@@ -64,7 +64,7 @@ $pad: 0.9375em;
 		.row.search{ width:80%;}
 		.searchbar{ margin-top:16.9rem;
 			a.button{ padding:0; margin:0;}
-			.icon-magnifier{ color: #fff; display: block; position: absolute; top: 19px; left: 10px;}
+			.icon-magnifier{ color: #fff; display: inline-block; position: relative; left: 0%; top: 30%;}
 			input:focus + .results{ display:none;} 
 		}
 		.hero-bkground{ background:url('../img/header_ground3.jpg'); background-size:cover; background-position:center;}
