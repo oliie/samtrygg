@@ -96,6 +96,16 @@ $pad: 0.9375em;
 	section#visit .columns a.columns.des{ display: none;}
 	section#visit .columns:last-child{ float: none;}
 	#visit .search-more { padding-top: 1em;}
+
+	#hood{
+		a.rental, a.destination{ margin-bottom:$pad;}
+		.group{ margin-bottom:0;}
+		.large-4, .large-8{ border:none;}
+		.end .large-4{ border:none;}
+		.middle{
+			.large-4:first-child + .large-4, .large-4:last-child{ border:none;}
+		}
+	}
 	
 	
 	header.hero .searchbar a.button span{ display: none;}
@@ -261,6 +271,7 @@ $pad: 0.9375em;
 			}
 		}
 		#cancel .cancel form p{ text-align:left;}
+		.rental-times .block.time-select{ margin:0; margin-bottom:$pad;}
 
 	}
 	nav#nav.top-bar.dashboard{

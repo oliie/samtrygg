@@ -133,6 +133,39 @@ div.visit-wrap-odd{  margin: 0; text-align: center; background: none;
 
 }
 
+/*  Hood Revise of visit  */
+#hood{
+	h1, p{ text-align:center;}
+	a.rental, a.destination{ display: inline-block; height: 362px;}
+	div.view{ position:absolute; top:0; z-index:0; width:100%; height:100%;}
+	.large-4{ border-right:$pad solid #fff;}
+	.large-8{ border-left:$pad solid #fff;}
+	.group{ margin-bottom:$dbl-pad;}
+	.end{
+		.large-4{ border-right:none; border-left:$dbl-pad solid #fff;}
+		.large-8{ border-left:0;}
+	}
+	.middle{
+		.large-4:first-child + .large-4{ border-left:$pad solid #fff; }
+		.large-4:last-child{ border-left:$pad solid #fff; border-right:0;}
+	}
+	.rental{ text-align:center;
+		div.wrap{ position:absolute; top:0; z-index:1; padding-left: 2rem; padding-right: 2rem; width:100%; word-wrap: break-word;
+			> *, span, sup { color: #fff;}
+			.price{ display: block; position: absolute; background-color: $trans-black; padding: .5em 2em; top: 0; left: 1px;}
+			h3{ margin-top:0; padding-top: 8.4rem;}
+			h3, p{ text-shadow: $text-shadow;}
+			p{ line-height: 1.25rem;}
+			span{ text-shadow: $text-shadow;}
+		}
+	}
+	.destination{ text-align:center; 
+		h2{ position:absolute; top:44%; z-index:1; width:100%; color:#fff; text-shadow: $text-shadow; font-family:$lato; font-weight:900;}
+	}
+	.search-more{ clear: both; padding-top: $pad; text-align:center; margin-bottom:50px;}
+}
+
+
 /*  Steps Section  */
 #steps{ width: 100%; background-color: $vapor; min-height: 300px; padding-bottom: 60px; margin-bottom:0;
 	// .row{ max-width: 82.5rem;}
@@ -563,6 +596,7 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
 	.featherlight .featherlight-inner{ width:100%; height:100%;}
 	// nav#nav.top-bar, nav#nav.top-bar.nav-top, nav#nav.top-bar.page-bar{ position:absolute;}
 	a{ color:$soft-grey;}
+	td.ui-datepicker-today a{ color:#fff;}
 	a:hover{ color:$metal; text-decoration:underline;}
 	a.button{ color:#fff;}
 	a.button:hover{ text-decoration:none;}
