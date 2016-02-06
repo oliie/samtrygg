@@ -166,16 +166,26 @@ $pad: 0.9375em;
 		}
 		.title{ 
 			.controls{ display: block; width: 100%; float:none; min-width:100%;}
-			select.sort-view{ float:none; max-width:120px;}
-			button.map{ float:none; margin-left:10px;}
+			select.sort-view{ float:none; max-width:110px; margin-right:10px; padding-left:10px;}
+			button.map{ float:left; margin-top:10px; padding:0.6rem 3.4rem 1.6rem .5rem;}
 		}
-		.grid-view{ display:none;}
-		.list-view{ display:none;}
 		.pad-n-l{ padding-left:0; padding-right:0;}
 		#filters .section .columns .columns.pad-n-r{ padding-left: 0px;}
 		#filters fieldset .columns.pad-n-r{ padding-left: 0px;}
 	}
+	#results .title button.list-view, #results .title .list-view.button-outline, #results .title button.grid-view, #results .title .grid-view.button-outline{ float:left; margin-bottom:0; margin-top:1px;}
+	#search .title button.map, #search .title .map.button-outline{ float:none;}
+	#results .title button.map, #results .title .map.button-outline{ margin:0;}
+	#results #list-view table thead tr th:nth-of-type(2), #results #list-view table thead tr th:last-child{ display:none;}
+	#results #list-view tr.accordion td:nth-of-type(2), #results #list-view tr.accordion td:last-child{ display:none;}
+	#results #list-view tr.accordion td, #results #list-view table thead tr th{ padding:0.2625rem 0.225rem; font-size:10px;}
+	td.more{ display:none;}
+	tr.panel td:first-child{ display:none;}
+	#results #list-view a.button{ font-size:10px; padding:0.6rem 2rem 1.0625rem 2rem;}
+	#results #list-view .panel{ background:transparent;}
+	#results #list-view tr.accordion{
 
+	}
 	#support{
 		header{ height:220px; background-attachment:scroll!important;}
 		section{ padding:0 1.75rem 50px 1.75rem;}
@@ -269,9 +279,12 @@ $pad: 0.9375em;
 				.col.medium-6.options{ padding:0 $pad;}
 
 			}
+
 		}
 		#cancel .cancel form p{ text-align:left;}
 		.rental-times .block.time-select{ margin:0; margin-bottom:$pad;}
+		nav#nav ul.right span.clone{ display:block;}
+		nav#nav.top-bar.dashboard ul.title-area{ border:none}
 
 	}
 	nav#nav.top-bar.dashboard{
@@ -282,6 +295,9 @@ $pad: 0.9375em;
 			input#search{ width:100%;}
 		}
 		li.message{ display:none;}
+		ul.title-area{ border-right:none;}
+		.top-bar-section ul li a{ font-size:16px;}
+		.top-bar-section ul li a:hover{ color:$metal;}
 	}
 
 
@@ -329,6 +345,7 @@ $pad: 0.9375em;
 	#dashboard .module .viewing-times .list-item div a.button{ padding:0.8rem 1rem 0.6rem 1rem;}
 	#property .description{ padding-left:$pad;}
 	#support header{ background-attachment:scroll!important;}
+	nav#nav.top-bar.dashboard .nav-search{ width:30%;}
 
 }
 

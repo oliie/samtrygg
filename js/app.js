@@ -1,0 +1,17 @@
+// @codekit-prepend "../bower_components/jquery/dist/jquery.min.js";
+// @codekit-prepend "../bower_components/jquery-ui/jquery-ui.min.js";
+// @codekit-prepend "../bower_components/modernizr/modernizr.js";
+// @codekit-prepend "../bower_components/foundation/js/foundation.min.js";
+// @codekit-prepend "../bower_components/featherlight/src/featherlight.js";
+// @codekit-prepend "../bower_components/featherlight/src/featherlight.gallery.js";
+// @codekit-prepend "../bower_components/owlcarousel/owl-carousel/owl.carousel.min.js";
+// @codekit-prepend "../bower_components/waypoints/lib/jquery.waypoints.min.js";
+// @codekit-prepend "../bower_components/counter-up/jquery.counterup.min.js";
+// @codekit-prepend "../bower_components/WOW/dist/wow.min.js";
+// @codekit-prepend "../bower_components/tristate/jquery.tristate.js";
+// @codekit-prepend "../bower_components/jquery-fadethis/dist/jquery.fadethis.min.js";
+// @codekit-prepend "../bower_components/Readmore.js/readmore.min.js";
+// @codekit-prepend "../bower_components/fastclick/lib/fastclick.js";
+// @codekit-prepend "../bower_components/video.js/dist/video.min.js";
+// @codekit-prepend "../bower_components/masonry/dist/masonry.pkgd.min.js";
+// @codekit-prepend "../components/jquery.fixer.js";

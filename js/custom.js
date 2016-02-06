@@ -1,13 +1,3 @@
-$(document).foundation({
-  accordion: {
-    content_class: 'content',
-    active_class: 'active',
-    multi_expand: true,
-    toggleable: true
-  }
-
-});
-    
 // On Document Ready
 $( document ).ready(function() {
 	 
@@ -44,10 +34,29 @@ $( document ).ready(function() {
     // Show blocks on a-link click
     $('a.show').click( function(e){
         e.preventDefault();
-        $($(this).attr('href')).slideToggle().siblings('div');
-
+        $(this).next('div').toggleClass( );
     });
     
+
+     // Search Results for all pages, excluding the landing
+    var searchBar = $('input#search , input#main-search');
+    var searchResults = $('input#search + .results , input#main-search + .results');
+    var searchResultsLink = $('input#search + .results a, input#main-search + .results a');
+
+    $(searchBar).on("focus", function(){
+       $(this).next('.results').show();
+    });
+    $(searchBar).blur( function(){
+        setTimeout(function(){ searchResults.fadeOut(); }, 200);
+    });
+    $(searchResultsLink).hover( function(){
+      searchResults.show();
+    });
+    // $(searchResultsLink).on("focus" , function(){
+    //   searchResults.show();
+    // });
+   
+
 
 
     // Make Footer Sticky on small pages
@@ -131,11 +140,13 @@ $( document ).ready(function() {
           e.preventDefault();
       });
 
-      // Rental time blocks
-      $('.block.time-select label').click(function() {
-          $(this).parent('div').toggleClass('checked');
-      });
+      // Rental time blocks  
+      var checkboxes = $("input[type='checkbox']");
 
+      checkboxes.click(function() {
+          $(this).parent('div.time-select').toggleClass('checked');
+      });
+    
 
       // Rental Elements
       var now = new Date();
@@ -181,10 +192,51 @@ $( document ).ready(function() {
           }
       });
 
-      // Footer isFixed
+      // Expand profile images to container
+      $('.card-image').find('img').each(function(){
+        var imgClass = (this.width/this.height > 1) ? 'wide' : 'tall';
+        $(this).addClass(imgClass);
+      });
+
+      // Remove placeholder images ( class ) if an image is present
+      $('.accord-content .profile-pic img').each(function () {
+        if (this.src.length > 0) {
+            $(this).parents('.profile-pic').removeClass('plholder-profile');
+          }
+      });
+      $('.card-image img').each(function () {
+        if (this.src.length > 0) {
+            $(this).parents('.card-image').removeClass('plholder-profile');
+          }
+      });
+
+      // Masonry layout of cards
+      var $grid = $('#dashboard #grid').masonry({
+        itemSelector: '.profile-card',
+        percentPosition: true,
+
+      });
+      
+      $('.profile-card a.show').click(function() {
+        $grid.masonry('layout');
+      });
+
+
+      // sidebar nav "active" class added to link if on url
+        if($('body#dashboard')){
+          $(function() {
+            $('.side-nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+          });
+        }
+
+        $('.side-nav span.clone').clone().prependTo('nav#nav ul.right');
+
+
+      // Sidebar Fix / Footer
+
         function checkOffset() {
-          if($('.dash-nav').offset().top + $('.dash-nav').height() >= $('#footer').offset().top - 10){
-              $('.dash-nav').css('position', 'absolute');
+          if($('.dash-nav').offset().top + $('.dash-nav').height() >= $('#footer').offset().top - 40){
+              $('.dash-nav').css('position', 'relative');
           }
           if($(document).scrollTop() + window.innerHeight < $('#footer').offset().top){
               $('.dash-nav').css('position', 'fixed'); // restore when you scroll up
@@ -194,20 +246,8 @@ $( document ).ready(function() {
           checkOffset();
         });
 
+        // $('.dash-nav').fixer();
 
-        // sidebar nav "active" class added to link if on url
-        if($('body#dashboard')){
-          $(function() {
-            $('.side-nav a[href^="' + location.pathname.split("/")[1] + '"]').addClass('active');
-          });
-        }
-
-        // sidebar nav for mobile & "active" class added
-        if($('body#dashboard') && mobileSize){
-          $('.side-nav li').prependTo('nav#nav ul.right').ready(function() {
-            $('ul.right li a[href^="' + location.pathname.split("/")[1] + '"]').addClass('active');
-          });
-        }
 
 
     //  --  Landing Page  -- //
@@ -227,6 +267,13 @@ $( document ).ready(function() {
                   header.addClass("nav-top");
               }
           });
+          
+
+        $('#dashboard #footer').waypoint(function() {
+          $('dash-nav').css('position','absolute');
+        }, {
+          offset: '20px'
+        });
 
           $(window).resize(function() {
               if (mobileSize) {
@@ -435,11 +482,6 @@ $( document ).ready(function() {
             inline: true
          });
       });  
-
-    // // SmoothState transitions and page loading on dashboard
-    // ;(function ($) {
-    //     $('#panel').smoothState({ debug: true });
-    // })(jQuery);
     
     // // Fade in effects on scroll
     // $('section#visit div').addClass('fx fadeIn');
@@ -457,6 +499,28 @@ $( document ).ready(function() {
       // $('#rebook, #cancel').on('click', function (){
       //   $(this).show();
       // });
+
+      
+      // Old Dashboard
+      // if($('body#dashboard') && mobileSize){
+        //     $('.side-nav span.clone').prependTo('nav#nav ul.right');
+        // }
+        // sidebar nav for mobile & "active" class added
+        // if($('body#dashboard') && mobileSize){
+        //   $('.side-nav span').prependTo('nav#nav ul.right').ready(function() {
+        //     $('ul.right li a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+        //   });
+        // }
+    
+        // $(window).on('resize', function(){
+        //     if($('body#dashboard') && desktopSize){
+        //       $('nav#nav ul.right span.clone').prependTo('.dash-nav .side-nav');
+        //       console.log('this');
+        //     } else if($('body#dashboard') && mobileSize){
+        //       $('.side-nav span.clone').prependTo('nav#nav ul.right');
+        //       console.log('that');
+        //     }
+        // });
 	
 });
 
@@ -474,3 +538,17 @@ $( window ).load(function() {
 
 	   
 });
+
+$(document).foundation({
+  accordion: {
+    content_class: 'content',
+    active_class: 'active',
+    multi_expand: true,
+    toggleable: true
+  }
+
+});
+
+// $(function() {
+//   FastClick.attach(document.body);
+// });

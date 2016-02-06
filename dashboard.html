@@ -15,7 +15,7 @@
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  
+
   <!-- Trust Pilot -->
   <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.sync.bootstrap.min.js"></script>
 
@@ -38,7 +38,17 @@
     </ul>
     <div class="top-bar-section">
       <div class="nav-search">
-        <span class="icon icon-MAPPIN"></span><input type="text" id="search" class="left" name="" placeholder="Sök område">
+        <span class="icon icon-MAPPIN"></span>
+        <input type="text" id="search" class="left" name="" placeholder="Sök område">
+        <div class="results columns small-12">
+          <ul>
+              <a href="search.html"><li><span class="icon icon-magnifier"></span><span class="location">Stockholm</span><span>4 viewings this week</span></li></a>
+              <a href="search.html"><li><span class="icon icon-magnifier"></span><span class="location">Malmo</span><span>4 viewings this week</span></li></a>
+              <a href="search.html"><li><span class="icon icon-magnifier"></span><span class="location">Gotenburg</span><span>4 viewings this week</span></li></a>
+              <a href="search.html"><li><span class="icon icon-magnifier"></span><span class="location">Testing</span><span>4 viewings this week</span></li></a>
+              <a href="search.html"><li><span class="icon icon-magnifier"></span><span class="location">Testing</span><span>4 viewings this week</span></li></a>
+            </ul>  
+        </div>
       </div>
       <!-- Right Nav Section -->
       <ul class="right">
@@ -59,7 +69,8 @@
 		
 		<div class="dash-nav col medium-2 small-12">
 	<ul class="side-nav">
-		<li><a href="dashboard.html">Översikt</a></li>
+		<span class="clone">
+		<li><a href="dashboard.html" class="active">Översikt</a></li>
 		<li><a href="dash-profile.html">Min Profil</a></li>
 		<li><a href="dash-rental.html">Redigera annons</a></li>
 		<li><a href="dash-manage-bookings.html">Hantera bokningar</a></li>
@@ -68,6 +79,7 @@
 		<li><a href="dash-messages.html">Meddelanden</a></li>
 		<li><a href="dash-settings.html">Kontoinställningar</a></li>
 		<li class="logout"><a href="index.html">Logga Ut</a></li>
+		</span>
 	</ul>
 </div>		
 		<div class="dash-content col medium-10 small-12">
@@ -95,38 +107,46 @@
 						<div class="col medium-4">Datum</div>
 					</div>
 					<hr>
-					<div class="accordion messages">
+					<div class="messages">
 
-						<div class="accordion row">
-						  <div class="accord-header">
+						<div class="accordion">
+						  <div class="accord-header row">
 						  	<div class="col medium-8 title">Visning av bostad, Samtrygg</div>
 						  	<div class="col medium-4 date">2011-01-11 10:11 <span class="icon-arrow_right_gallery arrow-close"></span></div>
 						  </div>
-						  <div class="accord-content col medium-12">This is the content for the first header.</div>
-					  	</div>
-
-						<div class="accordion row">
-						  <div class="accord-header">
-						  	<div class="col medium-8 title">Visningsbokning Göteborg - 2 rok - tillsv - 14 950 kr/mån på Mölndalsvägen 65, 412 63 Göteborg</div>
-						  	<div class="col medium-4 date">201-01-19 20:17 <span class="icon-arrow_right_gallery arrow-close"></span></div>
+						  <div class="accord-content row">
+						  	<div class="col medium-12">This is the content for the first header.</div>
 						  </div>
-						  <div class="accord-content col medium-12">This is the content for the first header.</div>
 					  	</div>
 
-					  	<div class="accordion row">
-						  <div class="accord-header">
+						<div class="accordion">
+						  <div class="accord-header row">
+						  	<div class="col medium-8 title">Visningsbokning Göteborg - 2 rok - tillsv - 14 950 kr/mån på Mölndalsvägen 65, 412 63 Göteborg</div>
+						  	<div class="col medium-4 date">2015-01-19 20:17 <span class="icon-arrow_right_gallery arrow-close"></span></div>
+						  </div>
+						  <div class="accord-content row">
+						  	<div class="col medium-12">This is the content for the first header.</div>
+						  </div>
+					  	</div>
+
+					  	<div class="accordion">
+						  <div class="accord-header row">
 						  	<div class="col medium-8 title">Visning av bostad, Samtrygg</div>
 						  	<div class="col medium-4 date">2016-01-19 20:17 <span class="icon-arrow_right_gallery arrow-close"></span></div>
 						  </div>
-						  <div class="accord-content col medium-12">This is the content for the first header.</div>
+						  <div class="accord-content row">
+						  	<div class="col medium-12">This is the content for the first header.</div>
+						  </div>
 					  	</div>
 
-						<div class="accordion row">
-						  <div class="accord-header">
+						<div class="accordion">
+						  <div class="accord-header row">
 						  	<div class="col medium-8 title">Visningsbokning Göteborg - 2 rok - tillsv - 14 950 kr/mån på Mölndalsvägen 65, 412 63 Göteborg</div>
 						  	<div class="col medium-4 date">2016-01-19 20:17 <span class="icon-arrow_right_gallery arrow-close"></span></div>
 						  </div>
-						  <div class="accord-content col medium-12">This is the content for the first header.</div>
+						  <div class="accord-content row">
+						  	<div class="col medium-12">This is the content for the first header.</div>
+						  </div>
 					  	</div>
 
 					</div>

@@ -4,7 +4,7 @@
 	<div id="panel" class="dashboard-wrapper row">
 		
 		<!-- @include nav_dash_sidebar -->
-		
+		<div id="scroller-anchor"></div>
 		<div class="dash-content col medium-10 small-12">
 			
 			<div class="module rental-times">
@@ -129,7 +129,9 @@
 							<div class="phone col medium-4">+46(0)703606105 <span class="icon-arrow_right_gallery arrow-close"></span></div>
 						</div>
 						<div class="accord-content row">
-							<div class="profile-pic col medium-3"><img class="plholder" src="img/profile-placeholder.jpg" height="250" width="220" alt=""></div>
+							<div class="profile-pic plholder-profile col medium-3">
+								<!-- <img src="" alt=""> -->
+							</div>
 							<div class="profile-description col medium-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat dolores laudantium hic, consequuntur beatae blanditiis inventore.</div>
 							<div class="profile-buttons col medium-4">
 								<a href="profile.html" class="button profile lightbox" data-featherlight="ajax">Visa profil</a>
@@ -146,7 +148,9 @@
 							<div class="phone col medium-4">+46(0)703606105 <span class="icon-arrow_right_gallery arrow-close"></span></div>
 						</div>
 						<div class="accord-content row">
-							<div class="profile-pic col medium-3"><img class="plholder" src="img/profile-placeholder.jpg" height="250" width="220" alt=""></div>
+							<div class="profile-pic plholder-profile col medium-3">
+								<img src="img/profile_ex4.jpg" height="250" width="220" alt="">
+							</div>
 							<div class="profile-description col medium-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat dolores laudantium hic, consequuntur beatae blanditiis inventore.</div>
 							<div class="profile-buttons col medium-4">
 								<a href="profile.html" class="button profile lightbox" data-featherlight="ajax">Visa profil</a>
@@ -163,7 +167,9 @@
 							<div class="phone col medium-4">+46(0)703606105 <span class="icon-arrow_right_gallery arrow-close"></span></div>
 						</div>
 						<div class="accord-content row">
-							<div class="profile-pic col medium-3"><img class="plholder" src="img/profile-placeholder.jpg" height="250" width="220" alt=""></div>
+							<div class="profile-pic plholder-profile col medium-3">
+								<img src="img/profile_ex2.jpg" height="960" width="960" alt="">
+							</div>
 							<div class="profile-description col medium-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat dolores laudantium hic, consequuntur beatae blanditiis inventore.</div>
 							<div class="profile-buttons col medium-4">
 								<a href="profile.html" class="button profile lightbox" data-featherlight="ajax">Visa profil</a>
@@ -183,36 +189,40 @@
 				<div class="mod-content">
 				<form action="submit" class="row">
 					<p>Du har nyligen haft visning/visningar. Vad är din inställning till att hyra ut till någon av dessa bostadssökande? Om båda parter är positiva kontaktar Samtrygg dig inom kort för att gå igenom förutsättningarna för hyresavtalet.</p>
-
-					<div class="profile-card col medium-6 small-12">
-						<div class="row">
-							<div class="profile col medium-6">
-								<div class="name">John Doe</div>
-								<div class="phone">+46(0)703606105</div>
-								<div class="email"><a href="mailto:john.doe@email.com">john.doe@email.com</a></div>
-							</div>
-							<div class="profile-reviews col medium-6">
-								<div class="yes col medium-6"><input type="checkbox" name="rating1" value="" id="yes1" ><label for="yes1">Ja tack!</label></div>
-								<div class="no col medium-6"><input type="checkbox" name="rating1" value="" id="no1" ><label for="no1">Nej</label></div>
-								<div class="col medium-12"></div>
-							</div>
-						</div>
-						<div class="row lower-card">
-							<div class="col medium-6">
-								<div class="profile-image plholder">
-									<a href="profile.html" class="lightbox" data-featherlight="ajax"><img src="img/profile-placeholder.jpg" height="250" width="220" alt=""></a>
+					<div id="grid">
+						<div class="profile-card col medium-6 small-12">
+							<div class="row">
+								<div class="profile col medium-6">
+									<div class="name">
+										<a href="profile.html" class="lightbox" data-featherlight="ajax">John Doe</a>
+									</div>
+									<div class="phone">+46(0)703606105</div>
+									<div class="email"><a href="mailto:john.doe@email.com">john.doe@email.com</a></div>
+								</div>
+								<div class="profile-reviews col medium-6">
+									<div class="yes col medium-6"><input type="checkbox" name="rating1" value="" id="yes1" ><label for="yes1">Ja tack!</label></div>
+									<div class="no col medium-6"><input type="checkbox" name="rating1" value="" id="no1" ><label for="no1">Nej</label></div>
+									<div class="col medium-12"></div>
 								</div>
 							</div>
-							<div class="col medium-6 options">
-								<input type="button" value="Bestämt ny tid" class="button new-time">
-								<a href="#no-show-panel1" class="button button-outline show">Kom inte:</a>
-								<div id="no-show-panel1" class="hidden">
-									<label for=""><input type="radio" name="reason1" class=""><span>Hörde ej av sig</span></label>
-									<label for=""><input type="radio" name="reason1" class=""><span>Avbokade i god tid</span></label>
-									<label for=""><input type="radio" name="reason1" class=""><span>Avbokade nära inpå visning</span></label>
+							<div class="row lower-card">
+								<div class="col medium-6">
+									<div class="card-image plholder-profile">
+										<a href="profile.html" class="lightbox" data-featherlight="ajax">
+											<img src="img/header_ground5.jpg" height="1153" width="2000" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="col medium-6 options">
+									<input type="button" value="Bestämt ny tid" class="button new-time">
+									<a href="show-panel" class="button button-outline show">Kom inte:</a>
+									<div class="hidden">
+										<label for=""><input type="radio" name="reason1" class=""><span>Hörde ej av sig</span></label>
+										<label for=""><input type="radio" name="reason1" class=""><span>Avbokade i god tid</span></label>
+										<label for=""><input type="radio" name="reason1" class=""><span>Avbokade nära inpå visning</span></label>
+									</div>
 								</div>
 							</div>
-						</div>
 					</div>
 
 					<div class="profile-card col medium-6 small-12">
@@ -230,14 +240,16 @@
 						</div>
 						<div class="row lower-card">
 							<div class="col medium-6">
-								<div class="profile-image plholder">
-									<a href="profile.html" class="lightbox" data-featherlight="ajax"><img src="img/profile-placeholder.jpg" height="250" width="220" alt=""></a>
+								<div class="card-image plholder-profile">
+									<a href="profile.html" class="lightbox" data-featherlight="ajax">
+										<img src="img/profile_ex2.jpg" alt="">
+									</a>
 								</div>
 							</div>
 							<div class="col medium-6 options">
 								<input type="button" value="Bestämt ny tid" class="button new-time">
-								<a href="#no-show-panel2" class="button button-outline show">Kom inte:</a>
-								<div id="no-show-panel2" class="hidden">
+								<a href="show-panel" class="button button-outline show">Kom inte:</a>
+								<div class="hidden">
 									<label for=""><input type="radio" name="reason2" class=""><span>Hörde ej av sig</span></label>
 									<label for=""><input type="radio" name="reason2" class=""><span>Avbokade i god tid</span></label>
 									<label for=""><input type="radio" name="reason2" class=""><span>Avbokade nära inpå visning</span></label>
@@ -261,14 +273,16 @@
 						</div>
 						<div class="row lower-card">
 							<div class="col medium-6">
-								<div class="profile-image plholder">
-									<a href="profile.html" class="lightbox" data-featherlight="ajax"><img src="img/profile-placeholder.jpg" height="250" width="220" alt=""></a>
+								<div class="card-image plholder-profile">
+									<a href="profile.html" class="lightbox" data-featherlight="ajax">
+										<img src="img/profile_ex1.jpg" alt="">
+									</a>
 								</div>
 							</div>
 							<div class="col medium-6 options">
 								<input type="button" value="Bestämt ny tid" class="button new-time">
-								<a href="#no-show-panel3" class="button button-outline show">Kom inte:</a>
-								<div id="no-show-panel3" class="hidden">
+								<a href="show-panel" class="button button-outline show">Kom inte:</a>
+								<div class="hidden">
 									<label for=""><input type="radio" name="reason3" class=""><span>Hörde ej av sig</span></label>
 									<label for=""><input type="radio" name="reason3" class=""><span>Avbokade i god tid</span></label>
 									<label for=""><input type="radio" name="reason3" class=""><span>Avbokade nära inpå visning</span></label>
@@ -292,8 +306,10 @@
 						</div>
 						<div class="row lower-card">
 							<div class="col medium-6">
-								<div class="profile-image plholder">
-									<a href="profile.html" class="lightbox" data-featherlight="ajax"><img src="img/profile-placeholder.jpg" height="250" width="220" alt=""></a>
+								<div class="card-image plholder-profile">
+									<a href="profile.html" class="lightbox" data-featherlight="ajax">
+										<img src="img/profile_ex4.jpg" alt="">
+									</a>
 								</div>
 							</div>
 							<div class="col medium-6 options">
@@ -307,6 +323,7 @@
 							</div>
 						</div>
 					</div>
+					</div> <!-- End grid -->
 
 						<span class="sm-break"></span>
 							<hr/>
