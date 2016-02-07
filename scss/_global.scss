@@ -1,5 +1,6 @@
 $pad: 0.9375em;
 $dbl-pad: 1.9375em;
+$tpl-pad: 2.9375em;
 
 body{ padding-top: 60px;}
 audio:not([controls]) {
@@ -131,68 +132,120 @@ nav#nav.top-bar.dashboard{
 
 /* Search Results */
 .results{ display: none; background-color: #fff; overflow: visible; padding: 0; z-index: 1001; box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.08); border:1px solid $vapor; border-radius: 0 0 3px 3px;
-        ul{ margin:0;
-          a:hover{ background-color: $vapor; }
-          a{ height: 60px; width: 100%; border-bottom: 1px solid $fog; pointer-events:all!important; height:60px; display:inline-block; padding-top:12px;}
-          span{ /* float: right; margin-right: 200px; */}
-        }
-        .icon-magnifier{ color: $fog; margin-left: 24px; margin-right: 20px;}
-        .location{ display:inline-block; width:30%;}
-        a:hover{ text-decoration:none;}
-      }
+    ul{ margin:0;
+      a:hover{ background-color: $vapor; }
+      a{ height: 60px; width: 100%; border-bottom: 1px solid $fog; pointer-events:all!important; height:60px; display:inline-block; padding-top:12px;}
+      span{ /* float: right; margin-right: 200px; */}
+    }
+    .icon-magnifier{ color: $fog; margin-left: 24px; margin-right: 20px;}
+    .location{ display:inline-block; width:30%;}
+    a:hover{ text-decoration:none;}
+}
 
 
 /*  Footer */
-   footer#footer{ min-height: 260px; background-color: $ozone; padding-top: 60px; font-size:14px;
-      .row div.large-12.columns:first-of-type { padding: 0;}
-      .footer-logo img{ width: 140px; padding-left: 0;}
-      ul{ font-size: 14px;
-        li{ line-height:2em;}
-      }
-      ul li a{ @include transition-hover; color:$metal;}
-      ul li a:hover{ color: $soft-black;}
-      div.large-4.columns.footer-logo{ max-width: 140px;}
-      .vcard a{ font-weight: normal; color:$metal; display: block;}
-      .vcard a:hover{ text-decoration: underline; color: $soft-black;}
-      .social-icons{ margin-top: 20px; height
-        a{ display: inline-block;}
-        a:hover{ opacity:1; @include transition; }
-      }
-      a.fb, a.instagram{ font-size:38px; width: 38px; height: 38px; }
-      a.instagram{ margin-left: 12px; }
-      a.fb:hover, a.instagram:hover{ text-decoration:none; }
-      a.fb span, a.instagram span { @include transition; color: $metal; }
-      a.fb:hover span, a.instagram:hover span { color: $soft-grey;}
-      .copyright{ width: 100%; text-align: center; margin-top: 30px; padding-bottom:0.5rem;
-        p{ font-size:12px; color:$soft-grey;}
-      }
-      .blurb{
-        p{ font-size:14px;}
-        ul{ margin:0;}
-        li{ line-height:2em;}
-        hr{ margin:1.25rem 0 1.25rem;}
-        span.icon{ margin-right:4px; width:20px; height:20px;}
-      }
-      .partners{
-        img{ max-height:50px; max-width:115px;}
-        img.bankid{ width:70px; margin-right:40px;}
-        img:nth-child(even){padding-left:$pad;}
 
-      }
-      .title{ font-weight:bold; margin-bottom: 10px;}
-      .v-card.medium-centered{ text-align:center;
-        a.email{ display:block; color:$soft-grey;}
-        a.email:hover{ text-decoration:underline;}
-      }
-      hr{ margin:2.25rem 0 3.1875rem;}
-      .numbers{
-        div{ color:$soft-grey; padding-left:$pad;}
-        span{ color:$red-clr; font-weight:bold; margin-left:10px; font-size:18px;}
-      }
-      .extra{
-        hr:first-child{ margin-bottom:2em;}
-      }
-   }
+footer#footer{ min-height:260px;
+  ul{ margin-left:0;}
+  .top{ max-height:138px; background-color:#fff; border-top:1px solid $vapor; border-bottom:1px solid $vapor; overflow:hidden; padding:30px;
+    .numbers, .points, .partners{ float:left;}
+    .numbers{ margin-right:$dbl-pad;
+      div{ font-size:16px;}
+      span{ margin-left:$pad; font-size:20px; color:$red-clr; font-weight:bold;}
+    }
+    .points ul{ margin-bottom:0; font-size:12px;
+      li{ color:$soft-grey;}
+      .icon{ width:12px; height:12px; margin-right:8px; color:$fog;}
+    }
+    .points{ margin-right:$dbl-pad;}
+    .h-break{ height:60px; float:left; margin-right:$dbl-pad; border-color:$vapor;}
+    .partners {
+      img{ height:20px; margin-right:20px;}
+      img.bankid{ height:40px;}
+    }
+  }
+  .middle{ min-height:330px; background-color:$vapor;
+    .row{ padding-top:80px; padding-bottom:80px;}
+    .about{ font-size:14px; color:$soft-grey;}
+    ul li.title{ margin-bottom:$pad; color:$metal;}
+    ul li{ padding-bottom:4px;}
+    ul li a{ color:$soft-grey;}
+    ul li a:hover{ color:$metal;}
+    .contact{ font-size:16px;
+      .tel, .email, .open-hours{ display:block;}
+      a{ color:$metal;}
+      a:hover{ text-decoration:underline;}
+    }
+  }
+  .bottom{ height:75px; overflow:hidden; background-color:$fog;
+    .row{ padding:0 $pad;}
+    .copyright{ float:left; margin-top:24px;}
+    .social-icons{ margin-top: 26px; float:right;
+      a span{ font-size:30px; color:$soft-grey;}
+      a span:hover{ color:$metal;}
+    }
+    .copyright p{ font-size:12px; margin-bottom:0; display:inline-block; color:$soft-grey; }
+    .icon-Logo2{color:#fff; font-size:35px; display:inline-block; float:left; width:106px;}
+  }
+  .press{
+    div{ float:left; margin-right:$tpl-pad;}
+    div img{ width:155px;}
+    div.sr img{ width:175px; margin-top:20px;}
+  }
+
+}
+  // Old Footer
+   // footer#footer{ min-height: 260px; background-color: $ozone; padding-top: 60px; font-size:14px;
+   //    .row div.large-12.columns:first-of-type { padding: 0;}
+   //    .footer-logo img{ width: 140px; padding-left: 0;}
+   //    ul{ font-size: 14px;
+   //      li{ line-height:2em;}
+   //    }
+   //    ul li a{ @include transition-hover; color:$metal;}
+   //    ul li a:hover{ color: $soft-black;}
+   //    div.large-4.columns.footer-logo{ max-width: 140px;}
+   //    .vcard a{ font-weight: normal; color:$metal; display: block;}
+   //    .vcard a:hover{ text-decoration: underline; color: $soft-black;}
+   //    .social-icons{ margin-top: 20px; height
+   //      a{ display: inline-block;}
+   //      a:hover{ opacity:1; @include transition; }
+   //    }
+   //    a.fb, a.instagram{ font-size:38px; width: 38px; height: 38px; }
+   //    a.instagram{ margin-left: 12px; }
+   //    a.fb:hover, a.instagram:hover{ text-decoration:none; }
+   //    a.fb span, a.instagram span { @include transition; color: $metal; }
+   //    a.fb:hover span, a.instagram:hover span { color: $soft-grey;}
+   //    .copyright{ width: 100%; text-align: center; margin-top: 30px; padding-bottom:0.5rem;
+   //      p{ font-size:12px; color:$soft-grey;}
+   //    }
+   //    .blurb{
+   //      p{ font-size:14px;}
+   //      ul{ margin:0;}
+   //      li{ line-height:2em;}
+   //      hr{ margin:1.25rem 0 1.25rem;}
+   //      span.icon{ margin-right:4px; width:20px; height:20px;}
+   //    }
+   //    .partners{
+   //      img{ max-height:50px; max-width:115px;}
+   //      img.bankid{ width:70px; margin-right:40px;}
+   //      img:nth-child(even){padding-left:$pad;}
+
+   //    }
+   //    .title{ font-weight:bold; margin-bottom: 10px;}
+   //    .v-card.medium-centered{ text-align:center;
+   //      a.email{ display:block; color:$soft-grey;}
+   //      a.email:hover{ text-decoration:underline;}
+   //    }
+   //    hr{ margin:2.25rem 0 3.1875rem;}
+   //    .numbers{
+   //      div{ color:$soft-grey; padding-left:$pad;}
+   //      span{ color:$red-clr; font-weight:bold; margin-left:10px; font-size:18px;}
+   //    }
+   //    .extra{
+   //      hr:first-child{ margin-bottom:2em;}
+   //    }
+   // }
+// }
 
 
 .bg {
@@ -246,6 +299,7 @@ input.incorrect-entry{ @include placeholder($red-clr);}
 
 .break{ display:block; height:1.875rem; clear:both;}
 .sm-break{ display:block; height:0.875rem; clear:both;}
+.h-break{ display:inline-block; width:1px; height:100%; border-right:1px solid $fog;}
 
 .vcard{ margin:0; border:none; padding:0;}
 .clearfix{ }

@@ -46,19 +46,37 @@
         <li><a href="login.html">Logga In</a></li>
       </ul>
     </div>
-  </nav>	<header class="parallax" style="background-image:url('img/des4.jpg');">
+  </nav>	<header class="parallax hero" style="background-image:url('img/des4.jpg');">
 		<div class="header-wrap">
 			<h1>Stockholm</h1>
-			<h2>Supporting text can go here if desired</h2>
-		</div>
+			<!-- <h2>Supporting text can go here if desired</h2> -->
+			<div class="row collapse searchbar">
+				<div class="search columns small-10">
+					<span class="icon-MAPPIN"></span>
+					<input type="text" id="search" name="" placeholder="Sök område">
+					<!-- <div class="results">
+			          <ul>
+			              <a href="#"><li><span class="icon icon-magnifier"></span><span class="location">Stockholm</span><span>4 viewings this week</span></li></a>
+			              <a href="#"><li><span class="icon icon-magnifier"></span><span class="location">Malmo</span><span>4 viewings this week</span></li></a>
+			              <a href="#"><li><span class="icon icon-magnifier"></span><span class="location">Gotenburg</span><span>4 viewings this week</span></li></a>
+			              <a href="#"><li><span class="icon icon-magnifier"></span><span class="location">Testing</span><span>4 viewings this week</span></li></a>
+			              <a href="#"><li><span class="icon icon-magnifier"></span><span class="location">Testing</span><span>4 viewings this week</span></li></a>
+			          </ul>  
+		        	</div> -->
+				</div>
+				<div class="small-2 columns">
+                  <a href="search.html" class="button" type=""><span>Sök</span><span class="icon icon-magnifier"></span></a>
+                </div>
+		    </div>
+		</div> <!-- End header-wrap -->
 	</header>
 
-	<div class="section-wrapper muted">
+	<!-- <div class="section-wrapper muted">
 		<section class="row">
 			<h1>A nice title goes here</h1>
 			<p>Include images and links much like supporting pages <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi repellendus id vero, nemo minima laudantium autem est recusandae. Minus consequuntur, eos optio et commodi quas similique provident placeat natus ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum explicabo facere, animi nulla libero quos molestiae. At eius inventore minus quam, ipsa doloribus, voluptates officiis facilis hic nobis autem, esse. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 		</section>
-	</div>
+	</div> -->
 
 	<div class="section-wrapper">
 	<section id="results">
@@ -229,76 +247,87 @@
 
   <!-- Footer -->
   <footer id="footer">
-      <div class="row">
+      
+      <div class="top">
+        <div class="row">
+            <div class="medium-12 columns">
+      
+                <div class="numbers">
+                  <div>Antal bostadssökande:<span class="renters">39 456</span></div>
+                  <div>Antal lediga bostäder:<span class="apts">189</span></div>
+                </div>
+                <span class="h-break"></span>
+                <div class="points">
+                  <ul>
+                    <li><span class="icon icon-check"></span>Personlig service</li>
+                    <li><span class="icon icon-check"></span>Garanterade hyresbetalningar</li>
+                    <li><span class="icon icon-check"></span>2 månaders hyresgaranti</li>
+                  </ul>
+                </div>
+                <div class="points">
+                  <ul>
+                    <li><span class="icon icon-check"></span>Andrahandsförsäkring</li>
+                    <li><span class="icon icon-check"></span>Trygga hyresavtal</li>
+                    <li><span class="icon icon-check"></span>Depositionsfritt</li>
+                  </ul>
+                </div>     
+                <span class="h-break"></span>
+                <div class="partners">
+                  <img class="bankid" src="img/bankid-logo.svg" alt="">
+                  <img class="arvato" src="img/arvato-logo.svg" alt="">
+                </div> 
 
-          <div class="medium-11 medium-centered columns">
+            </div>
+        </div>
+      </div>
 
-            <div class="medium-6 columns blurb">
-              <p>Samtrygg är en trygg och enkel marknadsplats för bostadsuthyrning. Bolaget grundades 2011 och har tusentals nöjda hyresgäster och uthyrare över hela Sverige. </p>
-              <hr/>
+      <div class="middle">
+        <div class="row">
+            <div class="medium-3 columns">
+              <ul> 
+                  <li class="title">Info</li>
+                  <li><a href="help.html">FAQ</a></li>
+                  <li><a href="help.html">Hur Det Fungerar</a></li>
+                  <li><a href="video.html">Video rekomendationer</a></li>
+                  <li><a href="basic-page.html">Regler och Policy</a></li>
+              </ul>
+            </div>
+
+            <div class="medium-3 columns">
               <ul>
-                <li><span class="icon icon-check"></span>Personlig service</li>
-                <li><span class="icon icon-check"></span>Garanterade hyresbetalningar</li>
-                <li><span class="icon icon-check"></span>2 månaders hyresgaranti</li>
-                <li><span class="icon icon-check"></span>Andrahandsförsäkring</li>
-                <li><span class="icon icon-check"></span>Trygga hyresavtal</li>
-                <li><span class="icon icon-check"></span>Depositionsfritt</li>
+                  <li class="title">Företag</li>
+                  <li><a href="basic-page.html">Om Oss</a></li>
+                  <li><a href="basic-page.html">Press</a></li>
+                  <li><a href="basic-page.html">Jobb</a></li>
+                  <li><a href="help.html">Kontakta Oss</a></li>
               </ul>
             </div>
 
             <div class="medium-6 columns">
-              <div class="medium-6 columns">
-                <ul> 
-                    <li class="title">Info</li>
-                    <li><a href="help.html">FAQ</a></li>
-                    <li><a href="help.html">Hur Det Fungerar</a></li>
-                    <li><a href="video.html">Video rekomendationer</a></li>
-                    <li><a href="basic-page.html">Regler och Policy</a></li>
-                </ul>
+                <p class="about">Samtrygg är en trygg och enkel marknadsplats för bostadsuthyrning. Bolaget grundades 2011 och har tusentals nöjda hyresgäster och uthyrare över hela Sverige.</p>
+                <div class="contact">
+                  <span class="tel">+46 (0) 8446801 85</span>
+                  <a class="email" href="mailto:sally@example.com">kundtjanst@samtrygg.se</a>
+                  <span class="open-hours">Weekdays 9-11 & 14-16</span>
                 </div>
-                <div class="medium-6 columns">
-                <ul>
-                    <li class="title">Företag</li>
-                    <li><a href="basic-page.html">Om Oss</a></li>
-                    <li><a href="basic-page.html">Press</a></li>
-                    <li><a href="basic-page.html">Jobb</a></li>
-                    <li><a href="help.html">Kontakta Oss</a></li>
-                </ul>
-              </div>
             </div>
+        </div>
+      </div>
 
+      <div class="bottom">
+        <div class="row">
+
+          <div class="copyright">
+            <span class="icon-Logo2 icon"></span>
+            <p>© 2015 Samtrygg AB</p>
           </div>
 
-      </div>
+          <div class="social-icons">
+              <a href="#" class="fb"><span class="icon-fb2"></span></a>
+              <a href="#" class="instagram"><span class="icon-instagram2"></span></a>
+          </div>
 
-      <div class="row">
-            <div class="medium-11 medium-centered small-12 columns">
-            <div class="row extra">
-              <hr>
-              <div class="medium-6 columns numbers">
-                <div>Antal bostadssökande:<span>39 456</span></div>
-                <div>Antal lediga bostäder:<span>189</span></div>
-              </div>
-              <div class="medium-6 columns partners">
-                <img src="img/bankid-logo.svg" alt="">
-                <img src="img/arvato-logo.svg" alt="">
-              </div> 
-            </div>
-              <hr>
-              <div class="medium-12 medium-centered v-card columns">
-                <span class="tel">+46 (0) 8446801 85</span>
-                <a class="email" href="mailto:sally@example.com">kundtjanst@samtrygg.se</a>
-                <span>Weekdays 9-11 & 14-16</span>
-                <div class="social-icons">
-                    <a href="#" class="fb"><span class="icon-fb"></span></a>
-                    <a href="#" class="instagram"><span class="icon-instagram"></span></a>
-                </div>
-              </div>
-            </div>
-      </div>
-
-      <div class="copyright">
-        <p>All rights reserved Copyright © 2015 Samtrygg AB</p>
+        </div>
       </div>
 
   </footer><script src="js/min/app-min.js"></script>

@@ -110,10 +110,15 @@ $pad: 0.9375em;
 	
 	header.hero .searchbar a.button span{ display: none;}
 	header.hero .searchbar .button .icon-magnifier{ display: inline-block;}
+	#support header.hero .searchbar{ margin-top:0; width:80%;}
 
 
 	footer#footer{ 
-		.footer-logo{ display: none;}
+
+		.middle .row{ padding:40px 0;}
+		.middle .about{ padding-top:$pad;}
+		.bottom .icon-Logo2{ display: none;}
+		.h-break, .points, .partners{ display:none;}
 		.social-icons a{ text-align: center; float: none;}
 		a.fb, footer#footer a.instagram{ display: inline-block;}
 		ul{ margin:0; margin-top:30px;}
@@ -123,10 +128,20 @@ $pad: 0.9375em;
 		.numbers{ margin-bottom: $pad;}
 		.partners{ display:none;}
 		.medium-6.columns .medium-6.columns:first-child ul{ margin-top:0;}
+		.press{ display:none;}
 
 	}
-	// footer p { margin-bottom: 0;}
 	
+	header{
+		.row.search{ width:80%;}
+	}
+	header.hero{ 
+		.searchbar{ 
+			a.button{ padding:0; margin:0;}
+			.icon-magnifier{ color: #fff; display: inline-block; position: relative; left: 0%; top: 30%;}
+			input:focus + .results{ display:none;} 
+		}
+	}
 	#property{ margin-top:0px;
 		.gallery #p-gallery{ max-height:250px;
 			a{ display:block;}
@@ -158,6 +173,10 @@ $pad: 0.9375em;
 
 		#sup-gallery{ display:none;}
 
+	}
+
+	#results{ margin-top:0;
+		#grid-view .block{ margin-right:0; margin-right:0; max-width:100%;}
 	}
 	
 	#search{
@@ -345,7 +364,13 @@ $pad: 0.9375em;
 	#dashboard .module .viewing-times .list-item div a.button{ padding:0.8rem 1rem 0.6rem 1rem;}
 	#property .description{ padding-left:$pad;}
 	#support header{ background-attachment:scroll!important;}
+	#support .searchbar.row{ max-width:50rem;}
 	nav#nav.top-bar.dashboard .nav-search{ width:30%;}
+	footer#footer .top .partners{ display:none;}
+	footer#footer .press div img{ width:115px;}
+	footer#footer .press div.sr img { width:125px;}
+	footer#footer .top .numbers{ margin-right:0;}
+	footer#footer .press div{ margin-right:$pad; padding-right:$pad;}
 
 }
 

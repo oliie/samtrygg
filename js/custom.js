@@ -39,9 +39,9 @@ $( document ).ready(function() {
     
 
      // Search Results for all pages, excluding the landing
-    var searchBar = $('input#search , input#main-search');
-    var searchResults = $('input#search + .results , input#main-search + .results');
-    var searchResultsLink = $('input#search + .results a, input#main-search + .results a');
+    var searchBar = $('input#search , input#main-search , input#sm-search');
+    var searchResults = $('input#search + .results , input#main-search + .results , input#sm-search + .results');
+    var searchResultsLink = $('input#search + .results a, input#main-search + .results a , input#sm-search + .results a');
 
     $(searchBar).on("focus", function(){
        $(this).next('.results').show();

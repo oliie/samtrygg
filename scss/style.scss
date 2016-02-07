@@ -550,6 +550,10 @@ Help Pages
 		h1{ text-align: center; color: #fff; text-shadow: $text-shadow; font-size:62px; }
 		h2{ text-align: center; color: #fff; text-shadow: $text-shadow; font-size:42px;}
 	}
+	header.hero .searchbar{ margin-top:2.5rem; position:relative;
+		input{ height:60px;}
+	}
+	.searchbar.row{ max-width:62.85rem;}
 	header + div{ background-color: #fff;
 	.accordion .accordion-navigation > a, .accordion dd > a{ padding: 1.2rem 1.2rem 1.2rem 1rem;}
 	.accordion .accordion-navigation > .content, .accordion dd > .content{ padding: 1rem;}
@@ -581,6 +585,9 @@ Help Pages
 		}
 	}
 	.map{ height: 480px; width: 100%;}
+}
+#support.destination{
+	header h1{ font-weight:900;}
 }
 
 /*  
@@ -841,6 +848,11 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
 			.map{ background-color:$vapor; height:200px; margin-bottom:$mod-pad;}
 			.col.border-r{ padding-left:0;}
 			.col.border-r + .col{ padding-right:0;}
+			.results { position:absolute; width:95.5%; margin-top:-16px; border-bottom:1px solid $fog; border-left:1px solid $fog; border-right:1px solid $fog;
+				ul li{ padding-left:$pad; font-size:14px;}
+				ul a{ height:50px;}
+				ul a:hover{ text-decoration:none;}
+			}
 		}
 		.location-item{ margin-bottom: 1rem; height: 2.5rem; font-size: 14px; padding-left: 1em; border:1px solid $fog; @include border-radius(3px);
 			span{ display:table-cell; height:inherit; vertical-align:middle;}
