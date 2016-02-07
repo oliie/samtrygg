@@ -8,10 +8,19 @@
 	</div>
 	<section id="signup" class="row">
 		<h3>Skapa ett konto</h3>
-		<a href="#" class="button log-facebook">Skapa konto via Facebook</a><span class="facebook"></span>
-		<a href="landing.html" class="button log-google">Skapa konto via Google</a><span class="google"></span>
-		<div></span><span class="center-form">eller</span><span class="breakline"></div>
+		<hr>
 		<form data-abide method="link" action="landing.html">
+			<h5>är du en:</h5>
+			<div class="left">
+			<input type="radio" name="radio" value="value" id="renter" class="custom-toggle"><label for="renter"><span class="button-outline">Bostadssökande</span></label>
+			</div>
+			<div class="right">
+			<input type="radio" name="radio" value="value" id="landlord" class="custom-toggle"><label for="landlord"><span class="button-outline">Uthyrare</span></label>
+			</div>
+			<hr>
+			<a href="#" class="button log-facebook">Skapa konto via Facebook</a><span class="facebook"></span>
+			<a href="landing.html" class="button log-google">Skapa konto via Google</a><span class="google"></span>
+			<div></span><span class="center-form">eller</span><span class="breakline"></div>
 			<input type="text" name="first-name" placeholder="Förnamn" required>
 			<input type="text" name="last-name" placeholder="Efternamn" required>
 			<input type="text" name="mobile" placeholder="Mobiltelefonnummer">
