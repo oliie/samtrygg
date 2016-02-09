@@ -133,12 +133,6 @@ $( document ).ready(function() {
         }
       });
 
-      // Tristate checkboxes
-      $('.amenities input').tristate();
-      $('.amenities li a').click(function(e){
-          $(this).prev().tristate('state', null);
-          e.preventDefault();
-      });
 
       // Rental time blocks  
       var checkboxes = $("input[type='checkbox']");
@@ -401,8 +395,14 @@ $( document ).ready(function() {
       });
 
       // List & Grid View
-      $('#list-view').hide();
-      $('button.grid-view').addClass('selected');
+      if (desktopSize){ 
+        $('#list-view').hide();
+        $('button.grid-view').addClass('selected');
+      }
+      if (mobileSize){ 
+        $('#grid-view').hide();
+        $('button.list-view').addClass('selected');
+      }
 
       $('.controls button').on('click',function() {
           if ($(this).hasClass('grid-view')) {
@@ -520,6 +520,13 @@ $( document ).ready(function() {
         //       $('.side-nav span.clone').prependTo('nav#nav ul.right');
         //       console.log('that');
         //     }
+        // });
+
+        // Tristate checkboxes
+        // $('.amenities input').tristate();
+        // $('.amenities li a').click(function(e){
+        //     $(this).prev().tristate('state', null);
+        //     e.preventDefault();
         // });
 	
 });

@@ -884,14 +884,20 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
 			.row{ margin-bottom:$mod-pad;}
 			.rental-type div{ float:left; margin-right:$mod-pad;}
 			.amenities{
+				.titles li{ font-size:14px; display:inline; color:$soft-grey;}
+				.titles li + li { margin-left:1.5rem;}
+				.titles li em{ border-bottom: 1px solid #000; padding-bottom: 2px; color:$metal;}
+				li.heading em{ border-bottom: 1px solid #000; padding-bottom: 3px; padding-right:4px;}
+				li.heading span{ margin-left:1.5rem;}
 				ul{ margin-left:0;}
-				li a{ color:$soft-grey; text-decoration:none/* line-through */; margin-left:1.8rem;}
-				li a:hover, li a:hover span{ color:$blue-clr; text-decoration:none;}
+				li .icon{ width:23px; height:23px;}
+				li span{ color:$soft-grey; text-decoration:none;}
 				span.icon{ font-size:23px; margin-right:0.25rem; display:inline-block; color:$fog;}
-				input[type="checkbox"]{ margin:0; display:inline-block; position:absolute; margin-top:8px;}
-				input[type="checkbox"]:checked + a span, input[type="checkbox"]:checked + a{ color:$metal; text-decoration:none;}
+				input[type="checkbox"]{ margin:0; display:inline-block; position:relative; margin-right:1.5rem;}
+				input[type="checkbox"] + input[type="checkbox"]{ margin-right:1.75rem;}
+				input[placeholder="available"]:checked ~ span span, input[placeholder="available"]:checked ~ span{ color:$metal; text-decoration:none;}
 				input[type="checkbox"]:checked ~ a{ font-weight:400;}
-				input[indeterminate="indeterminate"] + a {color:$blue-clr;}
+				input[type="checkbox"]:checked + span {color:$blue-clr;}
 				.rental-tips{ border:1px solid $fog; @include border-radius(3px);
 					p{ padding:$mod-pad; font-size:14px; text-align:center; margin-bottom:$mod-pad;}
 					div.row{ width:100%; margin-bottom:0; margin-top:$mod-pad; padding-top:$mod-pad;}

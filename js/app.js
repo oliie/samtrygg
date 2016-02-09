@@ -8,7 +8,6 @@
 // @codekit-prepend "../bower_components/waypoints/lib/jquery.waypoints.min.js";
 // @codekit-prepend "../bower_components/counter-up/jquery.counterup.min.js";
 // @codekit-prepend "../bower_components/WOW/dist/wow.min.js";
-// @codekit-prepend "../bower_components/tristate/jquery.tristate.js";
 // @codekit-prepend "../bower_components/jquery-fadethis/dist/jquery.fadethis.min.js";
 // @codekit-prepend "../bower_components/Readmore.js/readmore.min.js";
 // @codekit-prepend "../bower_components/fastclick/lib/fastclick.js";

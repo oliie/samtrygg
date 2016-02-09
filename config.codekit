@@ -20545,7 +20545,7 @@
 		},
 	"\/bower_components\/tristate\/jquery.tristate.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/tristate\/jquery.tristate.js",
 		"outputAbbreviatedPath": "\/bower_components\/tristate\/min\/jquery.tristate-min.js",
@@ -24233,8 +24233,8 @@
 		},
 	"\/error.kit": {
 		"fileType": 2048,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
+		"ignore": 0,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/error.kit",
 		"outputAbbreviatedPath": "\/error.html",
 		"outputPathIsOutsideProject": 0,
@@ -25169,8 +25169,8 @@
 		},
 	"\/property.kit": {
 		"fileType": 2048,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
+		"ignore": 0,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/property.kit",
 		"outputAbbreviatedPath": "\/property.html",
 		"outputPathIsOutsideProject": 0,
