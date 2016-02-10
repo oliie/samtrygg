@@ -1,0 +1,55 @@
+<!-- @include header -->
+<div id="dashboard" class="booking">
+
+	<div id="panel" class="dashboard-wrapper row">
+
+		<div class="module booking">
+			<div class="mod-header">
+				<h1>Välj tid för visning</h1>
+			</div>
+			<div class="mod-content">
+				<form action="submit">
+					<p>Du har bokat in tiden Söndag <span class="booked-time">2016-02-28 13:40</span> för visning. Tänk på att visningen är enbart för dig, så om du inte kommer måste du avboka din visning nedan. Vill du ändra din tid går det också bra. Vi har skickat uthyrarens kontaktuppgifter till dig på e-post och SMS. Vi ber dig kontakta uthyraren för detaljer såsom eventuell portkod och liknande. När visningen är klar vill vi att du tar kontakt med oss för att berätta hur det gick, om du vill hyra bostaden eller inte.</p>
+					<div class="row object">
+						<div class="col medium-2 pic"><img src="img/prop_2.jpg" alt=""></div>
+						<div class="col medium-2 town">Stockholm</div>
+						<div class="col medium-3 address">Vegagatan 12, 172 34 Sundbyberg</div>
+						<div class="col medium-1 area">120m&sup2;</div>
+						<div class="col medium-2 rooms">3&nbsp;rum</div>
+						<div class="col medium-2 price">14 000:-</div>
+					</div>
+					<hr>
+					<div class="row"><input type="submit" class="submit button bottom" value="Avboka"></div>
+				</form>
+				<hr>
+				<form action="submit" class="time-slot">
+					<h6>Eller välj en annan tid:</h6>
+					<div class="row">
+						<div class="col medium-6"><span class="day">Lördag</span><span class="date">2016-01-23</span><span class="time">11:00 - 11:20</span></div>
+						<div class="col medium-6">
+							<input type="radio" class="custom-toggle" name="timeVal" id="time1" value=""  />
+							<label class="button-outline" for="time1">Välj</label>
+						</div>					
+					</div> 
+					<br>
+					<h6>Fyll i ditt personnumer:</h6>
+					<input type="text" placeholder="ÅÅÅÅMMDDNNNN">
+					<p>Jag saknar svenskt personummer</p>
+					<div class="row"><input type="submit" class="submit button bottom" value="Boka"></div>
+				</form>
+			</div><!-- End mod-content -->
+		</div><!-- End module -->
+		<script class="hidden">
+		      $('.time-slot div input[type="radio"]').change(function(){
+		          if($(this).is(":checked")) {
+		              $(this).parents('div.row').addClass('selected');
+		              $(this).parents('div.row').siblings().removeClass('selected');
+		          } else {
+		              $(this).parents('div.row').removeClass('selected');
+		          }
+		      });
+
+		</script>
+	</div>
+</div>
+<!-- @include base -->

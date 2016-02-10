@@ -1,0 +1,1244 @@
+<!-- @include header -->
+<body id="dashboard">
+<!-- @include nav_dashboard -->
+<div id="panel" class="dashboard-wrapper row">
+		
+	<!-- @include nav_dash_sidebar -->
+		
+	<div class="dash-content col medium-10 small-12">
+		<form class="main-form" method="post" enctype="multipart/form-data">
+
+			<div class="module">
+				<div class="mod-header">
+					<h1>Uppgifter om hyresgäst</h1>
+				</div>
+				<div class="mod-content">
+					<div class="agreement-form">
+							<p><label for="hgType">Bostaden hyrs av</label></p>
+							<select name="hgType" id="hgType" onchange="updateHgType()">
+								<option value="0" selected="selected">Privatperson</option>
+								<option value="1">Företag</option>
+							</select>
+
+							<div class="company-info dont-validate" >
+								<h6>Företagsinfo</h6>
+									<div class="group">
+							<label for="Ange namn på företaget">Namn på företag:</label>
+							<div class="form-error" id="errCompanyName">
+								<span class="form-error-times">×</span><span class="form-error-text">Ange namn på företaget</span>
+							</div><input type="text" maxlength="50" id="CompanyName" class="pen" name="CompanyName" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+					
+
+									<div class="group">
+							<label for="Ange fakturamottagare">Kontaktperson/fakturamottagare:</label>
+							<div class="form-error" id="errInvoiceReceiver">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange fakturamottagare</span>
+							</div><input type="text" maxlength="50" id="InvoiceReceiver" class="pen" name="InvoiceReceiver" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+									<div class="group">
+							<label for="Ange adress">Adress:</label>
+							<div class="form-error" id="errCompanyAddress">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange adress</span>
+							</div><input type="text" maxlength="255" id="CompanyAddress" class="pen" name="CompanyAddress" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+									<div class="group">
+							<label for="Ange postnummer">Postnummer:</label>
+							<div class="form-error" id="errCompanyPostNr">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange postnummer</span>
+							</div><input type="text" maxlength="15" id="CompanyPostNr" class="pen" name="CompanyPostNr" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+									<div class="group">
+							<label for="Ange postort">Postort:</label>
+							<div class="form-error" id="errCompanyPostOrt">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange postort</span>
+							</div><input type="text" maxlength="100" id="CompanyPostOrt" class="pen" name="CompanyPostOrt" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+									<div class="group">
+							<label for="Ange organisationsnummer (10 siffror utan bindestreck)">Organisationsnummer (10 siffror):</label>
+							<div class="form-error" id="errOrgNr">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange organisationsnummer (10 siffror utan bindestreck)</span>
+							</div><input type="text" maxlength="20" id="OrgNr" class="pen" name="OrgNr" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+									<div class="group">
+							<label for="Ange e-post för fakturor">E-post för fakturor:</label>
+							<div class="form-error" id="errInvoiceEmail">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange e-post för fakturor</span>
+							</div><input type="text" maxlength="255" id="InvoiceEmail" class="pen" name="InvoiceEmail" value="" data-validator="emailValidate0(&#39;InvoiceEmail2&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+									<div class="group">
+							<label for="E-postadresserna måste stämma överens">Bekräfta e-post för fakturor:</label>
+							<div class="form-error" id="errInvoiceEmail2">
+								<span class="form-error-times">×</span> <span class="form-error-text">E-postadresserna måste stämma överens</span>
+							</div><input type="text" maxlength="255" id="InvoiceEmail2" class="pen" name="InvoiceEmail2" value="" data-validator="emailValidate(&#39;InvoiceEmail&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+								<h6>Firmatecknare för företaget</h6>
+									<div class="group">
+							<label for="Ange förnamn">Förnamn:</label>
+							<div class="form-error" id="errSignatoryFirstName">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange förnamn</span>
+							</div><input type="text" id="SignatoryFirstName" class="pen" name="SignatoryFirstName" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+									<div class="group">
+							<label for="Ange efternamn">Efternamn:</label>
+							<div class="form-error" id="errSignatoryLastName">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange efternamn</span>
+							</div><input type="text" id="SignatoryLastName" class="pen" name="SignatoryLastName" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+									<div class="group">
+							<label for="Ange personnummer">Personnr om svensk medborgare (ÅÅÅÅMMDDNNNN):</label>
+							<div class="form-error" id="errSignatoryCivicNo">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange personnummer</span>
+							</div><input type="text" maxlength="12" id="SignatoryCivicNo" class="pen" name="SignatoryCivicNo" value="" data-validator="pnrValidate" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+									<div class="group">
+							<label for="Ange e-post">E-post:</label>
+							<div class="form-error" id="errSignatoryEmail">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange e-post</span>
+							</div><input type="text" maxlength="255" id="SignatoryEmail" class="pen" name="SignatoryEmail" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+							</div>
+
+							<p><label for="numHg"><b>Antal hyresgäster:</b></label></p>
+							<select name="numHg" id="numHg" onchange="resizeHg(); updateAutogiroSelect();">
+									<option>1</option>
+									<option selected="selected">2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+									<option>10</option>
+							</select>
+								<div class="tenant-info" style="">
+									<h6>Uppgifter hyresgäst 1</h6>
+										<div class="group">
+							<label for="Ange förnamn">Förnamn:</label>
+							<div class="form-error" id="errFirstName_1">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange förnamn</span>
+							</div><input type="text" maxlength="50" id="FirstName_1" class="pen" name="FirstName_1" value="Gantulga " data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Ange efternamn">Efternamn:</label>
+							<div class="form-error" id="errLastName_1">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange efternamn</span>
+							</div><input type="text" maxlength="50" id="LastName_1" class="pen" name="LastName_1" value="Tungalag" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Felaktigt format för personnummer">Personnr om svensk medborgare (ÅÅÅÅMMDDNNNN):</label>
+							<div class="form-error" id="errCivicNo_1">
+								<span class="form-error-times">×</span> <span class="form-error-text">Felaktigt format för personnummer</span>
+							</div><input type="text" maxlength="20" id="CivicNo_1" class="pen" name="CivicNo_1" value="199206112238" data-validator="pnrValidate" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Ange e-post">E-post:</label>
+							<div class="form-error" id="errEmail_1">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange e-post</span>
+							</div><input type="text" maxlength="255" id="Email_1" class="pen" name="Email_1" value="hg_ganzaa@yahoo.com" data-validator="emailValidate0(&#39;Email2_1&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="E-postadresserna måste stämma överens">Bekräfta e-post:</label>
+							<div class="form-error" id="errEmail2_1">
+								<span class="form-error-times">×</span> <span class="form-error-text">E-postadresserna måste stämma överens</span>
+							</div><input type="text" maxlength="255" id="Email2_1" class="pen" name="Email2_1" value="hg_ganzaa@yahoo.com" data-validator="emailValidate(&#39;Email_1&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+								</div>
+								<div class="tenant-info" style="">
+									<h6>Uppgifter hyresgäst 2</h6>
+										<div class="group">
+							<label for="Ange förnamn">Förnamn:</label>
+							<div class="form-error" id="errFirstName_2">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange förnamn</span>
+							</div><input type="text" maxlength="50" id="FirstName_2" class="pen" name="FirstName_2" value="Saruulsaikhan " data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Ange efternamn">Efternamn:</label>
+							<div class="form-error" id="errLastName_2">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange efternamn</span>
+							</div><input type="text" maxlength="50" id="LastName_2" class="pen" name="LastName_2" value="Tulga " data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Felaktigt format för personnummer">Personnr om svensk medborgare (ÅÅÅÅMMDDNNNN):</label>
+							<div class="form-error" id="errCivicNo_2">
+								<span class="form-error-times">×</span> <span class="form-error-text">Felaktigt format för personnummer</span>
+							</div><input type="text" maxlength="20" id="CivicNo_2" class="pen" name="CivicNo_2" value="199406010463" data-validator="pnrValidate" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Ange e-post">E-post:</label>
+							<div class="form-error" id="errEmail_2">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange e-post</span>
+							</div><input type="text" maxlength="255" id="Email_2" class="pen" name="Email_2" value="whitesharon31@yahoo.com" data-validator="emailValidate0(&#39;Email2_2&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="E-postadresserna måste stämma överens">Bekräfta e-post:</label>
+							<div class="form-error" id="errEmail2_2">
+								<span class="form-error-times">×</span> <span class="form-error-text">E-postadresserna måste stämma överens</span>
+							</div><input type="text" maxlength="255" id="Email2_2" class="pen" name="Email2_2" value="whitesharon31@yahoo.com" data-validator="emailValidate(&#39;Email_2&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+								</div>
+								<div class="tenant-info dont-validate" style="display:none">
+									<h6>Uppgifter hyresgäst 3</h6>
+										<div class="group">
+							<label for="Ange förnamn">Förnamn:</label>
+							<div class="form-error" id="errFirstName_3">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange förnamn</span>
+							</div><input type="text" maxlength="50" id="FirstName_3" class="pen" name="FirstName_3" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Ange efternamn">Efternamn:</label>
+							<div class="form-error" id="errLastName_3">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange efternamn</span>
+							</div><input type="text" maxlength="50" id="LastName_3" class="pen" name="LastName_3" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Felaktigt format för personnummer">Personnr om svensk medborgare (ÅÅÅÅMMDDNNNN):</label>
+							<div class="form-error" id="errCivicNo_3">
+								<span class="form-error-times">×</span> <span class="form-error-text">Felaktigt format för personnummer</span>
+							</div><input type="text" maxlength="20" id="CivicNo_3" class="pen" name="CivicNo_3" value="" data-validator="pnrValidate" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Ange e-post">E-post:</label>
+							<div class="form-error" id="errEmail_3">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange e-post</span>
+							</div><input type="text" maxlength="255" id="Email_3" class="pen" name="Email_3" value="" data-validator="emailValidate0(&#39;Email2_3&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="E-postadresserna måste stämma överens">Bekräfta e-post:</label>
+							<div class="form-error" id="errEmail2_3">
+								<span class="form-error-times">×</span> <span class="form-error-text">E-postadresserna måste stämma överens</span>
+							</div><input type="text" maxlength="255" id="Email2_3" class="pen" name="Email2_3" value="" data-validator="emailValidate(&#39;Email_3&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+								</div>
+								<div class="tenant-info dont-validate" style="display:none">
+									<h6>Uppgifter hyresgäst 4</h6>
+										<div class="group">
+							<label for="Ange förnamn">Förnamn:</label>
+							<div class="form-error" id="errFirstName_4">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange förnamn</span>
+							</div><input type="text" maxlength="50" id="FirstName_4" class="pen" name="FirstName_4" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Ange efternamn">Efternamn:</label>
+							<div class="form-error" id="errLastName_4">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange efternamn</span>
+							</div><input type="text" maxlength="50" id="LastName_4" class="pen" name="LastName_4" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Felaktigt format för personnummer">Personnr om svensk medborgare (ÅÅÅÅMMDDNNNN):</label>
+							<div class="form-error" id="errCivicNo_4">
+								<span class="form-error-times">×</span> <span class="form-error-text">Felaktigt format för personnummer</span>
+							</div><input type="text" maxlength="20" id="CivicNo_4" class="pen" name="CivicNo_4" value="" data-validator="pnrValidate" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Ange e-post">E-post:</label>
+							<div class="form-error" id="errEmail_4">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange e-post</span>
+							</div><input type="text" maxlength="255" id="Email_4" class="pen" name="Email_4" value="" data-validator="emailValidate0(&#39;Email2_4&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="E-postadresserna måste stämma överens">Bekräfta e-post:</label>
+							<div class="form-error" id="errEmail2_4">
+								<span class="form-error-times">×</span> <span class="form-error-text">E-postadresserna måste stämma överens</span>
+							</div><input type="text" maxlength="255" id="Email2_4" class="pen" name="Email2_4" value="" data-validator="emailValidate(&#39;Email_4&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+								</div>
+								<div class="tenant-info dont-validate" style="display:none">
+									<h6>Uppgifter hyresgäst 5</h6>
+										<div class="group">
+							<label for="Ange förnamn">Förnamn:</label>
+							<div class="form-error" id="errFirstName_5">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange förnamn</span>
+							</div><input type="text" maxlength="50" id="FirstName_5" class="pen" name="FirstName_5" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Ange efternamn">Efternamn:</label>
+							<div class="form-error" id="errLastName_5">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange efternamn</span>
+							</div><input type="text" maxlength="50" id="LastName_5" class="pen" name="LastName_5" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Felaktigt format för personnummer">Personnr om svensk medborgare (ÅÅÅÅMMDDNNNN):</label>
+							<div class="form-error" id="errCivicNo_5">
+								<span class="form-error-times">×</span> <span class="form-error-text">Felaktigt format för personnummer</span>
+							</div><input type="text" maxlength="20" id="CivicNo_5" class="pen" name="CivicNo_5" value="" data-validator="pnrValidate" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Ange e-post">E-post:</label>
+							<div class="form-error" id="errEmail_5">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange e-post</span>
+							</div><input type="text" maxlength="255" id="Email_5" class="pen" name="Email_5" value="" data-validator="emailValidate0(&#39;Email2_5&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="E-postadresserna måste stämma överens">Bekräfta e-post:</label>
+							<div class="form-error" id="errEmail2_5">
+								<span class="form-error-times">×</span> <span class="form-error-text">E-postadresserna måste stämma överens</span>
+							</div><input type="text" maxlength="255" id="Email2_5" class="pen" name="Email2_5" value="" data-validator="emailValidate(&#39;Email_5&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+								</div>
+								<div class="tenant-info dont-validate" style="display:none">
+									<h6>Uppgifter hyresgäst 6</h6>
+										<div class="group">
+							<label for="Ange förnamn">Förnamn:</label>
+							<div class="form-error" id="errFirstName_6">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange förnamn</span>
+							</div><input type="text" maxlength="50" id="FirstName_6" class="pen" name="FirstName_6" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Ange efternamn">Efternamn:</label>
+							<div class="form-error" id="errLastName_6">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange efternamn</span>
+							</div><input type="text" maxlength="50" id="LastName_6" class="pen" name="LastName_6" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Felaktigt format för personnummer">Personnr om svensk medborgare (ÅÅÅÅMMDDNNNN):</label>
+							<div class="form-error" id="errCivicNo_6">
+								<span class="form-error-times">×</span> <span class="form-error-text">Felaktigt format för personnummer</span>
+							</div><input type="text" maxlength="20" id="CivicNo_6" class="pen" name="CivicNo_6" value="" data-validator="pnrValidate" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Ange e-post">E-post:</label>
+							<div class="form-error" id="errEmail_6">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange e-post</span>
+							</div><input type="text" maxlength="255" id="Email_6" class="pen" name="Email_6" value="" data-validator="emailValidate0(&#39;Email2_6&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="E-postadresserna måste stämma överens">Bekräfta e-post:</label>
+							<div class="form-error" id="errEmail2_6">
+								<span class="form-error-times">×</span> <span class="form-error-text">E-postadresserna måste stämma överens</span>
+							</div><input type="text" maxlength="255" id="Email2_6" class="pen" name="Email2_6" value="" data-validator="emailValidate(&#39;Email_6&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+								</div>
+								<div class="tenant-info dont-validate" style="display:none">
+									<h6>Uppgifter hyresgäst 7</h6>
+										<div class="group">
+							<label for="Ange förnamn">Förnamn:</label>
+							<div class="form-error" id="errFirstName_7">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange förnamn</span>
+							</div><input type="text" maxlength="50" id="FirstName_7" class="pen" name="FirstName_7" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Ange efternamn">Efternamn:</label>
+							<div class="form-error" id="errLastName_7">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange efternamn</span>
+							</div><input type="text" maxlength="50" id="LastName_7" class="pen" name="LastName_7" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Felaktigt format för personnummer">Personnr om svensk medborgare (ÅÅÅÅMMDDNNNN):</label>
+							<div class="form-error" id="errCivicNo_7">
+								<span class="form-error-times">×</span> <span class="form-error-text">Felaktigt format för personnummer</span>
+							</div><input type="text" maxlength="20" id="CivicNo_7" class="pen" name="CivicNo_7" value="" data-validator="pnrValidate" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Ange e-post">E-post:</label>
+							<div class="form-error" id="errEmail_7">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange e-post</span>
+							</div><input type="text" maxlength="255" id="Email_7" class="pen" name="Email_7" value="" data-validator="emailValidate0(&#39;Email2_7&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="E-postadresserna måste stämma överens">Bekräfta e-post:</label>
+							<div class="form-error" id="errEmail2_7">
+								<span class="form-error-times">×</span> <span class="form-error-text">E-postadresserna måste stämma överens</span>
+							</div><input type="text" maxlength="255" id="Email2_7" class="pen" name="Email2_7" value="" data-validator="emailValidate(&#39;Email_7&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+								</div>
+								<div class="tenant-info dont-validate" style="display:none">
+									<h6>Uppgifter hyresgäst 8</h6>
+										<div class="group">
+							<label for="Ange förnamn">Förnamn:</label>
+							<div class="form-error" id="errFirstName_8">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange förnamn</span>
+							</div><input type="text" maxlength="50" id="FirstName_8" class="pen" name="FirstName_8" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Ange efternamn">Efternamn:</label>
+							<div class="form-error" id="errLastName_8">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange efternamn</span>
+							</div><input type="text" maxlength="50" id="LastName_8" class="pen" name="LastName_8" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Felaktigt format för personnummer">Personnr om svensk medborgare (ÅÅÅÅMMDDNNNN):</label>
+							<div class="form-error" id="errCivicNo_8">
+								<span class="form-error-times">×</span> <span class="form-error-text">Felaktigt format för personnummer</span>
+							</div><input type="text" maxlength="20" id="CivicNo_8" class="pen" name="CivicNo_8" value="" data-validator="pnrValidate" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Ange e-post">E-post:</label>
+							<div class="form-error" id="errEmail_8">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange e-post</span>
+							</div><input type="text" maxlength="255" id="Email_8" class="pen" name="Email_8" value="" data-validator="emailValidate0(&#39;Email2_8&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="E-postadresserna måste stämma överens">Bekräfta e-post:</label>
+							<div class="form-error" id="errEmail2_8">
+								<span class="form-error-times">×</span> <span class="form-error-text">E-postadresserna måste stämma överens</span>
+							</div><input type="text" maxlength="255" id="Email2_8" class="pen" name="Email2_8" value="" data-validator="emailValidate(&#39;Email_8&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+								</div>
+								<div class="tenant-info dont-validate" style="display:none">
+									<h6>Uppgifter hyresgäst 9</h6>
+										<div class="group">
+							<label for="Ange förnamn">Förnamn:</label>
+							<div class="form-error" id="errFirstName_9">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange förnamn</span>
+							</div><input type="text" maxlength="50" id="FirstName_9" class="pen" name="FirstName_9" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Ange efternamn">Efternamn:</label>
+							<div class="form-error" id="errLastName_9">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange efternamn</span>
+							</div><input type="text" maxlength="50" id="LastName_9" class="pen" name="LastName_9" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Felaktigt format för personnummer">Personnr om svensk medborgare (ÅÅÅÅMMDDNNNN):</label>
+							<div class="form-error" id="errCivicNo_9">
+								<span class="form-error-times">×</span> <span class="form-error-text">Felaktigt format för personnummer</span>
+							</div><input type="text" maxlength="20" id="CivicNo_9" class="pen" name="CivicNo_9" value="" data-validator="pnrValidate" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Ange e-post">E-post:</label>
+							<div class="form-error" id="errEmail_9">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange e-post</span>
+							</div><input type="text" maxlength="255" id="Email_9" class="pen" name="Email_9" value="" data-validator="emailValidate0(&#39;Email2_9&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="E-postadresserna måste stämma överens">Bekräfta e-post:</label>
+							<div class="form-error" id="errEmail2_9">
+								<span class="form-error-times">×</span> <span class="form-error-text">E-postadresserna måste stämma överens</span>
+							</div><input type="text" maxlength="255" id="Email2_9" class="pen" name="Email2_9" value="" data-validator="emailValidate(&#39;Email_9&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+								</div>
+								<div class="tenant-info dont-validate" style="display:none">
+									<h6>Uppgifter hyresgäst 10</h6>
+										<div class="group">
+							<label for="Ange förnamn">Förnamn:</label>
+							<div class="form-error" id="errFirstName_10">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange förnamn</span>
+							</div><input type="text" maxlength="50" id="FirstName_10" class="pen" name="FirstName_10" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Ange efternamn">Efternamn:</label>
+							<div class="form-error" id="errLastName_10">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange efternamn</span>
+							</div><input type="text" maxlength="50" id="LastName_10" class="pen" name="LastName_10" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Felaktigt format för personnummer">Personnr om svensk medborgare (ÅÅÅÅMMDDNNNN):</label>
+							<div class="form-error" id="errCivicNo_10">
+								<span class="form-error-times">×</span> <span class="form-error-text">Felaktigt format för personnummer</span>
+							</div><input type="text" maxlength="20" id="CivicNo_10" class="pen" name="CivicNo_10" value="" data-validator="pnrValidate" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="Ange e-post">E-post:</label>
+							<div class="form-error" id="errEmail_10">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange e-post</span>
+							</div><input type="text" maxlength="255" id="Email_10" class="pen" name="Email_10" value="" data-validator="emailValidate0(&#39;Email2_10&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+										<div class="group">
+							<label for="E-postadresserna måste stämma överens">Bekräfta e-post:</label>
+							<div class="form-error" id="errEmail2_10">
+								<span class="form-error-times">×</span> <span class="form-error-text">E-postadresserna måste stämma överens</span>
+							</div><input type="text" maxlength="255" id="Email2_10" class="pen" name="Email2_10" value="" data-validator="emailValidate(&#39;Email_10&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+								</div>
+							<h6>Autogiromedgivande</h6>
+								<div class="group">
+							<label for="Ange bank">Namn på bank:</label>
+							<div class="form-error" id="errAutoGiroBank">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange bank</span>
+							</div><input type="text" id="AutoGiroBank" class="pen" name="AutoGiroBank" value="Swedbank" data-validator="emptyValidate" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+								<div class="group">
+							<label for="Ange clearingnummer">Clearingnummer (4 eller 5 siffror):</label>
+							<div class="form-error" id="errAutoGiroClearingNo">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange clearingnummer</span>
+							</div><input type="text" id="AutoGiroClearingNo" class="pen" name="AutoGiroClearingNo" value="8327-9" data-validator="emptyValidate" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+								<div class="group">
+							<label for="Ange kontonummer">Kontonummer (upprepa ej clearingnr):</label>
+							<div class="form-error" id="errAutoGiroAccountNo">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange kontonummer</span>
+							</div><input type="text" id="AutoGiroAccountNo" class="pen" name="AutoGiroAccountNo" value="913 508 445-8" data-validator="emptyValidate" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+							<label for="AutoGiroPerson">Kontoinnehavare:</label>
+							<select name="AutoGiroPerson" id="AutoGiroPerson">
+								<option></option>
+									<option value="1" id="autogiro_1" selected="selected">Gantulga  Tungalag</option>
+									<option value="2" id="autogiro_2">Saruulsaikhan  Tulga </option>
+									<option value="3" id="autogiro_3" style="display: none;">Hyresgäst nr 3</option>
+									<option value="4" id="autogiro_4" style="display: none;">Hyresgäst nr 4</option>
+									<option value="5" id="autogiro_5" style="display: none;">Hyresgäst nr 5</option>
+									<option value="6" id="autogiro_6" style="display: none;">Hyresgäst nr 6</option>
+									<option value="7" id="autogiro_7" style="display: none;">Hyresgäst nr 7</option>
+									<option value="8" id="autogiro_8" style="display: none;">Hyresgäst nr 8</option>
+									<option value="9" id="autogiro_9" style="display: none;">Hyresgäst nr 9</option>
+									<option value="10" id="autogiro_10" style="display: none;">Hyresgäst nr 10</option>
+							</select>
+							<a href="https://samtrygg.se/Documents/autogirovillkor.pdf" target="_blank">Autogirovillkor</a>
+						</div>
+					</div>
+				</div>
+			</div> <!-- End module -->
+
+			<script type="text/javascript" src="./Uppgifter för kontrakt_files/complete-agreement.js"></script>
+			<script type="text/javascript">
+				$(resizeHg);
+				$(updateAutogiroSelect);
+				$(updateHgType);
+				$(updateAutoGiroSelect);
+			</script>
+
+
+				<div class="module">
+					<div class="mod-header">
+						<h1>Uppgifter om uthyrare</h1>
+					</div>
+					<div class="mod-content">
+						<div class="agreement-form">						
+							<label for="numHv"><b>Antal uthyrare:</b></label>
+							<select name="numHv" id="numHv" onchange="resizeHv();">
+									<option selected="selected">1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+							</select>
+							<div class="landlord-info" style="">
+							<h6>Uppgifter uthyrare 1</h6>
+							<div class="group">
+								<label for="Ange förnamn">Förnamn:</label>
+								<div class="form-ok" id="okLandlordFirstName_1">
+									<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+								</div>
+								<div class="form-error" id="errLandlordFirstName_1">
+									<span class="form-error-times">×</span> <span class="form-error-text">Ange förnamn</span>
+								</div>
+								<input type="text" id="LandlordFirstName_1" class="pen" name="LandlordFirstName_1" value="Monia " data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Ange efternamn">Efternamn:</label>
+							<div class="form-ok" id="okLandlordLastName_1">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordLastName_1">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange efternamn</span>
+							</div>
+							<input type="text" id="LandlordLastName_1" class="pen" name="LandlordLastName_1" value="Nasri" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Felaktigt format för personnummer">Personnr om svensk medborgare (ÅÅÅÅMMDDNNNN):</label>
+							<div class="form-ok" id="okLandlordCivicNo_1">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordCivicNo_1">
+								<span class="form-error-times">×</span> <span class="form-error-text">Felaktigt format för personnummer</span>
+							</div>
+							<input type="text" id="LandlordCivicNo_1" class="pen" name="LandlordCivicNo_1" value="197901250303" data-validator="pnrValidate" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Ange adress">Adress:</label>
+							<div class="form-ok" id="okLandlordAddress_1">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordAddress_1">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange adress</span>
+							</div>
+							<input type="text" id="LandlordAddress_1" class="pen" name="LandlordAddress_1" value="Valla torg 89" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Ange postnummer">Postnummer:</label>
+							<div class="form-ok" id="okLandlordPostNr_1">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordPostNr_1">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange postnummer</span>
+							</div>
+							<input type="text" id="LandlordPostNr_1" class="pen" name="LandlordPostNr_1" value="12056" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Ange postort">Postort:</label>
+							<div class="form-ok" id="okLandlordPostOrt_1">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordPostOrt_1">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange postort</span>
+							</div>
+							<input type="text" id="LandlordPostOrt_1" class="pen" name="LandlordPostOrt_1" value="Årsta" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Ange e-post">E-post:</label>
+							<div class="form-ok" id="okLandlordEmail_1">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordEmail_1">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange e-post</span>
+							</div>
+							<input type="text" id="LandlordEmail_1" class="pen" name="LandlordEmail_1" value="order@salongskinsational.se" data-validator="emailValidate0(&#39;LandlordEmail2_1&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="E-postadresserna måste stämma överens">Bekräfta e-post:</label>
+							<div class="form-ok" id="okLandlordEmail2_1">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordEmail2_1">
+								<span class="form-error-times">×</span> <span class="form-error-text">E-postadresserna måste stämma överens</span>
+							</div>
+							<input type="text" id="LandlordEmail2_1" class="pen" name="LandlordEmail2_1" value="order@salongskinsational.se" data-validator="emailValidate(&#39;LandlordEmail_1&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							</div>
+							<div class="landlord-info dont-validate" style="display:none">
+								<h6>Uppgifter uthyrare 2</h6>
+							<div class="group">
+							<label for="Ange förnamn">Förnamn:</label>
+							<div class="form-ok" id="okLandlordFirstName_2">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordFirstName_2">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange förnamn</span>
+							</div>
+							<input type="text" id="LandlordFirstName_2" class="pen" name="LandlordFirstName_2" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Ange efternamn">Efternamn:</label>
+							<div class="form-ok" id="okLandlordLastName_2">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordLastName_2">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange efternamn</span>
+							</div>
+							<input type="text" id="LandlordLastName_2" class="pen" name="LandlordLastName_2" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Felaktigt format för personnummer">Personnr om svensk medborgare (ÅÅÅÅMMDDNNNN):</label>
+							<div class="form-ok" id="okLandlordCivicNo_2">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordCivicNo_2">
+								<span class="form-error-times">×</span> <span class="form-error-text">Felaktigt format för personnummer</span>
+							</div>
+							<input type="text" id="LandlordCivicNo_2" class="pen" name="LandlordCivicNo_2" value="" data-validator="pnrValidate" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Ange adress">Adress:</label>
+							<div class="form-ok" id="okLandlordAddress_2">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordAddress_2">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange adress</span>
+							</div>
+							<input type="text" id="LandlordAddress_2" class="pen" name="LandlordAddress_2" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Ange postnummer">Postnummer:</label>
+							<div class="form-ok" id="okLandlordPostNr_2">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordPostNr_2">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange postnummer</span>
+							</div>
+							<input type="text" id="LandlordPostNr_2" class="pen" name="LandlordPostNr_2" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Ange postort">Postort:</label>
+							<div class="form-ok" id="okLandlordPostOrt_2">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordPostOrt_2">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange postort</span>
+							</div>
+							<input type="text" id="LandlordPostOrt_2" class="pen" name="LandlordPostOrt_2" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Ange e-post">E-post:</label>
+							<div class="form-ok" id="okLandlordEmail_2">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordEmail_2">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange e-post</span>
+							</div>
+							<input type="text" id="LandlordEmail_2" class="pen" name="LandlordEmail_2" value="" data-validator="emailValidate0(&#39;LandlordEmail2_2&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="E-postadresserna måste stämma överens">Bekräfta e-post:</label>
+							<div class="form-ok" id="okLandlordEmail2_2">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordEmail2_2">
+								<span class="form-error-times">×</span> <span class="form-error-text">E-postadresserna måste stämma överens</span>
+							</div>
+							<input type="text" id="LandlordEmail2_2" class="pen" name="LandlordEmail2_2" value="" data-validator="emailValidate(&#39;LandlordEmail_2&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							</div>
+							<div class="landlord-info dont-validate" style="display:none">
+							<h6>Uppgifter uthyrare 3</h6>
+							<div class="group">
+							<label for="Ange förnamn">Förnamn:</label>
+							<div class="form-ok" id="okLandlordFirstName_3">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordFirstName_3">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange förnamn</span>
+							</div>
+							<input type="text" id="LandlordFirstName_3" class="pen" name="LandlordFirstName_3" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Ange efternamn">Efternamn:</label>
+							<div class="form-ok" id="okLandlordLastName_3">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordLastName_3">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange efternamn</span>
+							</div>
+							<input type="text" id="LandlordLastName_3" class="pen" name="LandlordLastName_3" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Felaktigt format för personnummer">Personnr om svensk medborgare (ÅÅÅÅMMDDNNNN):</label>
+							<div class="form-ok" id="okLandlordCivicNo_3">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordCivicNo_3">
+								<span class="form-error-times">×</span> <span class="form-error-text">Felaktigt format för personnummer</span>
+							</div>
+							<input type="text" id="LandlordCivicNo_3" class="pen" name="LandlordCivicNo_3" value="" data-validator="pnrValidate" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Ange adress">Adress:</label>
+							<div class="form-ok" id="okLandlordAddress_3">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordAddress_3">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange adress</span>
+							</div>
+							<input type="text" id="LandlordAddress_3" class="pen" name="LandlordAddress_3" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Ange postnummer">Postnummer:</label>
+							<div class="form-ok" id="okLandlordPostNr_3">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordPostNr_3">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange postnummer</span>
+							</div>
+							<input type="text" id="LandlordPostNr_3" class="pen" name="LandlordPostNr_3" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Ange postort">Postort:</label>
+							<div class="form-ok" id="okLandlordPostOrt_3">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordPostOrt_3">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange postort</span>
+							</div>
+							<input type="text" id="LandlordPostOrt_3" class="pen" name="LandlordPostOrt_3" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Ange e-post">E-post:</label>
+							<div class="form-ok" id="okLandlordEmail_3">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordEmail_3">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange e-post</span>
+							</div>
+							<input type="text" id="LandlordEmail_3" class="pen" name="LandlordEmail_3" value="" data-validator="emailValidate0(&#39;LandlordEmail2_3&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="E-postadresserna måste stämma överens">Bekräfta e-post:</label>
+							<div class="form-ok" id="okLandlordEmail2_3">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordEmail2_3">
+								<span class="form-error-times">×</span> <span class="form-error-text">E-postadresserna måste stämma överens</span>
+							</div>
+							<input type="text" id="LandlordEmail2_3" class="pen" name="LandlordEmail2_3" value="" data-validator="emailValidate(&#39;LandlordEmail_3&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							</div>
+							<div class="landlord-info dont-validate" style="display:none">
+								<h6>Uppgifter uthyrare 4</h6>
+							<div class="group">
+							<label for="Ange förnamn">Förnamn:</label>
+							<div class="form-ok" id="okLandlordFirstName_4">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordFirstName_4">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange förnamn</span>
+							</div>
+							<input type="text" id="LandlordFirstName_4" class="pen" name="LandlordFirstName_4" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Ange efternamn">Efternamn:</label>
+							<div class="form-ok" id="okLandlordLastName_4">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordLastName_4">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange efternamn</span>
+							</div>
+							<input type="text" id="LandlordLastName_4" class="pen" name="LandlordLastName_4" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Felaktigt format för personnummer">Personnr om svensk medborgare (ÅÅÅÅMMDDNNNN):</label>
+							<div class="form-ok" id="okLandlordCivicNo_4">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordCivicNo_4">
+								<span class="form-error-times">×</span> <span class="form-error-text">Felaktigt format för personnummer</span>
+							</div>
+							<input type="text" id="LandlordCivicNo_4" class="pen" name="LandlordCivicNo_4" value="" data-validator="pnrValidate" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Ange adress">Adress:</label>
+							<div class="form-ok" id="okLandlordAddress_4">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordAddress_4">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange adress</span>
+							</div>
+							<input type="text" id="LandlordAddress_4" class="pen" name="LandlordAddress_4" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Ange postnummer">Postnummer:</label>
+							<div class="form-ok" id="okLandlordPostNr_4">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordPostNr_4">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange postnummer</span>
+							</div>
+							<input type="text" id="LandlordPostNr_4" class="pen" name="LandlordPostNr_4" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Ange postort">Postort:</label>
+							<div class="form-ok" id="okLandlordPostOrt_4">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordPostOrt_4">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange postort</span>
+							</div>
+							<input type="text" id="LandlordPostOrt_4" class="pen" name="LandlordPostOrt_4" value="" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Ange e-post">E-post:</label>
+							<div class="form-ok" id="okLandlordEmail_4">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordEmail_4">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange e-post</span>
+							</div>
+							<input type="text" id="LandlordEmail_4" class="pen" name="LandlordEmail_4" value="" data-validator="emailValidate0(&#39;LandlordEmail2_4&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="E-postadresserna måste stämma överens">Bekräfta e-post:</label>
+							<div class="form-ok" id="okLandlordEmail2_4">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errLandlordEmail2_4">
+								<span class="form-error-times">×</span> <span class="form-error-text">E-postadresserna måste stämma överens</span>
+							</div>
+							<input type="text" id="LandlordEmail2_4" class="pen" name="LandlordEmail2_4" value="" data-validator="emailValidate(&#39;LandlordEmail_4&#39;)" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							</div>
+							<h6>Konto för utbetalning av hyran</h6>
+								<div class="group">
+							<label for="Ange bank">Namn på bank:</label>
+							<div class="form-ok" id="okWithdrawalBankName">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errWithdrawalBankName">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange bank</span>
+							</div>
+							<input type="text" id="WithdrawalBankName" class="pen" name="WithdrawalBankName" value="SEB " data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+								<div class="group">
+							<label for="Ange clearingnummer på 4 eller 5 siffror">Clearingnummer (4 eller 5 siffror):</label>
+							<div class="form-ok" id="okWithdrawalClearingNo">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errWithdrawalClearingNo">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange clearingnummer på 4 eller 5 siffror</span>
+							</div>
+							<input type="text" id="WithdrawalClearingNo" class="pen" name="WithdrawalClearingNo" value="5201" data-validator="clearingNumberValidate" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+							<label for="Ange kontonummer">Kontonummer (upprepa ej clearingnr):</label>
+							<div class="form-ok" id="okWithdrawalAccountNo">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errWithdrawalAccountNo">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange kontonummer</span>
+							</div>
+							<input type="text" id="WithdrawalAccountNo" class="pen" name="WithdrawalAccountNo" value="0173902" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+								<div class="group">
+							<label for="Ange förnamn">Förnamn på kontoinnehavare:</label>
+							<div class="form-ok" id="okWithdrawalFirstName">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errWithdrawalFirstName">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange förnamn</span>
+							</div>
+							<input type="text" id="WithdrawalFirstName" class="pen" name="WithdrawalFirstName" value="Monia" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+								<div class="group">
+							<label for="Ange efternamn">Efternamn på kontoinnehavare:</label>
+							<div class="form-ok" id="okWithdrawalLastName">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errWithdrawalLastName">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange efternamn</span>
+							</div>
+							<input type="text" id="WithdrawalLastName" class="pen" name="WithdrawalLastName" value="Nasri" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+					
+						</div>
+					</div><!-- End mod-content -->
+				</div> <!-- End module -->
+
+				<div class="module">
+					<div class="mod-header">
+						<h1>Flyttstädning</h1>
+					</div>
+					<div class="mod-content">
+						<div class="group">
+							<label for="Välj">Vill du boka en professionell flyttsädning när du flyttar ut ur bostaden? Kostnaden för flyttstädningen efter RUT-avdrag är 1725 kr:</label>
+							<div class="form-ok" id="okCleaningBefore">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errCleaningBefore">
+								<span class="form-error-times">×</span> <span class="form-error-text">Välj</span>
+							</div><select id="CleaningBefore" name="CleaningBefore" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+									<option value=""></option>
+									<option value="1">Ja</option>
+									<option value="0" selected="selected">Nej</option>
+							</select>
+						</div>
+
+						<div class="group">
+							<label for="Välj">Vill du att hyresgästen bekostar en professionell flyttstädning när denne flyttar ut? Kostnaden för flyttstädningen efter RUT-avdrag är 1725 kr:</label>
+							<div class="form-ok" id="okCleaningAfter">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errCleaningAfter">
+								<span class="form-error-times">×</span> <span class="form-error-text">Välj</span>
+							</div><select id="CleaningAfter" name="CleaningAfter" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+									<option value=""></option>
+									<option value="1">Ja</option>
+									<option value="0" selected="selected">Nej</option>
+							</select>
+						</div>
+
+						<h6>Om kund ej är nöjd</h6>
+						<p>Amica lämnar garantier på att flyttstädningen har utförts fackmannamässigt och att eventuella avvikelser som kan framkomma vid besiktningstillfället snarast kommer att åtgärdas. Besiktning sker efter det att arbetet är slutfört. Garantin gäller för den som flyttar in. Amica har ansvarsförsäkring hos Länsförsäkringar på 10 Mkr /skada. Företaget innehar F-skattebevis.</p>
+					</div>
+				</div><!-- End module -->
+						
+				<div class="module">
+					<div class="mod-header">
+						<h1>Kontraktsinfo</h1>
+					</div>
+					<div class="mod-content">
+						<label for="RentalPeriodType">Uthyrningsperiod:</label>
+						<select name="RentalPeriodType" id="RentalPeriodType" onchange="updateRentalPeriodType()">
+							<option value="1">Tillsvidareuthyrning</option>
+							<option value="2" selected="selected">Visstidsuthyrning</option>
+						</select>
+						<div class="group">
+							<label for="Ange startdatum för kontraktet">Inflyttningsdatum:</label>
+							<div class="form-ok" id="okStartDate">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errStartDate">
+								<span class="form-error-times">×</span> <span class="form-error-text">Ange startdatum för kontraktet</span>
+							</div>
+							<input type="text" id="StartDate" class="pen datepicker hasDatepicker" name="StartDate" value="2016-03-01" data-validator="validateDate" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+						</div>
+
+						<div class="temporary-rental">
+							<div class="group">
+								<label for="Ange slutdatum för kontraktet">Utflyttningsdatum:</label>
+								<div class="form-ok" id="okEndDate">
+									<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+								</div>
+								<div class="form-error" id="errEndDate">
+									<span class="form-error-times">×</span> <span class="form-error-text">Ange slutdatum för kontraktet</span>
+								</div>
+								<input type="text" id="EndDate" class="pen datepicker hasDatepicker" name="EndDate" value="2016-04-02" data-validator="validateDate" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+						</div>
+
+						<div class="notice-period dont-validate" style="display: none;">
+							<div class="group">
+								<label for="Ange uppsägningstid (med siffror), högst 31 dagar">Uppsägningstid för hyresgästen, dagar (lämna tomt för en månad):</label>
+								<div class="form-ok" id="okHGNoticePeriodDays">
+									<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+								</div>
+								<div class="form-error" id="errHGNoticePeriodDays">
+									<span class="form-error-times">×</span> <span class="form-error-text">Ange uppsägningstid (med siffror), högst 31 dagar</span>
+								</div>
+								<input type="text" id="HGNoticePeriodDays" class="pen" name="HGNoticePeriodDays" value="" data-validator="validateNumberMax31OrEmpty" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+
+							<div class="group">
+								<label for="Ange uppsägningstid (med siffror), minst 3 månader">Uppsägningstid för uthyraren, månader:</label>
+								<div class="form-ok" id="okNoticePeriod">
+									<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+								</div>
+								<div class="form-error" id="errNoticePeriod">
+									<span class="form-error-times">×</span> <span class="form-error-text">Ange uppsägningstid (med siffror), minst 3 månader</span>
+								</div>
+								<input type="text" id="NoticePeriod" class="pen" name="NoticePeriod" value="3" data-validator="validateNumberAtLeast3" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+							</div>
+						</div>
+
+						<h6>Om bostaden</h6>
+						<div class="group">
+							<label for="Välj">Bostaden hyrs ut:</label>
+							<div class="form-ok" id="okFurnished">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errFurnished">
+								<span class="form-error-times">×</span> <span class="form-error-text">Välj</span>
+							</div><select id="Furnished" name="Furnished" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+									<option value=""></option>
+									<option value="möblerad" selected="selected">möblerad</option>
+									<option value="omöblerad">omöblerad</option>
+							</select>
+						</div>
+
+						<div class="group">
+							<label for="Välj">Vindsutrymme:</label>
+							<div class="form-ok" id="okAtticSpace">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errAtticSpace">
+								<span class="form-error-times">×</span> <span class="form-error-text">Välj</span>
+							</div><select id="AtticSpace" name="AtticSpace" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+									<option value=""></option>
+									<option value="ja">ja</option>
+									<option value="nej" selected="selected">nej</option>
+							</select>
+						</div>
+
+						<div class="group">
+							<label for="Välj">Källarutrymme:</label>
+							<div class="form-ok" id="okBasement">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errBasement">
+								<span class="form-error-times">×</span> <span class="form-error-text">Välj</span>
+							</div><select id="Basement" name="Basement" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+									<option value=""></option>
+									<option value="ja">ja</option>
+									<option value="nej" selected="selected">nej</option>
+							</select>
+						</div>
+
+						<div class="group">
+							<label for="Välj">Garage- eller parkeringsplats:</label>
+							<div class="form-ok" id="okGarageOrParkPlace">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errGarageOrParkPlace">
+								<span class="form-error-times">×</span> <span class="form-error-text">Välj</span>
+							</div><select id="GarageOrParkPlace" name="GarageOrParkPlace" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+									<option value=""></option>
+									<option value="ja">ja</option>
+									<option value="nej" selected="selected">nej</option>
+							</select>
+						</div>
+
+						<div class="group">
+							<label for="Välj">Uppvärmning av bostaden ombesörjs av:</label>
+							<div class="form-ok" id="okHeating">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errHeating">
+								<span class="form-error-times">×</span> <span class="form-error-text">Välj</span>
+							</div><select id="Heating" name="Heating" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+									<option value=""></option>
+									<option value="uthyraren" selected="selected">uthyraren</option>
+									<option value="hyresgästen">hyresgästen</option>
+							</select>
+						</div>
+
+						<div class="group">
+							<label for="Välj">Varmvatten ombesörjs av:</label>
+							<div class="form-ok" id="okHotWater">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errHotWater">
+								<span class="form-error-times">×</span> <span class="form-error-text">Välj</span>
+							</div><select id="HotWater" name="HotWater" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+									<option value=""></option>
+									<option value="uthyraren" selected="selected">uthyraren</option>
+									<option value="hyresgästen">hyresgästen</option>
+							</select>
+						</div>
+
+						<div class="group">
+							<label for="Välj">Hushållsel ombesörjs av:</label>
+							<div class="form-ok" id="okElectricity">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errElectricity">
+								<span class="form-error-times">×</span> <span class="form-error-text">Välj</span>
+							</div><select id="Electricity" name="Electricity" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+									<option value=""></option>
+									<option value="uthyraren">uthyraren</option>
+									<option value="hyresgästen" selected="selected">hyresgästen</option>
+							</select>
+						</div>
+
+						<div class="group">
+							<label for="Välj">Internetuppkoppling ombesörjs av uthyraren:</label>
+							<div class="form-ok" id="okInternet">
+								<span class="form-ok-tick"><span class="icon-ico_check_big"></span></span>
+							</div>
+							<div class="form-error" id="errInternet">
+								<span class="form-error-times">×</span> <span class="form-error-text">Välj</span>
+							</div><select id="Internet" name="Internet" data-validator="defaultValidator" onblur="validate(this.name)" onchange="onUpdateField(this.id); validate(this.name)">
+									<option value=""></option>
+									<option value="ja">ja</option>
+									<option value="nej" selected="selected">nej</option>
+							</select>
+						</div>
+
+						<h6><label for="ContractAdditional">Eventuellt tilläggsavtal:</label></h6>
+						<textarea id="ContractAdditional" name="ContractAdditional">Möbler som ingår i uthyrningen:</textarea>
+
+						<h6>Eventuella bilagor (måste vara pdf):</b></p>
+						<input id="attachmentsDeleted" name="attachmentsDeleted" type="hidden" value="[]">
+
+						<input type="file" multiple="multiple" name="uploadFiles"><br>
+						<script type="text/javascript" src="./Uppgifter för kontrakt_files/complete-agreement.js"></script>
+				<script type="text/javascript">
+					$(resizeHv);
+					$(updateRentalPeriodType);
+					function removeAttachment(hash) {
+						var arr = JSON.parse($("#attachmentsDeleted").val());
+						arr.push(hash);
+						$("#attachmentsDeleted").val(JSON.stringify(arr));
+						$("#attachment-" + hash).remove();
+					}
+					$(function() {
+						var arr = JSON.parse($("#attachmentsDeleted").val());
+						for (var i = 0; i < arr.length; i++) {
+							$("#attachment-" + arr[i]).remove();
+						}
+					});
+				</script>	
+
+				<input type="hidden" name="action" id="action" value="">
+				<div class="width394" style="margin:0 auto;padding-bottom:30px">
+					<input type="checkbox" value="on" name="force">&nbsp;Forcera avtal om ej kreditvärdig<br>
+					<input type="button" class="button" value="Förhandsgranska" onclick="previewAgreement(false)">
+					<hr>
+					<input type="button" class="button bottom" id="submit-btn" value="Spara" onclick="submitAgreement(false)">
+				</div>
+
+					</div>
+				</div><!-- End module -->
+						
+	
+	</form>
+	</div> <!-- End dash-content -->
+</div> <!-- End Panel -->
+<!-- @include footer -->
+</body>
+<!-- @include base

@@ -1,3 +1,4 @@
+<!-- @include header -->
 <div id="dashboard" class="booking">
 
 	<div id="panel" class="dashboard-wrapper row">
@@ -20,7 +21,7 @@
 					
 				</div>
 
-				<form action="submit" class="time-slot">
+				<form data-abide method="link" action="bookings-confirm.html" class="time-slot">
 					<div class="row">
 						<div class="col medium-6"><span class="day">Lördag</span><span class="date">2016-01-23</span><span class="time">11:00 - 11:20</span></div>
 						<div class="col medium-6">
@@ -62,7 +63,9 @@
 		              $(this).parents('div.row').removeClass('selected');
 		          }
 		      });
+
 		</script>
 
 	</div>
 </div>
+<!-- @include base -->
