@@ -882,11 +882,12 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
 		.rental-info{
 			hr{margin:0;}
 			.row{ margin-bottom:$mod-pad;}
-			.rental-type div{ float:left; margin-right:$mod-pad;}
+			.rental-type div{ float:left; margin-right:$mod-pad; width: 160px;}
 			.amenities{
 				.titles li{ font-size:14px; display:inline; color:$soft-grey;}
 				.titles li + li { margin-left:1.5rem;}
 				.titles li em{ border-bottom: 1px solid #000; padding-bottom: 2px; color:$metal;}
+				li.heading{ margin-bottom: 0.5em;}
 				li.heading em{ border-bottom: 1px solid #000; padding-bottom: 3px; padding-right:4px;}
 				li.heading span{ margin-left:1.5rem;}
 				ul{ margin-left:0;}
