@@ -351,6 +351,8 @@ button:hover, button:focus, .button:hover, .button:focus{ background-color: $blu
 .button-outline:hover, .button-outline:visited{ border: 1px solid $soft-black; background-color: $vapor; color: $soft-black; text-decoration:none;}
 .bottom.button{ width:100%; background-color:$red-clr;}
 .bottom.button:hover{ background-color:$red-clr-hover;}
+.blue-button, .blue-button.bottom{ background-color:$blue-clr;}
+.blue-button:hover, .blue-button.bottom:hover{ background-color:$blue-clr-hover;}
 
 /*  Inputs  */
 input[type=text], input[type=password], select{ margin-bottom: 1.25rem; height: 3.3125rem; @include border-radius(3px); padding-left: 20px; box-shadow: none;}

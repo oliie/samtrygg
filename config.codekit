@@ -24701,7 +24701,7 @@
 		"outputAbbreviatedPath": "\/img\/header_ground4.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 1
+		"processed": 0
 		},
 	"\/img\/header_ground5.jpg": {
 		"fileType": 16384,
@@ -25517,6 +25517,24 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/signup.kit",
 		"outputAbbreviatedPath": "\/signup.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/trygghetsforsakring.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/trygghetsforsakring.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/trygghetsforsakring.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/trygghetsforsakring.kit",
+		"outputAbbreviatedPath": "\/trygghetsforsakring.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
