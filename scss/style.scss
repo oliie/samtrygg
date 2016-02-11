@@ -810,7 +810,7 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
 		.button:hover{ background-color:$red-clr-hover; text-decoration:none;}
 		label{ font-size:16px; margin-bottom:0.5rem;}
 		textarea{ min-height:126px; @include border-radius(3px)}
-		.mod-header{ background-color:$ozone; height: 60px; border-top-radius: 3px; border-bottom:1px solid $fog; @include border-radius(3px 3px 0 0);}
+		.mod-header{ background-color:$ozone; height: 60px; border-top-radius: 3px; border-bottom:1px solid $fog; @include border-radius(3px 3px 0 0); position:relative;}
 		.mod-content{ padding:30px;}
 		h1{ font-size: 20px; margin:0; display: table-cell; vertical-align: middle; height: 60px; padding-left: 30px;}
 		h2{ font-size: 18px; margin:0; display:inline-block;}
@@ -996,6 +996,7 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
 
 	}
 	// #footer .middle{ background-color:$ozone;}
+	.badge{ display:block; position:absolute; right:-10px; top:-10px;}
 
 }
 

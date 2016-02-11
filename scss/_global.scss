@@ -528,3 +528,19 @@ span.ui-datepicker-year{ float:left; margin:5px 0 0 20px;}
     .calendar-controls .curr-year{ color:$soft-grey;}
   }
 }
+
+/* Badge */
+.badge {
+    background-color: $red-clr;
+    // border: 2px solid white;
+    border-radius: 12px;
+    box-shadow: 1px 1px 1px $vapor;
+    color: white;
+    font-size: 12px;
+    height: 18px;
+    padding: 1px 6px 0 6px;
+    text-align: center;
+    min-width: 8px;
+}
+
+
