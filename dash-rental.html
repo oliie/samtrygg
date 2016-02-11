@@ -12,8 +12,12 @@
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/style.css">
 
+  <script src="js/min/app-min.js"></script>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
 
   <!-- Trust Pilot -->
@@ -89,7 +93,7 @@
 					<form action="submit">
 				
 						<div class="row rental-type">
-							<label for=""><h6>Typ av boende</h6></label>
+							<label for=""><h6>Typ av boende<span class="help" data-tooltip aria-haspopup="true" title="this is an example of text that can give helpful hints">(?)</span></h6></label>
 							<div><input id="box1" type="checkbox" name="apt-type"><label for="box1">Hyresrätt</label></div>
 							<div><input id="box2" type="checkbox" name="apt-type"><label for="box2">Bostadsrätt</label></div>
 							<div><input id="box3" type="checkbox" name="apt-type"><label for="box3">Äganderätt</label></div>
@@ -194,7 +198,7 @@
 						</div>
 
 						<div class="row">
-							<h6>Eventuell kampanjkod</h6>
+							<h6>Eventuell kampanjkod<span class="help" data-tooltip aria-haspopup="true" title="this is an example of text that can give helpful hints">(?)</span></h6>
 							<input type="text" name="campaignCode">
 						</div>
 
@@ -299,7 +303,6 @@
       </div>
 
   </footer></body>
-<script src="js/min/app-min.js"></script>
 <script src="js/custom.js"></script>
 </body>
 </html>

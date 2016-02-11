@@ -14,3 +14,4 @@
 // @codekit-prepend "../bower_components/video.js/dist/video.min.js";
 // @codekit-prepend "../bower_components/masonry/dist/masonry.pkgd.min.js";
 // @codekit-prepend "../components/jquery.fixer.js";
+// @codekit-prepend "../components/dzscalendar/dzscalendar.js";

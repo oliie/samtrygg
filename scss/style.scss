@@ -680,17 +680,20 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
 		.date{ font-weight:bold;}
 		.time-slot div.row.selected{ background:$vapor; /* border:4px solid $red-clr; @include border-box; */}
 		.time-slot{ margin-left:0;
+			h2{ margin-bottom:0;}
+			div.wrapper{ padding-bottom:$pad;}
 			.row:first-child{ border-top:1px solid $fog;}
 			.row{ padding-top:1.1875rem; padding-bottom:1.1875rem; border-bottom:1px solid $fog;}
 			.select{ background-color:$vapor;
 				.button{ background-color:#fff; color:$metal; border:1px solid $metal;}
 			}
-			div{ font-size:16px; line-height: 40px;}
-			.button-outline{ float:right; width:50%; text-align:center; margin-top:0.5rem; padding:0.5rem 2rem 0.66rem 2rem;}
+			div.event_info div.row div:first-child{ padding-left:0;}
+			div{ font-size:14px; line-height: 24px;}
+			.button-outline{ float:right; width:100%; text-align:center; margin-top:0.5rem; padding:0.5rem 2rem 0.66rem 2rem;}
 			.submit{ width:100%; @include border-radius(3px);}
 			input:checked + label.button-outline{ background-color:#fff; color:$red-clr; border:4px solid $red-clr; @include border-box; text-decoration:none; padding:0.3rem 2rem 0.66rem 2rem;}
+			.date, .time{ display:block; padding-left:10px;}
 		}
-		.date, .time{ margin-left:14px;}
 	}
 	.module .profile-card.checked-card{ border:4px solid $red-clr; @include border-box; padding-top: calc(0.9375rem - 1px); padding-bottom: calc(0.9375rem - 4px);
 		div.yes label{ color:$blue-clr;}
@@ -992,6 +995,7 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
 		}
 
 	}
+	// #footer .middle{ background-color:$ozone;}
 
 }
 

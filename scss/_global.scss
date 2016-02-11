@@ -401,6 +401,12 @@ a.tooltips span{ border-radius:3px; @extend .shadow; text-align: center;}
   margin-left: -13px;
 }
 
+.tooltip>.nub{ border-color:transparent transparent #fff transparent; display:none;}
+span.help{ display:inline-block; margin:0 10px;}
+span.help:hover{ pointer:cursor;}
+
+
+
 /* Accordions */
 .accordion .arrow-open, .accordion .arrow-close{ float: right;}
 .accordion .arrow-open{
@@ -503,3 +509,22 @@ span.ui-datepicker-year{ float:left; margin:5px 0 0 20px;}
 
 /* Show Hide */
 .no-show-panel{ display:none;}
+
+
+/* Calendar */
+#calendar{ padding-left:0; padding-bottom:$pad;
+  .dzscalendar.skin-lions-square .curr-date .curr-month{ color:$metal; font-weight:normal; text-transform:none;}
+  .dzscalendar.skin-lions-square{ background-color:$vapor;}
+  .dzscalendar.skin-lions-square .week-day.odd{ background-color:#fff;}
+  .dzscalendar.mode-datepicker .main-mon .mon-body .week-day{ cursor:default;}
+  .dzscalendar.mode-datepicker .main-mon .mon-body .week-day.tag-important{ cursor:pointer;}
+  .dzscalendar{
+    .week-day.tag-important.datepicker-selected .divimage-overlay{ background-color:$red-clr;}
+    .week-day.tag-important{ 
+      .the-number{ color:#fff;}
+      .divimage-overlay{ background-color:$soft-grey;}
+    }
+    .week-day.tag-important:hover .divimage-overlay{ background-color:$red-clr;}
+    .calendar-controls .curr-year{ color:$soft-grey;}
+  }
+}

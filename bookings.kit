@@ -1,5 +1,10 @@
-<!-- @include header -->
+<!--@include header -->
 <div id="dashboard" class="booking">
+<script>
+    window.arr_weekdays = ['Söndag', 'Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag'];
+    window.arr_monthnames = [ "Januari", "Februari", "Mars", "April", "Maj", "Juni",
+        "Juli", "Augusti", "September", "Oktober", "November", "December" ];
+</script>
 
 	<div id="panel" class="dashboard-wrapper row">
 
@@ -7,44 +12,132 @@
 			<div class="mod-header">
 				<h1>Välj tid för visning</h1>
 			</div>
-			<div class="mod-content">
-				<h2>Efter bokad visning kommer du få en bekräftelse med nödvändig information.</h2>
-				<div class="row object">
+			<div class="mod-content row">
+				<h2>Valt en tid i kalendern nedan.  Efter turen bokat får du en bekräftelse med nödvändig information </h2>
+				<!-- <div class="row object">
 					<div class="col medium-2 pic"><img src="img/prop_2.jpg" alt=""></div>
 					<div class="col medium-2 town">Stockholm</div>
 					<div class="col medium-3 address">Vegagatan 12, 172 34 Sundbyberg</div>
 					<div class="col medium-1 area">120m&sup2;</div>
 					<div class="col medium-2 rooms">3&nbsp;rum</div>
 					<div class="col medium-2 price">14 000:-</div>
-				</div>
-				<div id="calendar" class="custom-calendar">
-					
+				</div> -->
+
+				<div id="calendar" class="custom-calendar medium-6 small-12 columns">
+					<div class="dzscalendar skin-lions-square" id="calendar_datepicker" style="">
+	                    <div class="events">
+	                        <div class="event-tobe" data-date="2-11-2016" data-tag="important"></div>
+	                        <div class="event-tobe" data-date="2-15-2016" data-tag="important"></div>
+	                        <div class="event-tobe" data-date="3-10-2016" data-tag="important"></div>
+	                    </div>
+					</div>
 				</div>
 
-				<form data-abide method="link" action="bookings-confirm.html" class="time-slot">
-					<div class="row">
-						<div class="col medium-6"><span class="day">Lördag</span><span class="date">2016-01-23</span><span class="time">11:00 - 11:20</span></div>
-						<div class="col medium-6">
-							<input type="radio" class="custom-toggle" name="timeVal" id="time1" value=""  />
-							<label class="button-outline" for="time1">Välj</label>
-						</div>					
-					</div> 
-					<div class="row">
-						<div class="col medium-6"><span class="day">Lördag</span><span class="date">2016-01-23</span><span class="time">11:00 - 11:20</span></div>
-						<div class="col medium-6">
-							<input type="radio" class="custom-toggle" name="timeVal" id="time2" value=""  />
-							<label class="button-outline" for="time2">Välj</label>
-						</div>					
-					</div>
-					<div class="row">
-						<div class="col medium-6"><span class="day">Lördag</span><span class="date">2016-01-23</span><span class="time">11:00 - 11:20</span></div>
-						<div class="col medium-6">
-							<label for="time3">
-								<input type="radio" class="custom-toggle" name="timeVal" id="time3" value=""  />
-								<label class="button-outline" for="time3">Välj</label>
-							</label>
-						</div>					
-					</div>
+				<form data-abide method="link" action="bookings-confirm.html"  class="time-slot">
+
+						<div class="medium-6 small-12 columns wrapper">
+							<div id="date_2-11-2016" class="event_info">
+								<h2 class="day">Torsdag</h2>
+								<hr>
+								<div class="row">
+									<div class="col medium-6"><span class="date">2016-02-11</span><span class="time">11:00 - 11:20</span></div>
+									<div class="col medium-6">
+										<input type="radio" class="custom-toggle" name="timeVal" id="time1" value=""  />
+										<label class="button-outline" for="time1">Välj</label>
+									</div>					
+								</div> 
+								<div class="row">
+									<div class="col medium-6"><span class="date">2016-02-11</span><span class="time">11:00 - 11:20</span></div>
+									<div class="col medium-6">
+										<input type="radio" class="custom-toggle" name="timeVal" id="time2" value=""  />
+										<label class="button-outline" for="time2">Välj</label>
+									</div>					
+								</div>
+								<div class="row">
+									<div class="col medium-6"><span class="date">2016-02-11</span><span class="time">11:00 - 11:20</span></div>
+									<div class="col medium-6">
+										<label for="time3">
+											<input type="radio" class="custom-toggle" name="timeVal" id="time3" value=""  />
+											<label class="button-outline" for="time3">Välj</label>
+										</label>
+									</div>					
+								</div>
+								<div class="row">
+									<div class="col medium-6"><span class="date">2016-02-11</span><span class="time">11:00 - 11:20</span></div>
+									<div class="col medium-6">
+										<label for="time3">
+											<input type="radio" class="custom-toggle" name="timeVal" id="time3b" value=""  />
+											<label class="button-outline" for="time3b">Välj</label>
+										</label>
+									</div>					
+								</div>
+							</div><!-- End event-info -->
+
+							<div id="date_2-15-2016" class="event_info">
+								<h2 class="day">Mondag</h2>
+								<hr>
+								<div class="row">
+									<div class="col medium-6"><span class="date">2016-02-15</span><span class="time">11:00 - 11:20</span></div>
+									<div class="col medium-6">
+										<input type="radio" class="custom-toggle" name="timeVal" id="time4" value=""  />
+										<label class="button-outline" for="time4">Välj</label>
+									</div>					
+								</div> 
+								<div class="row">
+									<div class="col medium-6"><span class="date">2016-02-15</span><span class="time">11:00 - 11:20</span></div>
+									<div class="col medium-6">
+										<input type="radio" class="custom-toggle" name="timeVal" id="time5" value=""  />
+										<label class="button-outline" for="time5">Välj</label>
+									</div>					
+								</div>
+								<div class="row">
+									<div class="col medium-6"><span class="date">2016-02-15</span><span class="time">11:00 - 11:20</span></div>
+									<div class="col medium-6">
+										<label for="time3">
+											<input type="radio" class="custom-toggle" name="timeVal" id="time6" value=""  />
+											<label class="button-outline" for="time6">Välj</label>
+										</label>
+									</div>					
+								</div>
+							</div><!-- End event-info -->
+
+							<div id="date_3-10-2016" class="event_info">
+								<h2 class="day">Torsdag</h2>
+								<hr>
+								<div class="row">
+									<div class="col medium-6"><span class="date">2016-03-10</span><span class="time">11:00 - 11:20</span></div>
+									<div class="col medium-6">
+										<input type="radio" class="custom-toggle" name="timeVal" id="time7" value=""  />
+										<label class="button-outline" for="time7">Välj</label>
+									</div>					
+								</div> 
+								<div class="row">
+									<div class="col medium-6"><span class="date">2016-03-10</span><span class="time">11:00 - 11:20</span></div>
+									<div class="col medium-6">
+										<input type="radio" class="custom-toggle" name="timeVal" id="time8" value=""  />
+										<label class="button-outline" for="time8">Välj</label>
+									</div>					
+								</div>
+								<div class="row">
+									<div class="col medium-6"><span class="date">2016-03-10</span><span class="time">11:00 - 11:20</span></div>
+									<div class="col medium-6">
+										<label for="time3">
+											<input type="radio" class="custom-toggle" name="timeVal" id="time9" value=""  />
+											<label class="button-outline" for="time10">Välj</label>
+										</label>
+									</div>					
+								</div>
+								<div class="row">
+									<div class="col medium-6"><span class="date">2016-03-10</span><span class="time">11:00 - 11:20</span></div>
+									<div class="col medium-6">
+										<label for="time3">
+											<input type="radio" class="custom-toggle" name="timeVal" id="time9" value=""  />
+											<label class="button-outline" for="time10">Välj</label>
+										</label>
+									</div>					
+								</div>
+							</div><!-- End event-info -->
+						</div>
 
 					<div class="row"><input type="submit" class="submit button" value="Boka"></div>
 					<div class="row">
@@ -54,8 +147,30 @@
 
 			</div>
 		</div>
-		<script class="hidden">
-		      $('.time-slot div input[type="radio"]').change(function(){
+		<script>
+			jQuery(document).ready(function($){
+		        dzscal_init("#calendar_datepicker",{
+		            design_transitionDesc: 'tooltipDef'
+		            ,mode:'datepicker'
+		            ,header_weekdayStyle: 'three'
+		            ,design_transition: 'fade'
+		            ,mode_datepicker_setTodayAsDefault: 'on'
+		            ,start_weekday: 'Monday'
+		        });
+
+		        function dp1_event(arg){
+		            var the_id = 'date_' + arg;
+		            $(".event_info").hide();
+		            $("#"+the_id).show();
+		        }
+
+		        var dp1 = document.getElementById('calendar_datepicker');
+		        if(dp1){
+		            dp1.arr_datepicker_events.push(dp1_event);
+		        }
+
+		        $(".event_info").hide();
+		        $('.time-slot div input[type="radio"]').change(function(){
 		          if($(this).is(":checked")) {
 		              $(this).parents('div.row').addClass('selected');
 		              $(this).parents('div.row').siblings().removeClass('selected');
@@ -64,8 +179,9 @@
 		          }
 		      });
 
+		    });
 		</script>
 
 	</div>
 </div>
-<!-- @include base -->
+<!-- @include base
