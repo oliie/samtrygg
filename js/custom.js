@@ -311,7 +311,7 @@ $( document ).ready(function() {
 
     // Carousel(s)
         // Grab main gallery and copy into supporting gallery
-    $("#sup-gallery #sup-gallery-display").html($("#p-gallery").html());
+    $("#sup-gallery #sup-gallery-display").html($("#p-gallery").html()+'<a href="#" class="gallery"><img src="img/filler.jpg" alt=""></a>');
 
     $("#p-gallery").owlCarousel({
         singleItem:true,
