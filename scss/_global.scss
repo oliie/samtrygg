@@ -275,6 +275,7 @@ footer#footer{ min-height:260px;
   span.icon{ color: $alert-clr;}
   .close{ opacity:1;}
   span.icon-notification-circle{ display:block; position:absolute; font-size:23px; color:$alert-clr; margin-top:-2px;}
+  .alert-text{ text-align:left; width:30%; margin:0 auto;}
 }
 .alert-box.info{ color: $metal; border-color:$alert-clr; background-color:$alert-clr-hover;}
 .incorrect-entry{ color:$red-clr!important;}

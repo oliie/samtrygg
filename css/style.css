@@ -494,6 +494,10 @@ footer#footer {
     font-size: 23px;
     color: #F8C01C;
     margin-top: -2px; }
+  .alert-box .alert-text {
+    text-align: left;
+    width: 30%;
+    margin: 0 auto; }
 
 .alert-box.info {
   color: #5A5A5A;
