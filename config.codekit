@@ -24637,6 +24637,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
+	"\/img\/filler.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1343,
+		"inputAbbreviatedPath": "\/img\/filler.jpg",
+		"outputAbbreviatedPath": "\/img\/filler.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/google.png": {
 		"fileType": 32768,
 		"ignore": 0,
