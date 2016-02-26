@@ -245,19 +245,21 @@ $( document ).ready(function() {
 
 
       // Sidebar Fix / Footer
-
-        function checkOffset() {
-          if($('.dash-nav').offset().top + $('.dash-nav').height() >= $('#footer').offset().top - 40){
-              $('.dash-nav').css('position', 'relative');
+      if($('body').is('#dashboard')){
+        var checkOffset = function () {
+          if($('#dashboard .dash-nav').offset().top + $('#dashboard .dash-nav').height() >= $('#dashboard #footer').offset().top - 40){
+              $('#dashboard  .dash-nav').css('position', 'relative');
           }
-          if($(document).scrollTop() + window.innerHeight < $('#footer').offset().top){
-              $('.dash-nav').css('position', 'fixed'); // restore when you scroll up
+          if($(document).scrollTop() + window.innerHeight < $('#dashboard #footer').offset().top){
+              $('#dashboard .dash-nav').css('position', 'fixed'); // restore when you scroll up
           }
-        }
+        };
+      }
+      if($('body').is('#dashboard')){
         $(document).scroll(function() {
           checkOffset();
         });
-
+      }
         // $('.dash-nav').fixer();
 
 
