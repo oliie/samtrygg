@@ -13,9 +13,27 @@ $( document ).ready(function() {
     });
 
     // Featherlight Lightbox Settings
+    function setLightboxOpen() {
+      $('body').css('overflow', 'hidden');
+    }
+
+    function setLightboxClosed() {
+      $('body').css('overflow', 'auto');
+    }
+    $(function() {
+      $.featherlight.defaults.beforeOpen = setLightboxOpen;
+      $.featherlight.defaults.afterClose = setLightboxClosed;
+    });
+    if (mobileSize){
+      $(function() {
+        $.featherlight.defaults.beforeOpen = setLightboxOpen;
+        $.featherlight.defaults.afterClose = setLightboxClosed;
+      });
+    }
     $('.lightbox').featherlight({
       closeIcon: '<span class="icon icon-cross-circle"></span>'
     });
+
 
 
     // Datepicker
@@ -311,16 +329,16 @@ $( document ).ready(function() {
 
     // Carousel(s)
         // Grab main gallery and copy into supporting gallery
-    $("#sup-gallery #sup-gallery-display").html($("#p-gallery").html()+'<a href="#" class="gallery"><img src="img/filler.jpg" alt=""></a>');
+    // $("#sup-gallery #sup-gallery-display").html($("#p-gallery").html()+'<a href="#" class="gallery"><img src="img/filler.jpg" alt=""></a>');
 
-    $("#p-gallery").owlCarousel({
-        singleItem:true,
-        navigation:true,
-        autoPlay : true,
-        stopOnHover: true,
-        navigationText:["<span class='icon-chevron-left'></span>","<span class='icon-chevron-right'></span>"]
+    // $("#p-gallery").owlCarousel({
+    //     singleItem:true,
+    //     navigation:true,
+    //     autoPlay : true,
+    //     stopOnHover: true,
+    //     navigationText:["<span class='icon-chevron-left'></span>","<span class='icon-chevron-right'></span>"]
 
-    });
+    // });
 
     if ( desktopSize ) {
       $("#sup-gallery #sup-gallery-display").owlCarousel({

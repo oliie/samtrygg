@@ -966,6 +966,10 @@ td.ui-datepicker-today {
   td.ui-datepicker-today a {
     color: #fff; }
 
+td.ui-datepicker-current-day a.ui-state-active {
+  font-weight: bold;
+  color: #5A5A5A !important; }
+
 select.ui-datepicker-month {
   float: left;
   margin-bottom: 4px;
@@ -1013,6 +1017,8 @@ span.ui-datepicker-year {
 #calendar {
   padding-left: 0;
   padding-bottom: 0.9375em; }
+  #calendar .dzscalendar.skin-lions-square .week-day {
+    font-weight: normal; }
   #calendar .dzscalendar.skin-lions-square .curr-date .curr-month {
     color: #5A5A5A;
     font-weight: normal;
@@ -1030,11 +1036,16 @@ span.ui-datepicker-year {
   #calendar .dzscalendar .week-day.tag-important .the-number {
     color: #fff; }
   #calendar .dzscalendar .week-day.tag-important .divimage-overlay {
-    background-color: #909090; }
+    background-color: #5497FF; }
   #calendar .dzscalendar .week-day.tag-important:hover .divimage-overlay {
     background-color: #D8523D; }
   #calendar .dzscalendar .calendar-controls .curr-year {
     color: #909090; }
+  #calendar .dzscalendar .week-day.today-date.hasEvent .divimage-overlay {
+    background: #F6F6F6; }
+  #calendar .dzscalendar .week-day.today-date.hasEvent .the-number {
+    color: #5A5A5A;
+    font-weight: bold; }
 
 /* Badge */
 .badge {
@@ -2272,7 +2283,7 @@ Property Page
   #property .icon {
     font-size: 30px;
     color: #5A5A5A;
-    margin: 4px 20px 0 0;
+    margin: 4px 8px 0 0;
     vertical-align: top; }
   #property .not-included {
     text-decoration: line-through;
@@ -2377,11 +2388,12 @@ Property Page
       display: block;
       clear: both; }
     #property .details .boendet .columns, #property .details .ammenities .columns, #property .details .options .columns {
-      margin-top: 6px; }
+      margin-top: 20px; }
     #property .details .boendet ul, #property .details .ammenities ul, #property .details .options ul {
       margin-left: 0; }
       #property .details .boendet ul li, #property .details .ammenities ul li, #property .details .options ul li {
-        line-height: 50px; }
+        line-height: 50px;
+        font-size: 14px; }
         #property .details .boendet ul li a, #property .details .ammenities ul li a, #property .details .options ul li a {
           color: #5497FF; }
     #property .details .options {
@@ -3903,7 +3915,7 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
         width: 216px;
         height: 200px;
         background-color: #F6F6F6;
-        /*  position:relative; */
+        position: relative;
         overflow: hidden;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
@@ -3913,7 +3925,9 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
         float: left; }
         #dashboard .module .rental-info .rental-description .gallery li a {
           display: block;
-          position: relative; }
+          position: absolute;
+          right: 0;
+          z-index: 100; }
         #dashboard .module .rental-info .rental-description .gallery li a span {
           color: #D8523D;
           font-size: 18px;
@@ -3923,6 +3937,12 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
           background-color: #fff;
           float: right;
           text-align: center; }
+        #dashboard .module .rental-info .rental-description .gallery li img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-right: -50%;
+          transform: translate(-50%, -50%); }
     #dashboard .module .rental-info input[name="campaignCode"] {
       margin-bottom: 0; }
     #dashboard .module .viewing-times .header + hr {
@@ -4029,6 +4049,9 @@ Mobile / Media Queries
 
 */
 @media only screen and (max-width: 850px) {
+  .featherlight-iframe .featherlight-content {
+    width: 100%; }
+
   /*  Navigation Callouts */
   .top-bar .toggle-topbar.menu-icon {
     margin-top: -8px;
@@ -4296,6 +4319,9 @@ Mobile / Media Queries
 
   #property {
     margin-top: 0px; }
+    #property .boendet .columns, #property .ammenities .columns, #property .options .columns {
+      padding-left: 0;
+      padding-right: 0; }
     #property .gallery #p-gallery {
       max-height: 250px; }
       #property .gallery #p-gallery a {
@@ -4337,19 +4363,20 @@ Mobile / Media Queries
         font-size: 12px; }
     #property .icon {
       margin: 10px 2px 0 0;
-      font-size: 25px; }
+      font-size: 22px;
+      width: 22px; }
     #property .arrow-box:before {
       display: none;
       border-top-color: transparent; }
     #property .arrow-box:after {
       display: none;
       border-top-color: transparent; }
-    #property .columns.small-6.large-5 a.tooltips span {
+    #property .columns.small-6.large-6 a.tooltips span {
       padding: 40px 20px;
       margin-top: -240px;
       margin-left: -10px;
       width: 300px; }
-    #property .columns.small-6.large-7 a.tooltips span {
+    #property .columns.small-6.large-6 a.tooltips span {
       padding: 40px 20px;
       margin-top: -240px;
       margin-left: -164px;

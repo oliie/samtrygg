@@ -291,7 +291,7 @@ Property Page
 #property{ margin-top: 20px;
 	.featherlight .featherlight-content{ overflow:auto;}
 	.des-wrap{ margin: 40px auto 40px auto;}
-	.icon{ font-size:30px; color: $metal; margin: 4px 20px 0 0; vertical-align:top;}
+	.icon{ font-size:30px; color: $metal; margin: 4px 8px 0 0; vertical-align:top;}
 	.not-included{ text-decoration: line-through; color: $fog;
 		.icon{ color: $fog;}
 	}
@@ -328,9 +328,9 @@ Property Page
 		.boendet, .ammenities, .options{ 
 			h5{ float: left; background-color: $vapor; z-index:8; position: relative; padding-right: 20px; margin-bottom: 10px;}
 			.clear-float{ display:block; clear:both;}
-			.columns{ margin-top:6px; }
+			.columns{ margin-top:20px; }
 			ul{ margin-left: 0;
-				li{ line-height: 50px;
+				li{ line-height: 50px; font-size:14px;
 					a{ color: $blue-clr;}
 				}
 			}
@@ -928,9 +928,10 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
 			.rental-description{
 				a.add-button{ margin-top:$mod-pad; }
 				.gallery{ margin:0;
-					li{ display:inline-block; width:216px; height:200px; background-color:$vapor;/*  position:relative; */ overflow:hidden; @include border-radius(3px); margin:.5em; float:left;
-						a{ display:block; position:relative;}
+					li{ display:inline-block; width:216px; height:200px; background-color:$vapor; position:relative; overflow:hidden; @include border-radius(3px); margin:.5em; float:left;
+						a{ display:block; position:absolute; right:0; z-index:100;}
 						a span{ color:$red-clr; font-size:18px; display:inline-block; position:relative; padding:.2em; background-color:#fff; float:right; text-align:center;}
+						img{position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%)}
 					}
 				}
 			}

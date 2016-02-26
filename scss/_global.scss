@@ -483,6 +483,7 @@ table.ui-datepicker-calendar{ border:none; margin-bottom:0;}
 td.ui-datepicker-today{ background-color: $blue-clr; 
   a{ color:#fff;}
 }
+td.ui-datepicker-current-day a.ui-state-active{ font-weight:bold; color:$metal!important;}
 select.ui-datepicker-month{ float:left; margin-bottom:4px; max-width:100px; height:33px; padding:0; padding-left:20px;}
 span.ui-datepicker-year{ float:left; margin:5px 0 0 20px;}
 .ui-datepicker-prev, .ui-datepicker-next {
@@ -516,6 +517,7 @@ span.ui-datepicker-year{ float:left; margin:5px 0 0 20px;}
 
 /* Calendar */
 #calendar{ padding-left:0; padding-bottom:$pad;
+  .dzscalendar.skin-lions-square .week-day{ font-weight:normal;}
   .dzscalendar.skin-lions-square .curr-date .curr-month{ color:$metal; font-weight:normal; text-transform:none;}
   .dzscalendar.skin-lions-square{ background-color:$vapor;}
   .dzscalendar.skin-lions-square .week-day.odd{ background-color:#fff;}
@@ -525,10 +527,14 @@ span.ui-datepicker-year{ float:left; margin:5px 0 0 20px;}
     .week-day.tag-important.datepicker-selected .divimage-overlay{ background-color:$red-clr;}
     .week-day.tag-important{ 
       .the-number{ color:#fff;}
-      .divimage-overlay{ background-color:$soft-grey;}
+      .divimage-overlay{ background-color:$blue-clr;}
     }
     .week-day.tag-important:hover .divimage-overlay{ background-color:$red-clr;}
     .calendar-controls .curr-year{ color:$soft-grey;}
+    .week-day.today-date.hasEvent {
+      .divimage-overlay{background:$vapor;}
+      .the-number{ color:$metal; font-weight:bold;}
+    }
   }
 }
 

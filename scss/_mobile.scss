@@ -1,7 +1,10 @@
 $pad: 0.9375em;
 // Small screens
 @media only screen and (max-width: 850px) { 
-
+	
+	.featherlight-iframe .featherlight-content {
+		width:100%;
+	}
 	/*  Navigation Callouts */
 	.top-bar .toggle-topbar.menu-icon{ margin-top:-8px; top:50%;
 		a{ padding:0 0.5rem 0 $pad;}
@@ -143,6 +146,9 @@ $pad: 0.9375em;
 		}
 	}
 	#property{ margin-top:0px;
+		.boendet, .ammenities, .options{ 
+			.columns{ padding-left:0; padding-right:0;}
+		}
 		.gallery #p-gallery{ max-height:250px;
 			a{ display:block;}
 			img{ min-height:250px; display: block; max-height: 250px; width: inherit;}
@@ -163,11 +169,11 @@ $pad: 0.9375em;
 			li{ font-size:15px;}
 			.ammenities li{ font-size:12px;}
 		}
-		.icon{ margin: 10px 2px 0 0; font-size: 25px;}
+		.icon{ margin: 10px 2px 0 0; font-size: 22px; width:22px;}
 		.arrow-box:before{ display:none; border-top-color:transparent;}
 		.arrow-box:after{ display:none; border-top-color:transparent;}
-		.columns.small-6.large-5 a.tooltips span{ padding: 40px 20px; margin-top: -240px; margin-left: -10px; width: 300px;}
-		.columns.small-6.large-7 a.tooltips span{ padding: 40px 20px; margin-top: -240px; margin-left: -164px; width: 300px;}
+		.columns.small-6.large-6 a.tooltips span{ padding: 40px 20px; margin-top: -240px; margin-left: -10px; width: 300px;}
+		.columns.small-6.large-6 a.tooltips span{ padding: 40px 20px; margin-top: -240px; margin-left: -164px; width: 300px;}
 		
 		.read-more, .read-less{ margin-bottom:20px;}
 
