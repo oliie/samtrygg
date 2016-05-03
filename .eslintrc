@@ -123,9 +123,6 @@
         "no-unused-vars": 2,
         "no-use-before-define": 2,
 
-        // Node.js AND CommonJS
-        "global-require": 2,
-
         // STYLISTIC ISSUES
         "array-bracket-spacing": [
             1,
@@ -266,6 +263,6 @@
         "wrap-regex": 1
     },
     "globals": {
-        // "cwp": true,
+        "require": true
     }
 }
