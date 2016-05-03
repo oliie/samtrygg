@@ -63,8 +63,7 @@ img.tall {
   max-width: 100%;
   width: auto; }
 
-​
-span.form-error-times, .form-error-times, .form-error-text {
+​ span.form-error-times, .form-error-times, .form-error-text {
   color: #D8523D;
   font-size: 13px; }
 
@@ -74,6 +73,7 @@ span.form-error-times, .form-error-times, .form-error-text {
 /*  Topbar / Navigation - Front Pages  */
 nav#nav.top-bar.logged li.logged {
   margin-left: 40px; }
+
 nav#nav.top-bar.logged li a.button.button-outline {
   height: 1.75rem;
   padding-top: 0.34em;
@@ -81,6 +81,7 @@ nav#nav.top-bar.logged li a.button.button-outline {
   padding-right: 2em;
   font-weight: normal;
   color: #5A5A5A; }
+
 nav#nav.top-bar.logged li a.button.button-outline:hover {
   background-color: #909090;
   /* color:$metal; */
@@ -174,27 +175,27 @@ ul, ul li, ul li a {
 ul li a:hover {
   color: #5A5A5A; }
 
-nav#nav.top-bar.nav-top {
+nav.nav-top#nav.top-bar {
   background: transparent;
   border-bottom: none;
   position: absolute; }
-  nav#nav.top-bar.nav-top ul li a.button.rent {
+  nav.nav-top#nav.top-bar ul li a.button.rent {
     color: #fff;
     background-color: #5497FF;
     font-weight: normal;
     text-shadow: none; }
-  nav#nav.top-bar.nav-top ul li a.button.rent:hover {
+  nav.nav-top#nav.top-bar ul li a.button.rent:hover {
     background-color: #82B2FD;
     opacity: 1; }
-  nav#nav.top-bar.nav-top ul li a.button:hover {
+  nav.nav-top#nav.top-bar ul li a.button:hover {
     background: rgba(155, 154, 155, 0.5); }
-  nav#nav.top-bar.nav-top ul li a.button.search {
+  nav.nav-top#nav.top-bar ul li a.button.search {
     display: none; }
-  nav#nav.top-bar.nav-top .top-bar-section ul li a {
+  nav.nav-top#nav.top-bar .top-bar-section ul li a {
     color: #fff;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
     letter-spacing: 1px; }
-  nav#nav.top-bar.nav-top .top-bar-section ul li a:hover {
+  nav.nav-top#nav.top-bar .top-bar-section ul li a:hover {
     color: #D8D8D8;
     -webkit-transition: all 100ms ease;
     -moz-transition: all 100ms ease;
@@ -208,10 +209,13 @@ span.icon-cross2 {
 
 nav#nav.top-bar.expanded a {
   text-decoration: none; }
+
 nav#nav.top-bar.expanded ul li a.button.rent {
   background-color: #fff; }
+
 nav#nav.top-bar.expanded .toggle-topbar.menu-icon span.icon-hamburger_menu {
   display: none; }
+
 nav#nav.top-bar.expanded .toggle-topbar.menu-icon span.icon-cross2 {
   display: block;
   margin-top: 10px; }
@@ -240,11 +244,13 @@ nav#nav.top-bar.dashboard ul {
       background-color: #F6F6F6; }
       nav#nav.top-bar.dashboard ul li ul.dropdown li:hover a {
         font-weight: bold; }
+
 nav#nav.top-bar.dashboard div.results {
   box-shadow: none;
   border: 1px solid #D8D8D8; }
   nav#nav.top-bar.dashboard div.results a {
     padding-top: 20px; }
+
 nav#nav.top-bar.dashboard div.results ul li {
   width: 100%;
   margin-right: 0;
@@ -254,13 +260,17 @@ nav#nav.top-bar.dashboard div.results ul li {
     margin: 0 10px 0 20px;
     display: inline-block;
     position: relative; }
+
 nav#nav.top-bar.dashboard ul.title-area li a.nav-logo {
   padding-top: 14px; }
+
 nav#nav.top-bar.dashboard ul.title-area {
   height: 60px;
   border-right: 1px solid #D8D8D8; }
+
 nav#nav.top-bar.dashboard li:not(.has-form) a:not(.button) {
   padding-top: 8px; }
+
 nav#nav.top-bar.dashboard li.message a:not(.button) {
   padding-right: 0;
   padding-top: 8px;
@@ -277,6 +287,7 @@ nav#nav.top-bar.dashboard li.message a:not(.button) {
     background-color: #D8523D;
     position: absolute;
     margin: 12px 0 0 -14px; }
+
 nav#nav.top-bar.dashboard .nav-search {
   float: left;
   width: 40%; }
@@ -510,12 +521,15 @@ footer#footer {
 input.incorrect-entry ::-webkit-input-placeholder {
   font-family: "Lato", sans-serif;
   color: #D8523D; }
+
 input.incorrect-entry :-moz-placeholder {
   font-family: "Lato", sans-serif;
   color: #D8523D; }
+
 input.incorrect-entry ::-moz-placeholder {
   font-family: "Lato", sans-serif;
   color: #D8523D; }
+
 input.incorrect-entry :-ms-input-placeholder {
   font-family: "Lato", sans-serif;
   color: #D8523D; }
@@ -923,6 +937,7 @@ div.featherlight-content iframe html body {
 
 .featherlight.attached .featherlight-content {
   overflow: scroll; }
+
 .featherlight.attached .featherlight-inner a.gallery {
   display: block;
   margin-bottom: 10px; }
@@ -956,6 +971,7 @@ table.ui-datepicker-calendar {
   .ui-datepicker-calendar td a:hover {
     color: #fff;
     text-decoration: none; }
+
 .ui-datepicker-calendar td:hover {
   background-color: #5497FF; }
   .ui-datepicker-calendar td:hover a {
@@ -1065,6 +1081,7 @@ span.ui-datepicker-year {
   src: url("../fonts/icons.eot?e4wivw#iefix") format("embedded-opentype"), url("../fonts/icons.ttf?e4wivw") format("truetype"), url("../fonts/icons.woff?e4wivw") format("woff"), url("../fonts/icons.svg?e4wivw#icons") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icons' !important;
@@ -1573,12 +1590,30 @@ span.ui-datepicker-year {
 .icon-wash-machine:before {
   content: "\e91b"; }
 
-/*  
+.icon--big {
+  font-size: 40px;
+  width: auto;
+  height: 100%;
+  margin-top: 10px; }
 
-Landing Page  
-==============
+.padded {
+  padding: 20px 0; }
 
-*/
+.margin-bottom-fix {
+  margin-bottom: 3px; }
+
+.bold-text {
+  font-weight: bold; }
+
+@media screen and (max-width: 834px) {
+  .icon--big {
+    font-size: 70px;
+    padding: 30px 0;
+    margin-top: 20px; } }
+
+/*
+ * Landing Page
+ */
 #landing {
   padding-top: 0; }
   #landing section {
@@ -1592,13 +1627,13 @@ Landing Page
     text-decoration: none; }
   #landing #steps {
     margin-bottom: 0; }
-  #landing nav#nav.top-bar.dashboard.nav-top .nav-search {
+  #landing nav.dashboard.nav-top#nav.top-bar .nav-search {
     display: none; }
-  #landing nav#nav.top-bar.dashboard.nav-top ul.title-area {
+  #landing nav.dashboard.nav-top#nav.top-bar ul.title-area {
     border: none; }
-  #landing nav#nav.top-bar.dashboard.nav-top ul li.logged-user {
+  #landing nav.dashboard.nav-top#nav.top-bar ul li.logged-user {
     border: none; }
-  #landing nav#nav.top-bar.dashboard.nav-top ul li ul.dropdown {
+  #landing nav.dashboard.nav-top#nav.top-bar ul li ul.dropdown {
     background-color: rgba(0, 0, 0, 0.4);
     border: none;
     -webkit-border-radius: 3px;
@@ -1606,7 +1641,7 @@ Landing Page
     -ms-border-radius: 3px;
     border-radius: 3px;
     margin-top: 0; }
-  #landing nav#nav.top-bar.dashboard.nav-top ul li ul.dropdown li:hover {
+  #landing nav.dashboard.nav-top#nav.top-bar ul li ul.dropdown li:hover {
     background: transparent; }
 
 header.hero {
@@ -1652,8 +1687,6 @@ header.hero {
       -moz-border-radius: 0px;
       -ms-border-radius: 0px;
       border-radius: 0px;
-      border-bottom-left-radius: 3px;
-      border-top-left-radius: 3px;
       background-color: rgba(0, 0, 0, 0.4);
       border: none; }
     header.hero .searchbar input:focus {
@@ -1666,8 +1699,6 @@ header.hero {
       -moz-border-radius: 0px;
       -ms-border-radius: 0px;
       border-radius: 0px;
-      border-bottom-right-radius: 3px;
-      border-top-right-radius: 3px;
       background-color: #D8523D;
       padding: 11%; }
       header.hero .searchbar a.button span {
@@ -1755,17 +1786,22 @@ header.hero {
 /* How Section */
 #how div.video .large-8.columns {
   padding: 0; }
+
 #how div.video .large-4.columns .button {
   display: block; }
+
 #how div.video .columns {
   height: 433px; }
+
 #how div.video img {
   height: 433px;
   width: auto; }
+
 #how div.txt {
   padding: 40px;
   background-color: #F6F6F6;
   height: inherit; }
+
 #how a.vid-play-button {
   display: inline-block;
   width: 100%;
@@ -1774,6 +1810,7 @@ header.hero {
   background: url("../img/vid_play_button2.svg") no-repeat;
   background-position: 50% 48%;
   z-index: 100; }
+
 #how a.vid-play-button:hover {
   opacity: 0.8; }
 
@@ -1933,31 +1970,41 @@ div.visit-wrap-odd {
 /*  Hood Revise of visit  */
 #hood h1, #hood p {
   text-align: center; }
+
 #hood a.rental, #hood a.destination {
   display: inline-block;
   height: 362px; }
+
 #hood div.view {
   position: absolute;
   top: 0;
   z-index: 0;
   width: 100%;
   height: 100%; }
+
 #hood .large-4 {
   border-right: 0.9375em solid #fff; }
+
 #hood .large-8 {
   border-left: 0.9375em solid #fff; }
+
 #hood .group {
   margin-bottom: 1.9375em; }
+
 #hood .end .large-4 {
   border-right: none;
   border-left: 1.9375em solid #fff; }
+
 #hood .end .large-8 {
   border-left: 0; }
+
 #hood .middle .large-4:first-child + .large-4 {
   border-left: 0.9375em solid #fff; }
+
 #hood .middle .large-4:last-child {
   border-left: 0.9375em solid #fff;
   border-right: 0; }
+
 #hood .rental {
   text-align: center; }
   #hood .rental div.wrap {
@@ -1986,6 +2033,7 @@ div.visit-wrap-odd {
       line-height: 1.25rem; }
     #hood .rental div.wrap span {
       text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
+
 #hood .destination {
   text-align: center; }
   #hood .destination h2 {
@@ -1997,6 +2045,7 @@ div.visit-wrap-odd {
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     font-family: "Lato", sans-serif;
     font-weight: 900; }
+
 #hood .search-more {
   clear: both;
   padding-top: 0.9375em;
@@ -2093,9 +2142,9 @@ div.visit-wrap-odd {
     -o-transition: all 100ms ease;
     transition: all 100ms ease; }
 
-/*  
+/*
 
-Login Page 
+Login Page
 ==============
 
 */
@@ -2217,9 +2266,9 @@ Login Page
     #login p a:hover, #signup p a:hover {
       text-decoration: underline; }
 
-/*  
+/*
 
-Signup Page 
+Signup Page
 ==============
 
 */
@@ -2229,22 +2278,29 @@ Signup Page
   color: #D8D8D8;
   font-size: 26px;
   text-align: center; }
+
 #signup input[name=first-name][type=text], #signup input[name=last-name][type=text], #signup input[name=mobile][type=text] {
   padding-left: 20px; }
+
 #signup input[type="password"], #signup .login {
   margin-bottom: 1.25rem; }
+
 #signup nput.custom-toggle[type="checkbox"] + label, #signup input.custom-toggle[type="radio"] + label {
   margin: 0;
   width: 100%; }
+
 #signup input.custom-toggle[type="checkbox"]:checked + label, #signup input.custom-toggle[type="radio"]:checked + label {
   text-decoration: none; }
+
 #signup input#landlord[type=radio]:checked + label span {
   background-color: #5497FF;
   color: #fff; }
+
 #signup input[type=radio]:checked + label span {
   background-color: #D8523D;
   color: #fff;
   border: none; }
+
 #signup .button-outline {
   display: inline-block;
   height: 52px;
@@ -2252,25 +2308,30 @@ Signup Page
   padding: 0.9rem 1rem 0rem 1rem;
   float: left;
   text-align: center; }
+
 #signup #landlord.button-outline {
   float: left; }
+
 #signup #renter + label + p {
   float: left; }
+
 #signup h5 {
   text-align: center;
   margin-bottom: .75em; }
+
 #signup div.left {
   width: 50%; }
   #signup div.left label {
     padding-right: 10px; }
+
 #signup div.right {
   width: 50%; }
   #signup div.right label {
     padding-left: 10px; }
 
-/*  
+/*
 
-Property Page 
+Property Page
 ==============
 
 */
@@ -2468,20 +2529,24 @@ Property Page
     height: 480px;
     width: 100%; }
 
-/*  
+/*
 
-Search Page 
+Search Page
 ==============
 
 */
 #search section {
   margin-bottom: 60px; }
+
 #search span.icon {
   color: #D8D8D8; }
+
 #search footer span.icon {
   color: #5A5A5A; }
+
 #search span.icon-chevron-down-2 {
   font-size: 20px; }
+
 #search span.icon-chevron-down-2.filter-select {
   color: #D8523D;
   -ms-transform: rotate(180deg);
@@ -2489,10 +2554,13 @@ Search Page
   -webkit-transform: rotate(180deg);
   /* Chrome, Safari, Opera */
   transform: rotate(180deg); }
+
 #search .reveal-modal {
   padding-top: 90px; }
+
 #search .close-reveal-modal {
   margin: 83px 7px 0 0; }
+
 #search .button-bottom {
   position: relative;
   width: inherit;
@@ -2523,13 +2591,16 @@ Search Page
     background: #D8D8D8; }
     #search .button-bottom button.map:hover span.icon-globe, #search .button-bottom .map.button-outline:hover span.icon-globe {
       color: #909090; }
+
 #search .icon-cross-circle:hover {
   color: #D8523D; }
+
 #search .icon-cross-circle {
   color: #5A5A5A;
   font-size: 30px;
   padding: 10px;
   background-color: #fff; }
+
 #search .map-modal-content {
   width: 100%;
   height: 100%;
@@ -2539,12 +2610,15 @@ Search Page
   background-color: #F6F6F6;
   padding-top: 20px;
   border-bottom: 1px solid #D8D8D8; }
+
 #filters .filter-ops {
   display: none; }
+
 #filters .sm-circle:hover {
   cursor: pointer; }
   #filters .sm-circle:hover .icon-chevron-down-2 {
     color: #D8523D; }
+
 #filters .sm-circle {
   background: #F6F6F6;
   display: block;
@@ -2560,16 +2634,20 @@ Search Page
     width: 18px;
     height: 18px;
     font-size: 18px; }
+
 #filters .section .columns .columns.pad-n-r {
   padding-left: 4px; }
+
 #filters .icon.icon-MAPPIN {
   display: block;
   position: absolute;
   font-size: 23px;
   color: #D8D8D8;
   margin: 15px 0 0 12px; }
+
 #filters input#main-search[type="text"] {
   padding-left: 52px; }
+
 #filters fieldset {
   border: none;
   border-top: 1px solid #D8D8D8;
@@ -2587,13 +2665,17 @@ Search Page
     margin: 14px 10px 0 20px; }
   #filters fieldset .columns.pad-n-r {
     padding-left: 4px; }
+
 #filters label {
   font-size: 18px; }
+
 #filters select {
   font-size: 18px; }
+
 #filters .hyra select, #filters .size select, #filters .rm-amount select {
   font-size: 18px;
   text-indent: 50px; }
+
 #filters span.h-line {
   width: 100%;
   border-bottom: 1px solid #D8D8D8;
@@ -2838,9 +2920,9 @@ Search Page
   max-width: 300px;
   min-height: 200px; }
 
-/*  
+/*
 
-Landlord Page 
+Landlord Page
 ==============
 
 */
@@ -2851,6 +2933,7 @@ Landlord Page
   padding-top: 20px;
   background-attachment: fixed;
   background-size: cover; }
+
 #landlord .info-circle {
   background-color: #46C6E3;
   width: 230px;
@@ -2875,6 +2958,7 @@ Landlord Page
     width: 20px;
     display: inline-block;
     margin: 4px auto; }
+
 #landlord .calculator {
   background-color: #F6F6F6;
   border: 1px solid #D8D8D8;
@@ -2918,6 +3002,7 @@ Landlord Page
     color: #D8D8D8; }
   #landlord .calculator input.location[type=text] {
     padding-left: 50px; }
+
 #landlord #points {
   text-align: center;
   padding-top: 50px; }
@@ -2937,6 +3022,7 @@ Landlord Page
     width: 200px;
     display: block;
     margin: 0 auto; }
+
 #landlord #info-text {
   background-color: #F6F6F6;
   margin-top: 50px;
@@ -2945,44 +3031,58 @@ Landlord Page
     padding-top: 50px; }
   #landlord #info-text p {
     text-indent: 20px; }
+
 #landlord #points .icon {
   font-size: 48px; }
 
-/*  
+/*
 
-Help Pages 
+Help Pages
 ==============
 
 */
 #support #results {
   background-color: #fff;
   margin-top: 0; }
+
 #support section p img {
   max-height: 250px;
   float: right;
   padding: 10px; }
+
 #support section p img.left {
   float: left; }
+
 #support section {
   padding: 0 0 60px 0; }
+
 #support section:first-child {
   padding-top: 50px; }
+
 #support div.section-wrapper.pop-blue {
   background-color: #46C6E3; }
+
 #support div.section-wrapper.pop-yellow {
   background-color: #FFDB71; }
+
 #support div.section-wrapper.pop-mint {
   background-color: #9EEFD7; }
+
 #support div.section-wrapper.pop h1, #support div.section-wrapper.pop h2, #support div.section-wrapper.pop h3, #support div.section-wrapper.pop h4, #support div.section-wrapper.pop h5, #support div.section-wrapper.pop h6, #support div.section-wrapper.pop p, #support div.section-wrapper.pop ul, #support div.section-wrapper.pop li, #support div.section-wrapper.pop dt, #support div.section-wrapper.pop dl, #support div.section-wrapper.pop table, #support div.section-wrapper.pop td, #support div.section-wrapper.pop th, #support div.section-wrapper.pop * {
   color: #fff; }
+
 #support div.section-wrapper.muted {
   background-color: #F6F6F6; }
+
 #support .button.red {
   background-color: #D8523D; }
+
 #support .button.red:hover {
   background-color: #F26954; }
+
 #support .section-wrapper:nth-child(even) {
   background-color: #F6F6F6; }
+
 #support header {
   height: 440px;
   width: 100%;
@@ -3003,58 +3103,77 @@ Help Pages
     color: #fff;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     font-size: 42px; }
+
 #support header.hero .searchbar {
   margin-top: 2.5rem;
   position: relative; }
   #support header.hero .searchbar input {
     height: 60px; }
+
 #support .searchbar.row {
   max-width: 62.85rem; }
+
 #support header + div {
   background-color: #fff; }
   #support header + div .accordion .accordion-navigation > a, #support header + div .accordion dd > a {
     padding: 1.2rem 1.2rem 1.2rem 1rem; }
   #support header + div .accordion .accordion-navigation > .content, #support header + div .accordion dd > .content {
     padding: 1rem; }
+
 #support address {
   font-style: normal; }
   #support address span {
     display: block; }
+
 #support .info-drop ul.tabs li {
   display: inline-block;
   font-size: 18px; }
+
 #support .info-drop ul.tabs li.active {
   text-decoration: underline; }
+
 #support .info-drop ul.tabs span {
   display: inline-block;
   margin: 0 10px 0 10px; }
+
 #support .info-drop ul.tabs a:hover {
   text-decoration: underline; }
+
 #support .info-drop .search a {
   color: #D8523D; }
+
 #support .info-drop .rent-out a {
   color: #5497FF; }
+
 #support .info-drop .tabs-content a {
   color: #5A5A5A;
   font-size: 18px; }
+
 #support .info-drop .tabs-content a[aria-expanded=true] {
   background: #F6F6F6; }
+
 #support .info-drop .tabs-content p {
   font-size: 16px; }
+
 #support .info-drop .tabs-content li {
   border-bottom: 1px solid #D8D8D8;
   /* background-color: #fff;  */
   font-size: 18px; }
+
 #support .info-drop .tabs-content li:first-child {
   border-top: 1px solid #D8D8D8; }
+
 #support .info-drop .tabs-content li.active, #support .info-drop .tabs-content .accordion-navigation.active div.active {
   background-color: #F6F6F6; }
+
 #support .info-drop .tabs-content span.icon-arrow_right_gallery.arrow-close {
   font-weight: bold;
   color: #D8D8D8; }
+
 #support .info-drop .tabs-content span.icon-chevron-down-2.arrow-open {
   color: #D8523D;
   font-size: 16px; }
+
 #support .map {
   height: 480px;
   width: 100%; }
@@ -3062,9 +3181,9 @@ Help Pages
 #support.destination header h1 {
   font-weight: 900; }
 
-/*  
+/*
 
-Dashboard  
+Dashboard
 ==============
 
 */
@@ -3078,7 +3197,7 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
   #dashboard div.dash-content {
     float: right; }
   #dashboard div#ui-datepicker-div {
-    z-index: 999999999999999999 !important; }
+    z-index: 1000000000000000000 !important; }
   #dashboard .ui-datepicker-calendar td:hover a, #dashboard a.ui-datepicker-calendar td:hover a, #dashboard td.ui-datepicker-current-day a {
     color: #fff;
     text-decoration: none; }
@@ -4042,26 +4161,23 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
     right: -10px;
     top: -10px; }
 
-/*  
+/*
 
-Mobile / Media Queries 
+Mobile / Media Queries
 ==============
 
 */
 @media only screen and (max-width: 850px) {
   .featherlight-iframe .featherlight-content {
     width: 100%; }
-
   /*  Navigation Callouts */
   .top-bar .toggle-topbar.menu-icon {
     margin-top: -8px;
     top: 50%; }
     .top-bar .toggle-topbar.menu-icon a {
       padding: 0 0.5rem 0 0.9375em; }
-
-  nav#nav.top-bar, nav#nav.top-bar.nav-top, nav#nav.top-bar.page-bar, nav#nav.top-bar.nav-top, nav#nav.top-bar.page-bar {
+  nav#nav.top-bar, nav#nav.top-bar.nav-top, nav#nav.top-bar.page-bar, nav.nav-top#nav.top-bar, nav.page-bar#nav.top-bar {
     position: fixed; }
-
   nav#nav.top-bar.expanded {
     background: #fff;
     height: 3.8125rem;
@@ -4108,19 +4224,15 @@ Mobile / Media Queries
         color: #5A5A5A; }
     nav#nav.top-bar.expanded .top-bar-section ul li:last-child {
       padding-bottom: 40px; }
-
   nav#nav.top-bar .top-bar-section ul li a.radius.rent {
     border-color: transparent;
     background-color: transparent; }
-
   nav#nav.top-bar, nav#nav.top-bar.nav-top, nav#nav.top-bar.page-bar, nav#nav.top-bar.expanded {
     background-color: #fff;
     padding: 0;
     border-bottom: 1px solid #D8D8D8; }
-
   nav#nav.top-bar.expanded {
     height: auto; }
-
   #landing nav#nav.top-bar.dashboard ul.title-area li a.nav-logo, #support nav#nav.top-bar.dashboard ul.title-area li a.nav-logo, #search nav#nav.top-bar.dashboard ul.title-area li a.nav-logo, #landlord nav#nav.top-bar.dashboard ul.title-area li a.nav-logo {
     padding-top: 8px; }
   #landing nav#nav.top-bar.dashboard li.toggle-topbar.menu-icon, #support nav#nav.top-bar.dashboard li.toggle-topbar.menu-icon, #search nav#nav.top-bar.dashboard li.toggle-topbar.menu-icon, #landlord nav#nav.top-bar.dashboard li.toggle-topbar.menu-icon {
@@ -4131,7 +4243,7 @@ Mobile / Media Queries
     content: ' > ';
     position: relative;
     display: inline; }
-  #landing nav#nav.top-bar.dashboard.nav-top ul li ul.dropdown, #support nav#nav.top-bar.dashboard.nav-top ul li ul.dropdown, #search nav#nav.top-bar.dashboard.nav-top ul li ul.dropdown, #landlord nav#nav.top-bar.dashboard.nav-top ul li ul.dropdown {
+  #landing nav.dashboard.nav-top#nav.top-bar ul li ul.dropdown, #support nav.dashboard.nav-top#nav.top-bar ul li ul.dropdown, #search nav.dashboard.nav-top#nav.top-bar ul li ul.dropdown, #landlord nav.dashboard.nav-top#nav.top-bar ul li ul.dropdown {
     background: transparent; }
   #landing .dropdown .title.back.js-generated h5 a, #support .dropdown .title.back.js-generated h5 a, #search .dropdown .title.back.js-generated h5 a, #landlord .dropdown .title.back.js-generated h5 a {
     color: #909090;
@@ -4140,27 +4252,22 @@ Mobile / Media Queries
     content: " < "; }
   #landing nav#nav.top-bar.expanded .top-bar-section ul li:last-child, #support nav#nav.top-bar.expanded .top-bar-section ul li:last-child, #search nav#nav.top-bar.expanded .top-bar-section ul li:last-child, #landlord nav#nav.top-bar.expanded .top-bar-section ul li:last-child {
     padding-bottom: 20px; }
-  #landing nav#nav.top-bar.dashboard.nav-top .nav-search, #support nav#nav.top-bar.dashboard.nav-top .nav-search, #search nav#nav.top-bar.dashboard.nav-top .nav-search, #landlord nav#nav.top-bar.dashboard.nav-top .nav-search {
+  #landing nav.dashboard.nav-top#nav.top-bar .nav-search, #support nav.dashboard.nav-top#nav.top-bar .nav-search, #search nav.dashboard.nav-top#nav.top-bar .nav-search, #landlord nav.dashboard.nav-top#nav.top-bar .nav-search {
     display: block; }
-
   /* Light box */
   .featherlight-next {
     left: 72%; }
-
   .featherlight-previous {
     left: 10px; }
-
   .featherlight-content {
     max-width: 350px;
     margin: 0 auto; }
-
   /*  Landing Page  */
   header.hero .hero-text {
     margin-top: 6.6rem; }
     header.hero .hero-text h2, header.hero .hero-text h1 {
       font-size: 42px;
       line-height: 3rem; }
-
   header#header.hero {
     height: 400px; }
     header#header.hero .row.search {
@@ -4184,7 +4291,6 @@ Mobile / Media Queries
       background-position: center; }
     header#header.hero .hero-bkground a {
       display: none; }
-
   header.hero .searchbar .search {
     font-size: 14px; }
     header.hero .searchbar .search ::-webkit-input-placeholder {
@@ -4199,7 +4305,6 @@ Mobile / Media Queries
     header.hero .searchbar .search :-ms-input-placeholder {
       font-family: "Lato", sans-serif;
       color: transparent; }
-
   #steps {
     display: none; }
     #steps a.columns {
@@ -4216,40 +4321,29 @@ Mobile / Media Queries
       margin: 20px auto; }
     #steps .steps h1 {
       margin: 30px 0 0 0; }
-
   div.visit-wrap-even a {
     margin-right: 0; }
-
   #landing section {
     margin: 40px 0; }
-
   #landing section#how {
     margin-top: 0px; }
-
   section#how div.video img {
     height: auto; }
-
   section#how div.video .columns {
     height: auto; }
-
   #visit div {
     margin-top: .5em; }
-
   section#visit .columns a.columns {
     display: block;
     float: none;
     height: 400px;
     margin: 0.9375em auto; }
-
   section#visit .columns a.columns.des {
     display: none; }
-
   section#visit .columns:last-child {
     float: none; }
-
   #visit .search-more {
     padding-top: 1em; }
-
   #hood a.rental, #hood a.destination {
     margin-bottom: 0.9375em; }
   #hood .group {
@@ -4260,17 +4354,13 @@ Mobile / Media Queries
     border: none; }
   #hood .middle .large-4:first-child + .large-4, #hood .middle .large-4:last-child {
     border: none; }
-
   header.hero .searchbar a.button span {
     display: none; }
-
   header.hero .searchbar .button .icon-magnifier {
     display: inline-block; }
-
   #support header.hero .searchbar {
     margin-top: 0;
     width: 80%; }
-
   footer#footer .middle .row {
     padding: 40px 0; }
   footer#footer .middle .about {
@@ -4301,10 +4391,8 @@ Mobile / Media Queries
     margin-top: 0; }
   footer#footer .press {
     display: none; }
-
   header .row.search {
     width: 80%; }
-
   header.hero .searchbar a.button {
     padding: 0;
     margin: 0; }
@@ -4316,7 +4404,6 @@ Mobile / Media Queries
     top: 30%; }
   header.hero .searchbar input:focus + .results {
     display: none; }
-
   #property {
     margin-top: 0px; }
     #property .boendet .columns, #property .ammenities .columns, #property .options .columns {
@@ -4385,14 +4472,12 @@ Mobile / Media Queries
       margin-bottom: 20px; }
     #property #sup-gallery {
       display: none; }
-
   #results {
     margin-top: 0; }
     #results #grid-view .block {
       margin-right: 0;
       margin-right: 0;
       max-width: 100%; }
-
   #search #results {
     margin-top: 0; }
     #search #results #grid-view .block {
@@ -4420,41 +4505,30 @@ Mobile / Media Queries
     padding-left: 0px; }
   #search #filters fieldset .columns.pad-n-r {
     padding-left: 0px; }
-
   #results .title button.list-view, #results .title .list-view.button-outline, #results .title .list-view.button-outline, #results .title button.grid-view, #results .title .grid-view.button-outline, #results .title .grid-view.button-outline {
     float: left;
     margin-bottom: 0;
     margin-top: 1px; }
-
   #search .title button.map, #search .title .map.button-outline, #search .title .map.button-outline {
     float: none; }
-
   #results .title button.map, #results .title .map.button-outline, #results .title .map.button-outline {
     margin: 0; }
-
   #results #list-view table thead tr th:nth-of-type(2), #results #list-view table thead tr th:last-child {
     display: none; }
-
   #results #list-view tr.accordion td:nth-of-type(2), #results #list-view tr.accordion td:last-child {
     display: none; }
-
   #results #list-view tr.accordion td, #results #list-view table thead tr th {
     padding: 0.2625rem 0.225rem;
     font-size: 10px; }
-
   td.more {
     display: none; }
-
   tr.panel td:first-child {
     display: none; }
-
   #results #list-view a.button {
     font-size: 10px;
     padding: 0.6rem 2rem 1.0625rem 2rem; }
-
   #results #list-view .panel {
     background: transparent; }
-
   #support header {
     height: 220px;
     background-attachment: scroll !important; }
@@ -4466,7 +4540,6 @@ Mobile / Media Queries
     font-size: 27px; }
   #support #results #grid-view table a.button {
     padding: 0.43rem 1rem 1.0625rem 1rem; }
-
   #landlord .info-circle {
     margin: -73px 20% 0 20%;
     z-index: 2; }
@@ -4482,7 +4555,6 @@ Mobile / Media Queries
       line-height: 52px; }
   #landlord #points {
     margin-top: 60px; }
-
   #dashboard .dash-nav {
     position: relative; }
   #dashboard .rental-times .timeblock.small-12.col {
@@ -4505,7 +4577,7 @@ Mobile / Media Queries
     color: #909090; }
   #dashboard nav#nav.top-bar.expanded .top-bar-section a.active {
     margin-left: 10px; }
-  #dashboard nav#nav.top-bar, #dashboard nav#nav.top-bar.nav-top, #dashboard nav#nav.top-bar.page-bar, #dashboard nav#nav.top-bar.expanded {
+  #dashboard nav#nav.top-bar, #dashboard nav.nav-top#nav.top-bar, #dashboard nav.page-bar#nav.top-bar, #dashboard nav#nav.top-bar.expanded {
     -webkit-box-shadow: 2px 2px 10px #D8D8D8;
     -moz-box-shadow: 2px 2px 10px #D8D8D8;
     box-shadow: 2px 2px 10px #D8D8D8; }
@@ -4599,7 +4671,6 @@ Mobile / Media Queries
     display: block; }
   #dashboard nav#nav.top-bar.dashboard ul.title-area {
     border: none; }
-
   nav#nav.top-bar.dashboard ul li {
     height: inherit;
     margin-right: 0; }
@@ -4627,107 +4698,83 @@ Mobile / Media Queries
     font-size: 16px; }
   nav#nav.top-bar.dashboard .top-bar-section ul li a:hover {
     color: #5A5A5A; }
-
   .dzscalendar.skin-lions-square .curr-date .curr-month, .dzscalendar.skin-lions-square .curr-date .curr-year {
     font-size: 14px; } }
+
 @media only screen and (min-width: 850px) and (min-width: 668px) {
   #dashboard .rental-times .timeblock {
     width: 30.3333333333%; }
   #dashboard .module .profile-card {
     width: 48%; } }
+
 @media only screen and (max-width: 1068px) and (min-width: 851px) {
   header.hero div.searchbar > div.row {
     width: 70%; }
-
   section#how div.video .large-4.columns .button {
     display: inline; }
-
   #visit .large-12.columns {
     padding-left: 0.9375em;
     padding-right: 0.9375em; }
-
   #visit div {
     margin-top: 0.5rem; }
-
   .row.search {
     max-width: 50rem; }
-
   .hero-bkground video {
     height: 100%;
     width: auto;
     margin-top: 0; }
-
   div.visit-wrap-even a {
     margin-right: 0.4em;
     margin-bottom: 0; }
   div.visit-wrap-even .des {
     width: 334px; }
-
   section#how div.video .large-8.columns div {
     text-align: center; }
-
   section#how div.video .large-4.columns {
     text-align: center;
     height: auto;
     padding-top: 16px; }
-
   #support section.row {
     padding-left: 3.9375rem;
     padding-right: 3.9375rem; }
-
   #results #grid-view .block {
     margin-right: 10px; }
-
   .large-6.columns.pad-n-l, .large-6.columns.pad-n-r, #filters fieldset .columns.pad-n-r, #filters .section .columns .columns.pad-n-r {
     padding-left: 0.9375em;
     padding-right: 0.9375em; }
-
   #property .des-wrap {
     padding-left: 3.9375rem;
     padding-right: 3.9375rem; }
-
   #sup-gallery {
     display: none; }
-
   #property .details {
     padding-right: 0.9375em; }
-
   #landlord .calculator {
     margin-left: 40px; }
-
   #landlord .info-circle {
     margin-left: 460px; }
-
   #dashboard .module .viewing-times .list-item div a.button {
     padding: 0.8rem 1rem 0.6rem 1rem; }
-
   #property .description {
     padding-left: 0.9375em; }
-
   #support header {
     background-attachment: scroll !important; }
-
   #support .searchbar.row {
     max-width: 50rem; }
-
   nav#nav.top-bar.dashboard .nav-search {
     width: 30%; }
-
   footer#footer .top .partners {
     display: none; }
-
   footer#footer .press div img {
     width: 115px; }
-
   footer#footer .press div.sr img {
     width: 125px; }
-
   footer#footer .top .numbers {
     margin-right: 0; }
-
   footer#footer .press div {
     margin-right: 0.9375em;
     padding-right: 0.9375em; } }
+
 @media only screen and (max-width: 1258px) {
   .offset-vid {
     margin-top: 0px; } }
