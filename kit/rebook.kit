@@ -1,0 +1,33 @@
+<!-- @include header -->
+<body id="dashboard" class="rebook">
+
+	<div id="panel" class="dashboard-wrapper row">
+
+		<div id="rebook" class="module rebook">
+				<div class="mod-header">
+					<h1>Avboka</h1>
+				</div>
+				<div class="mod-content rebook">
+					<form action="/Timebooking/HVO/x2bp6HK9WYCX05kSeH23" method="post">					
+						<input type="hidden" name="action" value="rebook" />
+						<p>Du har valt att ändra tiden<br /><span id="rebook-time">Sundag 2016-01-30 15:40</span> för <span id="rebook-name">John Doe</span>.<br />Välj en ny tid, skriv in en orsak nedan och tryck "Omboka".</p>
+						<p>Vänligen observera att om du inte vill ta in andra bostadssökande på visning på den tid som nu blir ledig, kom ihåg att ta bort denna högst upp på sidan.</p>
+						<input type="hidden" name="rebookId" id="rebookId" />
+						<div class="row">
+							<div class="col medium-2">Datum</div>
+							<div class="col medium-4 end"><input type="text" name="rebookNewDate" id="rebookNewDate" class="datepicker"/></div>
+						</div>
+						<div class="row">
+							<div class="col medium-2">Tid (hh:mm)</div>
+							<div class="col medium-4 end"><input type="text" name="rebookNewTime" id="rebookNewTime" /></div>
+						</div>
+						<textarea name="rebookReason" id="rebook-reason" placeholder="Skriv din orsak här"></textarea>
+						<hr>
+						<input type="submit" value="Omboka" class="button bottom" />
+					</form>	
+				</div>
+			</div> <!-- End rebook -->
+
+	</div> <!-- End panel -->
+</body> <!-- End dashboard -->
+<!-- @include base -->

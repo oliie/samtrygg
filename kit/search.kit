@@ -1,0 +1,617 @@
+<!-- @include header -->
+<body id="search">
+<!-- @include nav -->
+
+<section id="filters">
+	<form class="wrapper" action="#">
+		<div class="row">
+			<div class="columns 12-large">
+				<span class="icon icon-MAPPIN"></span>
+				<input type="text" id="main-search" name="" placeholder="Sök område">
+			</div>
+		</div>
+		<div class="filter-ops">
+			<div class="row section">
+				<div class="large-6 columns">
+					<fieldset>
+						<legend>Hyresperiod</legend>
+							<div class="large-6 columns pad-n-l">
+								<input class="datepicker" type="text" placeholder="Inflyttningsdatum" autocomplete="on">
+							</div>
+							<div class="large-6 columns pad-n-r">
+								<select name="end">
+									<option value="tillsvidare">Tillsvidare</option>
+									<option value="1">1 månader</option>
+									<option value="2">2 månader</option>
+									<option value="3">3 månader</option>
+									<option value="4">4 månader</option>
+									<option value="5">5 månader</option>
+									<option value="6">6 månader</option>
+									<option value="7">7 månader</option>
+									<option value="8">8 månader</option>
+									<option value="9">9 månader</option>
+									<option value="10">10 månader</option>
+									<option value="11">11 månader</option>
+									<option value="12">12 månader</option>
+								</select>
+							</div>
+					</fieldset>
+				</div>
+
+				<div class="large-6 columns">
+					<fieldset>
+						<legend>Hyra</legend>
+							<div class="hyra">
+								<div class="large-6 columns pad-n-l">
+									<span>Min:</span>
+									<select name="min">
+										<option value="1000" selected>1000kr</option>
+										<option value="starbuck">Starbuck</option>
+										<option value="hotdog">Hot Dog</option>
+										<option value="apollo">Apollo</option>
+									</select>
+								</div>
+								<div class="large-6 columns pad-n-r">
+									<span>Max:</span>
+									<select name="max">
+										<option value="50000" selected>50000kr</option>
+										<option value="starbuck">Starbuck</option>
+										<option value="hotdog">Hot Dog</option>
+										<option value="apollo">Apollo</option>
+									</select>
+								</div>
+							</div>
+					</fieldset>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="large-6 columns">
+					<fieldset>
+						<legend>Antal rum</legend>
+							<div class="rm-amount">
+								<div class="large-6 columns pad-n-l">
+									<span>Min:</span>
+									<select name="min">
+										<option value="1" selected>1 rum</option>
+										<option value="2">2 rum</option>
+										<option value="3">3 rum</option>
+										<option value="4">4 rum</option>
+										<option value="5">5 rum</option>
+										<option value="6">6 rum</option>
+										<option value="7">7 rum</option>
+										<option value="8">8 rum</option>
+										<option value="9">9 rum</option>
+										<option value="10">10 rum</option>
+										<option value="11">11 rum</option>
+										<option value="12">12 rum</option>
+										<option value="13">13 rum</option>
+										<option value="14">14 rum</option>
+										<option value="15">15 rum</option>
+									</select>
+								</div>
+								<div class="large-6 columns pad-n-r">
+									<span>Max:</span>
+									<select name="max">
+										<option value="15" selected>15 rum</option>
+										<option value="14">14 rum</option>
+										<option value="13">13 rum</option>
+										<option value="12">12 rum</option>
+										<option value="11">11 rum</option>
+										<option value="10">10 rum</option>
+										<option value="9">9 rum</option>
+										<option value="8">8 rum</option>
+										<option value="7">7 rum</option>
+										<option value="6">6 rum</option>
+										<option value="5">5 rum</option>
+										<option value="4">4 rum</option>
+										<option value="3">3 rum</option>
+										<option value="2">2 rum</option>
+										<option value="1">1 rum</option>
+									</select>
+								</div>
+							</div>
+					</fieldset>
+				</div>
+
+				<div class="large-6 columns">
+					<fieldset>
+						<legend>Antal kvm</legend>
+							<div class="size">
+								<div class="large-6 columns pad-n-l">
+									<span>Min:</span>
+									<select name="min">
+										<option value="20" selected>20m&sup2;</option>
+										<option value="starbuck">Starbuck</option>
+										<option value="hotdog">Hot Dog</option>
+										<option value="apollo">Apollo</option>
+									</select>
+								</div>
+								<div class="large-6 columns pad-n-r">
+									<span>Max:</span>
+									<select id="max-area" name="max">
+										<option value="500" selected>500m&sup2;</option>
+										<option value="starbuck">Starbuck</option>
+										<option value="hotdog">Hot Dog</option>
+										<option value="apollo">Apollo</option>
+									</select>
+								</div>
+							</div>
+					</fieldset>
+				</div>
+			</div>
+
+			<!-- <div class="row">
+				<div class="columns medium-12">
+					<input type="button" class="bottom button" value="Sök boende" />
+				</div>
+			</div> -->
+
+		</div>
+		<!-- Hidden submit button if needed -->
+		<!-- <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;" tabindex="-1"/> -->
+	</form>
+	<span class="sm-circle"><span class="icon icon-chevron-down-2"></span><span class="arc-2"></span></span>
+</section>
+
+
+<!-- // END Search Filters Section -->
+
+<section id="results">
+
+	<div class="title row">
+		<div class="large-12 columns">
+					<h2>Stockholm</h2>
+			<h5 class="results-amt">196 Annonser</h5>
+			<div class="controls">
+				<select name="" class="sort-view">
+					<option value=""></option>
+					<option value="sortByPublished" selected="selected">Senaste</option>
+					<option value="sortByRooms">antal rum</option>
+					<option value="sortByM2">antal m&sup2;</option>
+					<option value="sortByRent">hyra/mån</option>
+				</select>
+				<button class="list-view"><span class="icon icon-list"></span></button>
+				<button class="grid-view"><span class="icon icon-grid-view"></span></button>
+				<button class="map" data-reveal-id="map-modal">Karta<span class="icon icon-globe"></span></button>
+			</div>
+		</div>
+	</div>
+
+	<div id="grid-view">
+		<div class="row">
+			<div class="large-12 columns">
+
+				<div class="large-4 columns block">
+					<a href="property.html">
+						<div class="overlay-wrapper"></div>
+						<div class="item" style="background-image: url('img/prop_1.jpg');">
+							<span class="price">14 000:-</span>
+						</div>
+					</a>
+					<table>
+						<tbody>
+							<tr>
+								<td class="address">Grevlunda path 526</td>
+								<td class="area">53m&sup2;</td>
+							</tr>
+							<tr>
+								<td class="zip">27736, Vitaby</td>
+								<td class="rooms">3rum</td>
+							</tr>
+							<tr class="last">
+								<td class="dates">Dec15 - Nov16</td>
+								<td class="book"><a class="button" href="property.html">Boka visning</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="large-4 columns block">
+					<a href="#">
+						<div class="overlay-wrapper"></div>
+						<div class="item" style="background-image: url('img/apt5.jpg');">
+							<span class="price">14 000:-</span>
+						</div>
+					</a>
+					<table>
+						<tbody>
+							<tr>
+								<td class="address">Grevlunda path 526</td>
+								<td class="area">53m&sup2;</td>
+							</tr>
+							<tr>
+								<td class="zip">27736, Vitaby</td>
+								<td class="rooms">3rum</td>
+							</tr>
+							<tr class="last">
+								<td class="dates">Dec15 - Nov16</td>
+								<td class="book"><a class="button" href="property.html">Boka visning</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="large-4 columns block">
+					<a href="#">
+						<div class="overlay-wrapper"></div>
+						<div class="item" style="background-image: url('img/prop_2.jpg');">
+							<span class="price">14 000:-</span>
+						</div>
+					</a>
+					<table>
+						<tbody>
+							<tr>
+								<td class="address">Grevlunda path 526</td>
+								<td class="area">53m&sup2;</td>
+							</tr>
+							<tr>
+								<td class="zip">27736, Vitaby</td>
+								<td class="rooms">3rum</td>
+							</tr>
+							<tr class="last">
+								<td class="dates">Dec15 - Nov16</td>
+								<td class="book"><a class="button" href="property.html">Boka visning</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="large-4 columns block">
+					<a href="#">
+						<div class="overlay-wrapper"></div>
+						<div class="item" style="background-image: url('img/apt3.jpg');">
+							<span class="price">14 000:-</span>
+						</div>
+					</a>
+					<table>
+						<tbody>
+							<tr>
+								<td class="address">Grevlunda path 526</td>
+								<td class="area">53m&sup2;</td>
+							</tr>
+							<tr>
+								<td class="zip">27736, Vitaby</td>
+								<td class="rooms">3rum</td>
+							</tr>
+							<tr class="last">
+								<td class="dates">Dec15 - Nov16</td>
+								<td class="book"><a class="button" href="property.html">Boka visning</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="large-4 columns block">
+					<a href="#">
+						<div class="overlay-wrapper"></div>
+						<div class="item" style="background-image: url('img/prop_1.jpg');">
+							<span class="price">14 000:-</span>
+						</div>
+					</a>
+					<table>
+						<tbody>
+							<tr>
+								<td class="address">Grevlunda path 526</td>
+								<td class="area">53m&sup2;</td>
+							</tr>
+							<tr>
+								<td class="zip">27736, Vitaby</td>
+								<td class="rooms">3rum</td>
+							</tr>
+							<tr class="last">
+								<td class="dates">Dec15 - Nov16</td>
+								<td class="book"><a class="button" href="property.html">Boka visning</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="large-4 columns block">
+					<a href="#">
+						<div class="overlay-wrapper"></div>
+						<div class="item">
+							<span class="price">14 000:-</span>
+						</div>
+					</a>
+					<table>
+						<tbody>
+							<tr>
+								<td class="address">Grevlunda path 526</td>
+								<td class="area">53m&sup2;</td>
+							</tr>
+							<tr>
+								<td class="zip">27736, Vitaby</td>
+								<td class="rooms">3rum</td>
+							</tr>
+							<tr class="last">
+								<td class="dates">Dec15 - Nov16</td>
+								<td class="book"><a class="button" href="property.html">Boka visning</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="large-4 columns block">
+					<a href="#">
+						<div class="overlay-wrapper"></div>
+						<div class="item" style="background-image: url('img/prop_1.jpg');">
+							<span class="price">14 000:-</span>
+						</div>
+					</a>
+					<table>
+						<tbody>
+							<tr>
+								<td class="address">Grevlunda path 526</td>
+								<td class="area">53m&sup2;</td>
+							</tr>
+							<tr>
+								<td class="zip">27736, Vitaby</td>
+								<td class="rooms">3rum</td>
+							</tr>
+							<tr class="last">
+								<td class="dates">Dec15 - Nov16</td>
+								<td class="book"><a class="button" href="property.html">Boka visning</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="large-4 columns block">
+					<a href="#">
+						<div class="overlay-wrapper"></div>
+						<div class="item" style="background-image: url('img/prop_2.jpg');">
+							<span class="price">14 000:-</span>
+						</div>
+					</a>
+					<table>
+						<tbody>
+							<tr>
+								<td class="address">Grevlunda path 526</td>
+								<td class="area">53m&sup2;</td>
+							</tr>
+							<tr>
+								<td class="zip">27736, Vitaby</td>
+								<td class="rooms">3rum</td>
+							</tr>
+							<tr class="last">
+								<td class="dates">Dec15 - Nov16</td>
+								<td class="book"><a class="button" href="property.html">Boka visning</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="large-4 columns block">
+					<a href="#">
+						<div class="overlay-wrapper"></div>
+						<div class="item">
+							<span class="price">14 000:-</span>
+						</div>
+					</a>
+					<table>
+						<tbody>
+							<tr>
+								<td class="address">Grevlunda path 526</td>
+								<td class="area">53m&sup2;</td>
+							</tr>
+							<tr>
+								<td class="zip">27736, Vitaby</td>
+								<td class="rooms">3rum</td>
+							</tr>
+							<tr class="last">
+								<td class="dates">Dec15 - Nov16</td>
+								<td class="book"><a class="button" href="property.html">Boka visning</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="large-4 columns block">
+					<a href="#">
+						<div class="overlay-wrapper"></div>
+						<div class="item" style="background-image: url('img/prop_1.jpg');">
+							<span class="price">14 000:-</span>
+						</div>
+					</a>
+					<table>
+						<tbody>
+							<tr>
+								<td class="address">Grevlunda path 526</td>
+								<td class="area">53m&sup2;</td>
+							</tr>
+							<tr>
+								<td class="zip">27736, Vitaby</td>
+								<td class="rooms">3rum</td>
+							</tr>
+							<tr class="last">
+								<td class="dates">Dec15 - Nov16</td>
+								<td class="book"><a class="button" href="property.html">Boka visning</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="large-4 columns block">
+					<a href="#">
+						<div class="overlay-wrapper"></div>
+						<div class="item" style="background-image: url('img/prop_1.jpg');">
+							<span class="price">14 000:-</span>
+						</div>
+					</a>
+					<table>
+						<tbody>
+							<tr>
+								<td class="address">Grevlunda path 526</td>
+								<td class="area">53m&sup2;</td>
+							</tr>
+							<tr>
+								<td class="zip">27736, Vitaby</td>
+								<td class="rooms">3rum</td>
+							</tr>
+							<tr class="last">
+								<td class="dates">Dec15 - Nov16</td>
+								<td class="book"><a class="button" href="property.html">Boka visning</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="large-4 columns block">
+					<a href="#">
+						<div class="overlay-wrapper"></div>
+						<div class="item">
+							<span class="price">14 000:-</span>
+						</div>
+					</a>
+					<table>
+						<tbody>
+							<tr>
+								<td class="address">Grevlunda path 526</td>
+								<td class="area">53m&sup2;</td>
+							</tr>
+							<tr>
+								<td class="zip">27736, Vitaby</td>
+								<td class="rooms">3rum</td>
+							</tr>
+							<tr class="last">
+								<td class="dates">Dec15 - Nov16</td>
+								<td class="book"><a class="button" href="property.html">Boka visning</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- // END gird-view -->
+
+	<div id="list-view">
+		<table class="row">
+			<thead>
+				<tr>
+					<th width="15.38461538%"></th>
+					<th width="15.38461538%">Område</th>
+					<th width="20.19230769%">Adress</th>
+					<th width="7.692307692%">Antal rum</th>
+					<th width="7.692307692%">Storlek</th>
+					<th width="15.38461538%">Uthyres</th>
+					<th width="15.38461538%">Månadshyra</th>
+					<th width="2.884615385%"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="accordion">
+					<td class="pic"><a href="#"><img src="img/prop_pic_1.jpg" alt=""></a></td>
+					<td class="town">Vitaby</td>
+					<td class="address">Grevlunda path 526</td>
+					<td class="area">53m&sup2;</td>
+					<td class="rooms">3 rum</td>
+					<td class="dates">Dec15 - Nov16</td>
+					<td class="price">14 950:-</td>
+					<td class="expand"><a href="#"><span class="icon icon-chevron-down-2"></span></a></td>
+				</tr>
+				<tr class="panel">
+					<td colspan="3"><div id="map" class="map"></div></td>
+					<td class="more" colspan="3"><p>Solna - 2 rum - 12 mån - 11 500 kr/mån 172 74 Sundbyberg</p></td>
+					<td class="buttons" colspan="2"><a href="property.html" class="button view-property">Visa objekt</a><a href="property.html"class="button">Boka visning</a></td>
+				</tr>
+				<tr class="accordion">
+					<td class="pic"><a href="#"><img src="img/prop_pic_1.jpg" alt=""></a></td>
+					<td class="town">Vitaby</td>
+					<td class="address">Grevlunda path 526</td>
+					<td class="area">53m&sup2;</td>
+					<td class="rooms">3 rum</td>
+					<td class="dates">Dec15 - Nov16</td>
+					<td class="price">14 950:-</td>
+					<td class="expand"><a href="#"><span class="icon icon-chevron-down-2"></span></a></td>
+				</tr>
+				<tr class="panel">
+					<td colspan="3"><div id="map2" class="map"></div></td>
+					<td class="more" colspan="3"><p>Solna - 2 rum - 12 mån - 11 500 kr/mån 172 74 Sundbyberg</p></td>
+					<td class="buttons" colspan="2"><a href="property.html" class="button view-property">Visa objekt</a><a href="property.html" class="button">Boka visning</a></td>
+				</tr>
+				<tr class="accordion">
+					<td class="pic"><a href="#"><img src="img/prop_pic_1.jpg" alt=""></a></td>
+					<td class="town">Vitaby</td>
+					<td class="address">Grevlunda path 526</td>
+					<td class="area">53m&sup2;</td>
+					<td class="rooms">3 rum</td>
+					<td class="dates">Dec15 - Nov16</td>
+					<td class="price">14 950:-</td>
+					<td class="expand"><a href="#"><span class="icon icon-chevron-down-2"></span></a></td>
+				</tr>
+				<tr class="panel">
+					<td colspan="3"><div id="map2" class="map"></div></td>
+					<td class="more" colspan="3"><p>Solna - 2 rum - 12 mån - 11 500 kr/mån 172 74 Sundbyberg</p></td>
+					<td class="buttons" colspan="2"><a href="#" class="button view-property">Visa objekt</a><a href="#" class="button">Boka visning</a></td>
+				</tr>
+				<tr class="accordion">
+					<td class="pic"><a href="#"><img src="img/prop_pic_1.jpg" alt=""></a></td>
+					<td class="town">Vitaby</td>
+					<td class="address">Grevlunda path 526</td>
+					<td class="area">53m&sup2;</td>
+					<td class="rooms">3 rum</td>
+					<td class="dates">Dec15 - Nov16</td>
+					<td class="price">14 950:-</td>
+					<td class="expand"><a href="#"><span class="icon icon-chevron-down-2"></span></a></td>
+				</tr>
+				<tr class="panel">
+					<td colspan="3"><div id="map2" class="map"></div></td>
+					<td class="more" colspan="3"><p>Solna - 2 rum - 12 mån - 11 500 kr/mån 172 74 Sundbyberg</p></td>
+					<td class="buttons" colspan="2"><a href="#" class="button view-property">Visa objekt</a><a href="#" class="button">Boka visning</a></td>
+				</tr>
+				<tr class="accordion">
+					<td class="pic"><a href="#"><img src="img/prop_pic_1.jpg" alt=""></a></td>
+					<td class="town">Vitaby</td>
+					<td class="address">Grevlunda path 526</td>
+					<td class="area">53m&sup2;</td>
+					<td class="rooms">3 rum</td>
+					<td class="dates">Dec15 - Nov16</td>
+					<td class="price">14 950:-</td>
+					<td class="expand"><a href="#"><span class="icon icon-chevron-down-2"></span></a></td>
+				</tr>
+				<tr class="panel">
+					<td colspan="3"><div id="map2" class="map"></div></td>
+					<td class="more" colspan="3"><p>Solna - 2 rum - 12 mån - 11 500 kr/mån 172 74 Sundbyberg</p></td>
+					<td class="buttons" colspan="2"><a href="#" class="button view-property">Visa objekt</a><a href="#" class="button">Boka visning</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</section>
+
+<div id="map-modal"  class="reveal-modal full" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+	<a class="close-reveal-modal" aria-label="Close"><span class="icon-cross-circle"></span></a>
+	<div class="map-modal-content">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d130266.40104620463!2d17.84712179897666!3d59.32606644626561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f763119640bcb%3A0xa80d27d3679d7766!2sStockholm!5e0!3m2!1sen!2sse!4v1452159821183" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
+	<div class="button-bottom">
+		<a class="close-reveal-modal" aria-label="Close">
+			<button class="map" data-reveal-id="map-modal">Karta<span class="icon icon-globe"></span></button>
+		</a>
+	</div>
+</div>
+
+<script src="http://maps.google.com/maps/api/js?v=3&amp;sensor=false"></script>
+<script>
+  var map, map2;
+
+	function initialize(condition) {
+	    // create the maps
+	    var myOptions = {
+	        zoom: 8,
+	        center: new google.maps.LatLng(59.3258414,17.707373),
+	        mapTypeId: google.maps.MapTypeId.ROADMAP
+	    }
+	    map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+	    map2 = new google.maps.Map(document.getElementById("map2"), myOptions);
+	}
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<!-- @include footer -->
+<!-- @include base

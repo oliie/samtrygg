@@ -1,0 +1,328 @@
+<!-- @include header -->
+<body id="dashboard">
+<!-- @include nav_dashboard -->
+	<div id="panel" class="dashboard-wrapper row">
+		
+		<!-- @include nav_dash_sidebar -->
+		
+		<div class="dash-content col medium-10 small-12">
+
+			<div class="module">
+				<div class="mod-header">
+					<h1>Profil</h1>
+				</div>
+				<div class="mod-content row">
+					<div class="profile-controls col medium-4">
+						<div class="profile-image plholder-profile">
+							<a href="#" class="remove"><span class="icon icon-cross-circle"></span></a>
+							<img src="img/profile_ex1.jpg" alt="">
+							<img src="img/profile_ex2.jpg" alt="">
+							<img src="img/profile_ex3.jpg" alt="">
+							<img src="img/profile_ex4.jpg" alt="">
+							<img src="img/profile_ex5.jpg" alt="">
+							<a href="#" class="edit"><span class="icon icon-pencil"></span>Lägga till / Redigera</a>
+						</div>
+					</div>
+					<form action="submit">
+						<div class="profile-form col medium-8">
+							<div class="row">
+								<div class="col medium-3"><label class="inline" for="first-name">Förnamn</label></div>
+								<div class="col medium-9"><input type="text" name="first-name" placeholder="Förnamn"></div>
+							</div>
+							<div class="row">
+								<div class="col medium-3"><label class="inline" for="last-name">Efternamn</label></div>
+								<div class="col medium-9"><input type="text" name="last-name" placeholder="Efternamn"></div>
+							</div>
+							<div class="row">
+								<div class="col medium-3"><label class="inline" for="mobile">Mobile</label></div>
+								<div class="col medium-9"><input type="text" name="mobile" placeholder="+0 00 000 0000"></div>
+							</div>
+						</div>
+						<span class="sm-break"></span>
+						<hr/>
+						<span class="sm-break"></span>
+												<div class="personal-description">
+							<label for="personal-description"><h2>Personlig beskrivning</h2></label>
+							<textarea name="personal-description" placeholder="Öka chanserna att få en bostad genom att skriva en utförlig beskrivning om dig själv och dina intressen"></textarea>
+						</div>
+						<hr/>
+						<div class="row">
+							<a href="" class="button bottom ">Spara</a>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="module profile">
+				<div class="mod-header">
+					<h1>Specifikationer</h1>
+				</div>
+				<div class="mod-content specs row">
+					<form action="">
+
+						<div class="col medium-6 l-col">
+							<div class="row apt-type">
+								<div class="col medium-12">
+									<label for=""><h6>Ditt önskade boende</h6></label>
+									<div><input id="box1" type="checkbox"><label for="box1">Lägenhet</label></div>
+									<div><input id="box2" type="checkbox"><label for="box2">Villa</label></div>
+									<div><input id="box3" type="checkbox"><label for="box3">Rum</label></div>
+									<div><input id="box4" type="checkbox"><label for="box4">Radhus</label></div>
+									<div><input id="box5" type="checkbox"><label for="box5">Sommarstuga</label></div>
+								</div>
+								<div class="col medium-12">
+									<label for=""><h6>Mellan vilka datum vill du hyra?</h6></label>
+									<input class="datepicker" type="text" placeholder="Inflyttningsdatum" autocomplete="on">
+									<select name="end">
+										<option value="tillsvidare">Tillsvidare</option>
+										<option value="1">1 månader</option>
+										<option value="2">2 månader</option>
+										<option value="3">3 månader</option>
+										<option value="4">4 månader</option>
+										<option value="5">5 månader</option>
+										<option value="6">6 månader</option>
+										<option value="7">7 månader</option>
+										<option value="8">8 månader</option>
+										<option value="9">9 månader</option>
+										<option value="10">10 månader</option>
+										<option value="11">11 månader</option>
+										<option value="12">12 månader</option>
+									</select>
+								</div>
+							</div>
+						</div><!-- End left column -->
+						<div class="col medium-6 r-col border-l">
+							<div class="row">
+								<h6>Antal Rum</h6>
+								<div class="col medium-6">
+									<label for="min">Min</label>
+									<select name="min">
+										<option value="1" selected>1 rum</option>
+										<option value="2">2 rum</option>
+										<option value="3">3 rum</option>
+										<option value="4">4 rum</option>
+										<option value="5">5 rum</option>
+										<option value="6">6 rum</option>
+										<option value="7">7 rum</option>
+										<option value="8">8 rum</option>
+										<option value="9">9 rum</option>
+										<option value="10">10 rum</option>
+										<option value="11">11 rum</option>
+										<option value="12">12 rum</option>
+										<option value="13">13 rum</option>
+										<option value="14">14 rum</option>
+										<option value="15">15 rum</option>
+									</select>
+								</div>
+								<div class="col medium-6">
+									<label for="max">Max</label>
+									<select name="max">
+										<option value="15" selected>15 rum</option>
+										<option value="14">14 rum</option>
+										<option value="13">13 rum</option>
+										<option value="12">12 rum</option>
+										<option value="11">11 rum</option>
+										<option value="10">10 rum</option>
+										<option value="9">9 rum</option>
+										<option value="8">8 rum</option>
+										<option value="7">7 rum</option>
+										<option value="6">6 rum</option>
+										<option value="5">5 rum</option>
+										<option value="4">4 rum</option>
+										<option value="3">3 rum</option>
+										<option value="2">2 rum</option>
+										<option value="1">1 rum</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<h6>Antal kvm</h6>
+								<div class="col medium-6">
+									<label for="min-area">Min</label>
+									<select name="min-area">
+										<option value="10" selected>10m&sup2;</option>
+										<option value="20">20m&sup2;</option>
+										<option value="30">30m&sup2;</option>
+										<option value="40">40m&sup2;</option>
+										<option value="50">50m&sup2;</option>
+									</select>
+								</div>
+								<div class="col medium-6">
+									<label for="max-area">Max</label>
+									<select id="max-area" name="max">
+										<option value="500" selected>500m&sup2;</option>
+										<option value="400">400</option>
+										<option value="300">300</option>
+										<option value="200">200</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<h6>Månadshyra</h6>
+								<div class="col medium-6">
+									<label for="min-cost">Min</label>
+									<select name="min-cost">
+										<option value="1000" selected>1000kr</option>
+										<option value="2000">2000kr</option>
+										<option value="5000">5000kr</option>
+										<option value="4000">4000kr</option>
+									</select>
+								</div>
+								<div class="col medium-6">
+									<label for="max-cost">Max</label>
+									<select name="max-cost">
+										<option value="50000" selected>50000kr</option>
+										<option value="40000">40000kr</option>
+										<option value="30000">30000kr</option>
+										<option value="20000">20000kr</option>
+										<option value="40000">10000kr</option>
+										<option value="30000">9000kr</option>
+										<option value="20000">8000kr</option>
+									</select>
+								</div>
+							</div>
+						</div><!-- End right column -->
+
+						<span class="break"></span>
+						<hr/>
+						<span class="break"></span>
+
+						<div class="col medium-6 border-r l-col">
+							<div class="row">
+								<div class="col medium-4"><label class="inline" for="">Hushållstyp</label></div>
+								<div class="col medium-8">
+									<select name="" id="">
+										<option value=""></option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col medium-4"><label class="inline" for="">Rökare</label></div>
+								<div class="col medium-8">
+									<select name="" id="">
+										<option value=""></option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col medium-4"><label class="inline" for="">Anställningsform</label></div>
+								<div class="col medium-8">
+									<select name="" id="">
+										<option value=""></option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col medium-4"><label class="inline" for="">Yrke</label></div>
+								<div class="col medium-8"><input type="text" placeholder="Yrke"></div>
+							</div>
+							<div class="row">
+								<div class="col medium-4"><label class="inline" for="">Utbildning</label></div>
+								<div class="col medium-8">
+									<select name="" id="">
+										<option value=""></option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+							</div>
+						</div> <!-- End left column -->
+						<div class="col medium-6 r-col">
+							<div class="row">
+								<div class="col medium-4"><label class="inline" for="">Facebook</label></div>
+								<div class="col medium-8"><input type="text" placeholder="http://www.facebook.com"></div>
+							</div>
+							<div class="row">
+								<div class="col medium-4"><label class="inline" for="">Husdjur</label></div>
+								<div class="col medium-8">
+									<select name="" id="">
+										<option value=""></option>
+										<option value=""></option>
+										<option value=""></option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col medium-4"><label class="inline" for="">LinkedIn</label></div>
+								<div class="col medium-8"><input type="text" placeholder="http://www."></div>
+							</div>
+							<div class="row">
+								<div class="col medium-4"><label class="inline" for="">Intressen</label></div>
+								<div class="col medium-8"><input type="text" placeholder=""></div>
+							</div>
+							<div class="row">
+								<div class="col medium-4"><label class="inline" for="">Referenser</label></div>
+								<div class="col medium-8"><input type="text" placeholder=""></div>
+							</div>
+						</div><!-- End right column -->
+
+						<span class="break"></span>
+						<hr/>
+						<span class="break"></span>
+
+						<div class="row locations">
+							<div class="map">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d130266.40104620463!2d17.84712179897666!3d59.32606644626561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f763119640bcb%3A0xa80d27d3679d7766!2sStockholm!5e0!3m2!1sen!2sse!4v1452159821183" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+							</div>
+							<p class="details">Skriv en stad, stadsdel eller område som du önskar bo i.<br />
+							Du kan välja upp till fem olika områden. T.ex: Södermalm.
+							</p>
+							<div class="col medium-6 border-r">
+								<input id="sm-search" type="text" placeholder="Sök område" title="Sök område" />
+								<div class="results columns small-12">
+						          <ul>
+						              <a href="#"><li></span><span class="result">Stockholm</span></li></a>
+						              <a href="#"><li></span><span class="result">Malmo</span></li></a>
+						              <a href="#"><li></span><span class="result">Gotenburg</span></li></a>
+						              <a href="#"><li></span><span class="result">Testing</span></li></a>
+						              <a href="#"><li></span><span class="result">Testing</span></li></a>
+						            </ul>  
+						        </div>
+								<input type="button" class="add-button button" value="+ Lägg till" />
+							</div>
+							<div class="col medium-6">
+								<div class="location-item">
+									<span>Stockholm</span>
+									<a href="#" class="close"><i class="icon icon-cross-circle"></i></a>
+								</div>
+								<div class="location-item">
+									<span>Location 2</span>
+									<a href="#" class="close"><i class="icon icon-cross-circle"></i></a>
+								</div>
+							</div>
+						</div> <!-- End locations -->
+
+						<span class="sm-break"></span>
+						<hr/>
+						<span class="sm-break"></span>
+
+						<div class="row">
+							<div class="col medium-12 pad-n-r">
+								<a href="profile.html" class="button view-profile lightbox" data-featherlight="ajax">Visa profil</a>
+							</div>
+						</div>
+
+						<span class="sm-break"></span>
+						<hr/>
+						<span class="sm-break"></span>
+
+						<div class="row profile-submit">
+							<div class="col medium-12 pad-n-r">
+								<input type="submit" class="button bottom" value="Spara">
+							</div>
+						</div>
+
+					</form>	
+				</div><!-- End mod-content -->
+			</div><!-- End module -->
+		</div>
+	</div> <!-- End Panel -->
+<!-- @include footer -->	
+</body>
+<!-- @include base
