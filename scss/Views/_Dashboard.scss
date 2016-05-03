@@ -1,0 +1,1245 @@
+div#dashboard.booking,
+div#dashboard.show-profile,
+#dashboard.cancel,
+#dashboard.rebook {
+    background-color: #fff;
+}
+#dashboard {
+    background-color: $vapor;
+    .side-nav li a:not(.button):hover, .side-nav li a:not(.button):focus {
+        background: none;
+    }
+    div.dash-content {
+        float: right;
+    }
+    div#ui-datepicker-div {
+        z-index: 999999999999999999!important;
+    }
+    .ui-datepicker-calendar td:hover a,
+    a.ui-datepicker-calendar td:hover a,
+    td.ui-datepicker-current-day a {
+        color: #fff;
+        text-decoration: none;
+    }
+    .featherlight .featherlight-inner {
+        width: 100%;
+        height: 100%;
+    }
+    // nav#nav.top-bar, nav#nav.top-bar.nav-top, nav#nav.top-bar.page-bar{ position:absolute;}
+    a {
+        color: $soft-grey;
+    }
+    td.ui-datepicker-today a {
+        color: #fff;
+    }
+    a:hover {
+        color: $metal;
+        text-decoration: underline;
+    }
+    a.button {
+        color: #fff;
+    }
+    a.button:hover {
+        text-decoration: none;
+    }
+    nav a:hover {
+        text-decoration: none;
+    }
+    nav#nav ul.right span.clone {
+        display: none;
+    }
+    .dash-nav a:hover {
+        text-decoration: none;
+    }
+    .featherlight .featherlight-content {
+        overflow: auto;
+    }
+    #panel {
+        min-height: 100%;
+    }
+    .bottom.button {
+        width: 100%;
+        @include border-radius(3px);
+    }
+    $mod-pad: 0.9375rem;
+    h6 {
+        font-weight: bold;
+        margin-bottom: $mod-pad;
+    }
+    .side-nav {
+        padding-top: 0;
+        margin-top: -8px;
+    }
+    .row .row {
+        margin: 0;
+    }
+    .col.medium-4 {
+        overflow-wrap: break-word;
+    }
+    @include placeholder ($fog);
+    @include placeholder-size ( 0px,
+    16px);
+    .dashboard-wrapper {
+        padding-top: 30px;
+    }
+    .active:before {
+        content: "";
+        position: absolute;
+        left: 24px;
+        padding-top: 14px;
+        width: 0px;
+        height: 0px;
+        margin: 0px auto;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-bottom: 8px solid $metal;
+        @include transform(90deg);
+    }
+    .dash-nav {
+        float: left;
+        position: fixed;
+        ul {
+            line-height: 1.4;
+        }
+        ul li {
+            a.active {
+                margin-left: 10px;
+                font-weight: bold;
+                color: $metal;
+            }
+            a {
+                color: $soft-grey;
+                @include transition;
+                font-size: 15px;
+            }
+            a:hover {
+                font-weight: bold;
+                margin-left: 10px;
+                background-color: transparent;
+                color: $metal;
+            }
+            a:hover:before {
+                @extend .active:before;
+            }
+        }
+    }
+    .manage-bookings {
+        .header + hr {
+            margin: 0.5rem 0 0;
+        }
+        .header div {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .accord-header {
+            font-size: 14px;
+            padding: $mod-pad 0;
+            .time span {
+                margin-right: 10px;
+            }
+        }
+        .booked-tenant {
+            border-bottom: 1px solid $fog;
+            cursor: pointer;
+        }
+        .booked-tenant:hover {
+            background: $vapor;
+        }
+        .accord-content {
+            padding-bottom: $pad;
+            .profile-pic {
+                min-height: 150px;
+            }
+            .profile-pic img {
+                @include border-radius(3px);
+            }
+            .profile-description {
+                font-size: 14px;
+            }
+            .profile-buttons .button {
+                width: 100%;
+                margin-bottom: 0.5rem;
+                font-size: 14px;
+            }
+            .button.profile {
+                background-color: $blue-clr;
+            }
+            .button.profile:hover {
+                background-color: $blue-clr-hover;
+            }
+            .button.rebook {
+                background-color: #fff;
+                border: 1px solid $metal;
+                color: $metal;
+            }
+            .button.rebook:hover {
+                background-color: $vapor;
+            }
+        }
+    }
+    .booking {
+        form {
+            margin-left: 0;
+        }
+        .mod-content {
+            h2 {
+                margin-bottom: 0.9735rem;
+            }
+            img {
+                display: block;
+                max-height: 200px;
+            }
+            div {
+                font-size: 14px;
+            }
+        }
+        .row.object {
+            padding: 1.1875rem 0;
+            border-top: 1px solid $fog;
+        }
+        .price {
+            color: $red-clr;
+            font-weight: bold;
+        }
+        .date {
+            font-weight: bold;
+        }
+        .time-slot div.row.selected {
+            background: $vapor;
+            /* border:4px solid $red-clr; @include border-box; */
+        }
+        .time-slot {
+            margin-left: 0;
+            h2 {
+                margin-bottom: 0;
+            }
+            div.wrapper {
+                padding-bottom: $pad;
+            }
+            .row:first-child {
+                border-top: 1px solid $fog;
+            }
+            .row {
+                padding-top: 1.1875rem;
+                padding-bottom: 1.1875rem;
+                border-bottom: 1px solid $fog;
+            }
+            .select {
+                background-color: $vapor;
+                .button {
+                    background-color: #fff;
+                    color: $metal;
+                    border: 1px solid $metal;
+                }
+            }
+            div.event_info div.row div:first-child {
+                padding-left: 0;
+            }
+            div {
+                font-size: 14px;
+                line-height: 24px;
+            }
+            .button-outline {
+                float: right;
+                width: 100%;
+                text-align: center;
+                margin-top: 0.5rem;
+                padding: 0.5rem 2rem 0.66rem 2rem;
+            }
+            .submit {
+                width: 100%;
+                @include border-radius(3px);
+            }
+            input:checked + label.button-outline {
+                background-color: #fff;
+                color: $red-clr;
+                border: 4px solid $red-clr;
+                @include border-box;
+                text-decoration: none;
+                padding: 0.3rem 2rem 0.66rem 2rem;
+            }
+            .date,
+            .time {
+                display: block;
+                padding-left: 10px;
+            }
+        }
+    }
+    .module .profile-card.checked-card {
+        border: 4px solid $red-clr;
+        @include border-box;
+        padding-top: calc(0.9375rem - 1px);
+        padding-bottom: calc(0.9375rem - 4px);
+        div.yes label {
+            color: $blue-clr;
+        }
+        .options {
+            opacity: 0.1;
+        }
+    }
+    .module .profile-card.cancel-card {
+        border-color: $fog;
+        .name, .phone, .email a {
+            color: $fog;
+        }
+        .lower-card {
+            opacity: 0.4;
+        }
+        .options {
+            opacity: 0.1;
+        }
+        div label {
+            color: $fog;
+        }
+    }
+    .module .profile-card {
+        border: 1px solid $metal;
+        padding: $mod-pad 0;
+        @include border-radius(3px);
+        margin: 4px;
+        background-color: #fff;
+        .name, .name a {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .phone,
+        .email a {
+            font-size: 12px;
+        }
+        /* .email a{ color:$metal;} */
+
+        .email {
+            line-height: 10px;
+            margin-bottom: 10px;
+        }
+        .card-image {
+            min-height: 150px;
+            max-height: 150px;
+            max-width: 140px;
+            margin-bottom: 0;
+            overflow: hidden;
+            margin: 0 auto;
+            background-color: $vapor;
+            // img{ max-height:150px; max-width:139px; display:block;}
+            a {
+                display: table-cell;
+                width: 140px;
+                height: 150px;
+                vertical-align: middle;
+                text-align: center;
+            }
+        }
+        div.yes,
+        div.no {
+            float: left;
+            display: inline-block;
+        }
+        input[type="checkbox"]+label,
+        input[type="radio"]+label {
+            margin: 0;
+        }
+        input[type="checkbox"] {
+            display: block;
+            margin: 0 auto;
+        }
+        .profile-reviews {
+            padding-left: 0;
+            padding-bottom: $mod-pad;
+            .col:first-child {
+                padding-left: 0;
+                border-right: 1px solid $fog;
+            }
+            .col {
+                text-align: center;
+            }
+            .row:first-child {
+                margin-bottom: $mod-pad;
+            }
+            div.medium-12 {
+                border-bottom: 1px solid $fog;
+                margin-top: $mod-pad;
+            }
+        }
+        .button {
+            font-size: 14px;
+            padding: 0.6rem 1rem 1.0625rem 1rem;
+            width: 100%;
+        }
+        .button.new-time {
+            background-color: $blue-clr;
+        }
+        .button.new-time:hover {
+            background-color: $blue-clr-hover;
+        }
+        .row:last-child .col:last-child {
+            padding-left: 0;
+        }
+        .button-outline {
+            background-color: #fff;
+            color: $metal;
+        }
+        .button-outline:hover {
+            background-color: $vapor;
+            color: $metal;
+        }
+        .options {
+            margin-top: $mod-pad;
+            label {
+                font-size: 14px;
+            }
+            label:first-child {
+                margin-top: $pad;
+            }
+            input {
+                margin: 0;
+                margin-right: 10px;
+            }
+        }
+    }
+    .module.alert {
+        border-color: $bahama-blue;
+        .mod-content, .mod-header {
+            background-color: $mint;
+            border: none;
+            text-align: center;
+        }
+        .mod-content {
+            padding-top: 0;
+        }
+        .close-module span.icon {
+            color: $bahama-blue;
+        }
+        h1 {
+            display: block;
+            margin-top: $mod-pad;
+        }
+        h1,
+        h2 {
+            width: 100%;
+            text-align: center;
+        }
+        a.close-module,
+        a.min-module {
+            margin: 0;
+            padding: $mod-pad;
+        }
+    }
+    .settings {
+        .mod-content.settings {
+            max-width: 450px;
+            margin: 0 auto;
+            h2 {
+                margin-bottom: $mod-pad;
+            }
+        }
+        .button {
+            width: 100%;
+            @include border-radius(3px);
+        }
+        .button.remove {
+            background-color: #fff;
+            border: 1px solid $metal;
+            color: $metal;
+            /* margin-top:$mod-pad; */
+        }
+        .button.remove + span.icon {
+            display: block;
+            position: absolute;
+            margin-top: -30px;
+            margin-left: $mod-pad;
+            pointer-events: none;
+        }
+        .button.remove:hover {
+            background-color: $vapor;
+        }
+    }
+    .agreement {
+        .mod-content {
+            h2 {
+                margin-bottom: $mod-pad;
+            }
+            p {
+                margin-bottom: 2.5rem;
+            }
+        }
+    }
+    .rental-times {
+        .rental-address h6 {
+            margin-top: 0;
+            text-align: left;
+        }
+        p.info {
+            margin-bottom: 0;
+        }
+        a.show {
+            margin-bottom: $mod-pad;
+            display: block;
+            clear: both;
+            color: $blue-clr;
+        }
+        .button-add {
+            margin-top: $mod-pad;
+        }
+        .block.time-select {
+            @include border-radius(3px);
+            height: 120px;
+            border: 1px solid $metal;
+            padding: 1rem;
+            margin: 10px;
+            text-align: center;
+            label {
+                font-weight: bold;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                @include border-radius(3px);
+            }
+            span {
+                color: $soft-grey;
+                display: inline-block;
+                height: 90px;
+                font-size: 18px;
+                font-weight: normal;
+                vertical-align: middle;
+                padding-top: 10px;
+                pointer-events: none;
+            }
+            span em {
+                color: $soft-grey;
+                display: block;
+                font-weight: bold;
+                margin-top: 4px;
+                font-style: normal;
+            }
+            input[type="checkbox"]:not(old) {
+                display: none;
+            }
+            input[type="checkbox"] + label {
+                margin: 0;
+            }
+            input[type="checkbox"]:checked + label {
+                background-color: #fff;
+                margin: 0;
+                border: 1px solid $fog;
+                span, span em {
+                    color: $metal;
+                }
+            }
+        }
+        .block.time-select:hover,
+        .block.time-select.checked {
+            background: $vapor;
+        }
+        .block.checked {
+            border: 4px solid $red-clr;
+            @include border-box;
+        }
+        .block.checked label {
+            background-color: #fff;
+            span, span em {
+                color: $red-clr;
+            }
+        }
+        .timeblock {
+            background-color: $vapor;
+            padding: 10px;
+            margin: 10px;
+            @include border-radius(3px);
+            a.close {
+                display: block;
+                position: absolute;
+                background-color: #fff;
+                padding: 0.4em;
+                right: 0;
+                top: 0;
+                span.icon.icon-cross-circle {
+                    height: 18px;
+                    width: 18px;
+                    color: $red-clr;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+            a.close:hover {
+                text-decoration: none;
+            }
+        }
+        .repeat-time {
+            input {
+                margin-bottom: 0;
+                float: left;
+            }
+            label {
+                font-size: 14px;
+                line-height: 1rem;
+                color: $soft-grey;
+                width: 80%;
+                float: left;
+                margin-right: 0;
+            }
+        }
+    }
+    span#cancel-time,
+    span#cancel-name,
+    span#rebook-name,
+    span#rebook-time {
+        font-weight: bold;
+        font-size: 18px;
+    }
+    #cancel {
+        p {
+            text-align: center;
+        }
+        input {
+            margin-bottom: 0;
+            display: inline-block;
+        }
+        label {
+            display: inline;
+        }
+    }
+    #rebook {
+        .row .col {
+            font-size: 14px;
+        }
+    }
+    .module {
+        max-width: 773px;
+        margin: 0 auto;
+        @include border-radius(3px);
+        background-color: #fff;
+        margin-bottom: 40px;
+        border: 1px solid $fog;
+        p, a {
+            font-size: 16px;
+        }
+        label h6 {
+            margin-bottom: $mod-pad;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        input[type=text],
+        input[type=password],
+        select {
+            margin-bottom: 1rem;
+            height: 2.5rem;
+            font-size: 16px;
+            padding-left: 1em;
+        }
+        .button {
+            height: 2.5rem;
+            padding: .6rem 2rem 1.0625rem 2rem;
+            background-color: $red-clr;
+            margin-bottom: 0;
+        }
+        .button-outline {
+            height: 2.5rem;
+            padding: 0.66rem 2rem 0.66rem 2rem;
+            margin-top: 0.9375rem;
+        }
+        .button-outline:hover {
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: $red-clr-hover;
+            text-decoration: none;
+        }
+        label {
+            font-size: 16px;
+            margin-bottom: 0.5rem;
+        }
+        textarea {
+            min-height: 126px;
+            @include border-radius(3px)
+        }
+        .mod-header {
+            background-color: $ozone;
+            height: 60px;
+            border-top-radius: 3px;
+            border-bottom: 1px solid $fog;
+            @include border-radius(3px 3px 0 0);
+            position: relative;
+        }
+        .mod-content {
+            padding: 30px;
+        }
+        h1 {
+            font-size: 20px;
+            margin: 0;
+            display: table-cell;
+            vertical-align: middle;
+            height: 60px;
+            padding-left: 30px;
+        }
+        h2 {
+            font-size: 18px;
+            margin: 0;
+            display: inline-block;
+        }
+        a.close-module,
+        a.min-module {
+            font-size: 20px;
+            margin-top: -43px;
+            display: inline-block;
+            height: 60px;
+            float: right;
+            padding-right: $mod-pad;
+        }
+        a.close-module:hover span {
+            color: $soft-grey;
+        }
+        .icon-plus-circle {
+            display: none;
+        }
+        a.min-module.off {
+            .icon-plus-circle {
+                display: inline-block;
+            }
+            .icon-circle-minus {
+                display: none;
+            }
+        }
+        .add-button {
+            /* float:right; */
+
+            background: transparent;
+            border: 1px solid $metal;
+            color: $metal;
+        }
+        .add-button:hover {
+            background-color: $vapor;
+        }
+        #upload {
+            display: none;
+        }
+        .profile-image {
+            min-height: 250px;
+            max-height: 250px;
+            max-width: 220px;
+            overflow: hidden;
+            @include border-radius(3px);
+            img {
+                height: 250px;
+                max-width: 220px;
+                overflow: hidden;
+                display: block;
+                margin: 0 auto;
+                object-fit: cover;
+            }
+        }
+        .profile-controls {
+            padding: 0;
+            overflow: hidden;
+            a {
+                display: block;
+            }
+            a.edit {
+                color: $blue-clr;
+                display: block;
+                position: absolute;
+                bottom: 0px;
+                padding: 6px;
+                background: $trans-white;
+                width: 92.9%;
+            }
+            a.edit:hover {} a.remove {
+                color: $metal;
+                display: inline-block;
+                position: absolute;
+            }
+            a.remove:hover {
+                text-decoration: none;
+            }
+            a.edit,
+            a.remove {
+                font-size: 14px;
+            }
+            .remove .icon,
+            .edit .icon {
+                width: 20px;
+                height: 20px;
+            }
+            .remove .icon {
+                color: $red-clr;
+                background: #fff;
+                padding: 4px;
+                text-align: center;
+                width: 26px;
+                height: 26px;
+                vertical-align: middle;
+                display: table-cell;
+            }
+            a:hover .icon-pencil {
+                text-decoration: none;
+            }
+        }
+        .profile-form {
+            padding-right: 0;
+            margin-top: 1.9375rem;
+            .row .col.medium-3 {
+                padding-left: 0;
+            }
+            .row .col.medium-9 {
+                padding-right: 0;
+            }
+        }
+        .profile-form + .sm-break + hr {
+            margin: 0;
+        }
+        .personal-description textarea {
+            margin: $mod-pad 0 0 0;
+        }
+        .specs {
+            .col.medium-6.l-col {
+                padding-left: 0;
+                .medium-4 {
+                    padding-left: 0;
+                    padding-right: 0;
+                    overflow-wrap: break-word;
+                }
+            }
+            .col.medium-6.r-col {
+                padding-right: 0;
+                .medium-8 {
+                    padding-right: 0;
+                }
+                .medium-4 label {
+                    padding-left: 0;
+                }
+            }
+            .col.medium-12 {
+                padding-left: 0;
+            }
+            input[type=text],
+            input[type=password],
+            select,
+            label {
+                font-size: 14px;
+            }
+            @include placeholder-size (0px,
+            14px);
+            hr {
+                margin: 0;
+            }
+            .apt-type {
+                .col.medium-12 div {
+                    float: left;
+                }
+                .col.medium-12 {
+                    margin-bottom: $mod-pad;
+                }
+            }
+        }
+        .locations {
+            .map {
+                background-color: $vapor;
+                height: 200px;
+                margin-bottom: $mod-pad;
+            }
+            .col.border-r {
+                padding-left: 0;
+            }
+            .col.border-r + .col {
+                padding-right: 0;
+            }
+            .results {
+                position: absolute;
+                width: 95.5%;
+                margin-top: -16px;
+                border-bottom: 1px solid $fog;
+                border-left: 1px solid $fog;
+                border-right: 1px solid $fog;
+                ul li {
+                    padding-left: $pad;
+                    font-size: 14px;
+                }
+                ul a {
+                    height: 50px;
+                }
+                ul a:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        .location-item {
+            margin-bottom: 1rem;
+            height: 2.5rem;
+            font-size: 14px;
+            padding-left: 1em;
+            border: 1px solid $fog;
+            @include border-radius(3px);
+            span {
+                display: table-cell;
+                height: inherit;
+                vertical-align: middle;
+            }
+            a {
+                display: inline-block;
+                float: right;
+                margin-top: -1.95em;
+            }
+            a:hover i {
+                text-decoration: none;
+                color: $soft-grey;
+            }
+        }
+        .profile-submit {
+            input[type="submit"] {
+                @include border-radius(3px);
+                width: 100%;
+                margin-bottom: $mod-pad;
+            }
+        }
+        .view-profile {
+            float: right;
+            background: $blue-clr;
+        }
+        a.button.view-profile:hover {
+            background-color: $blue-clr-hover;
+        }
+        .rental-info {
+            hr {
+                margin: 0;
+            }
+            .row {
+                margin-bottom: $mod-pad;
+            }
+            .rental-type div {
+                float: left;
+                margin-right: $mod-pad;
+                width: 160px;
+            }
+            .amenities {
+                .titles li {
+                    font-size: 14px;
+                    display: inline;
+                    color: $soft-grey;
+                }
+                .titles li + li {
+                    margin-left: 1.5rem;
+                }
+                .titles li em {
+                    border-bottom: 1px solid #000;
+                    padding-bottom: 2px;
+                    color: $metal;
+                }
+                li.heading {
+                    margin-bottom: 0.5em;
+                }
+                li.heading em {
+                    border-bottom: 1px solid #000;
+                    padding-bottom: 3px;
+                    padding-right: 4px;
+                }
+                li.heading span {
+                    margin-left: 1.5rem;
+                }
+                ul {
+                    margin-left: 0;
+                }
+                li .icon {
+                    width: 23px;
+                    height: 23px;
+                }
+                li span {
+                    color: $soft-grey;
+                    text-decoration: none;
+                }
+                span.icon {
+                    font-size: 23px;
+                    margin-right: 0.25rem;
+                    display: inline-block;
+                    color: $fog;
+                }
+                input[type="checkbox"] {
+                    margin: 0;
+                    display: inline-block;
+                    position: relative;
+                    margin-right: 1.5rem;
+                }
+                input[type="checkbox"] + input[type="checkbox"] {
+                    margin-right: 1.75rem;
+                }
+                input[placeholder="available"]:checked ~ span span,
+                input[placeholder="available"]:checked ~ span {
+                    color: $metal;
+                    text-decoration: none;
+                }
+                input[type="checkbox"]:checked ~ a {
+                    font-weight: 400;
+                }
+                input[type="checkbox"]:checked + span {
+                    color: $blue-clr;
+                }
+                .rental-tips {
+                    border: 1px solid $fog;
+                    @include border-radius(3px);
+                    p {
+                        padding: $mod-pad;
+                        font-size: 14px;
+                        text-align: center;
+                        margin-bottom: $mod-pad;
+                    }
+                    div.row {
+                        width: 100%;
+                        margin-bottom: 0;
+                        margin-top: $mod-pad;
+                        padding-top: $mod-pad;
+                    }
+                    .icon {
+                        margin-right: 0;
+                        display: block;
+                        text-align: center;
+                        font-size: 40px;
+                        color: $blue-clr;
+                        margin: 0 auto;
+                        height: 40px;
+                        width: 40px;
+                    }
+                }
+            }
+            .rental-dates {
+                div:first-of-type {
+                    padding: 0;
+                }
+                div.end {
+                    padding: 0;
+                    div:first-child {
+                        padding-right: $mod-pad;
+                    }
+                    div:nth-child(2n) {
+                        padding-right: 0;
+                    }
+                }
+                span {
+                    display: inline-block;
+                    position: absolute;
+                    color: $fog;
+                    font-size: 23px;
+                    margin-top: 8px;
+                    margin-left: 10px
+                }
+                .date input[type=text] {
+                    padding-left: 2.9375rem;
+                }
+            }
+            .rental-specs {
+                div.col:first-child {
+                    padding-left: 0;
+                }
+                div.col:last-child {
+                    padding-right: 0;
+                }
+                div.col input {
+                    margin-bottom: 0;
+                }
+                div.col span.holder {
+                    display: inline-block;
+                    position: absolute;
+                    text-align: left;
+                    margin-top: -34px;
+                    right: $mod-pad;
+                    color: $fog;
+                }
+                div.col:first-child span.holder {
+                    right: 1.9375rem;
+                }
+                div.col:nth-child(even) span.holder {
+                    right: 1.9375rem;
+                }
+            }
+            .rental-description {
+                a.add-button {
+                    margin-top: $mod-pad;
+                }
+                .gallery {
+                    margin: 0;
+                    li {
+                        display: inline-block;
+                        width: 216px;
+                        height: 200px;
+                        background-color: $vapor;
+                        position: relative;
+                        overflow: hidden;
+                        @include border-radius(3px);
+                        margin: .5em;
+                        float: left;
+                        a {
+                            display: block;
+                            position: absolute;
+                            right: 0;
+                            z-index: 100;
+                        }
+                        a span {
+                            color: $red-clr;
+                            font-size: 18px;
+                            display: inline-block;
+                            position: relative;
+                            padding: .2em;
+                            background-color: #fff;
+                            float: right;
+                            text-align: center;
+                        }
+                        img {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            margin-right: -50%;
+                            transform: translate(-50%, -50%)
+                        }
+                    }
+                }
+            }
+            input[name="campaignCode"] {
+                margin-bottom: 0;
+            }
+        }
+        .viewing-times {
+            .header + hr {
+                margin: 0.5rem 0 1.1875rem;
+            }
+            .header div {
+                font-size: 14px;
+                font-weight: bold;
+            }
+            .list-item div {
+                font-size: 14px;
+                a.button {
+                    font-size: 13px;
+                    padding: 0.8rem 2rem 0.6rem 2rem;
+                }
+            }
+            .list-item.inactive {
+                div {
+                    color: $fog;
+                }
+                div a.button {
+                    display: none;
+                }
+            }
+        }
+        .viewing-object {
+            .header + hr {
+                margin: 0.5rem 0 1.1875rem;
+            }
+            .header div {
+                font-size: 14px;
+                font-weight: bold;
+            }
+            .list-item div {
+                font-size: 14px;
+                a.button {
+                    font-size: 13px;
+                    padding: 0.8rem 2rem 0.6rem 2rem;
+                    background-color: $blue-clr;
+                }
+                a.button:hover {
+                    background-color: $blue-clr-hover;
+                }
+            }
+            .list-item.inactive {
+                div {
+                    color: $fog;
+                }
+                div a.button {
+                    display: none;
+                }
+            }
+        }
+        .messages {
+            .row.header {
+                font-weight: bold;
+            }
+            .row.header + hr {
+                margin: 0.5rem 0 0;
+            }
+            h2 {
+                margin-bottom: $mod-pad;
+            }
+            div {
+                font-size: 14px;
+            }
+            .accord-header {
+                padding: $mod-pad 0;
+            }
+            .accord-header:hover {
+                cursor: pointer;
+                background-color: $vapor;
+            }
+            .accordion span.arrow-close {
+                color: $metal;
+            }
+            .accordion.on {
+                background-color: $vapor;
+                .title, .date {
+                    color: $soft-grey;
+                }
+                .date span {
+                    color: $red-clr;
+                    @include transform(90deg)
+                }
+            }
+            // .accordion:hover{ cursor:pointer; background-color:$vapor;}
+            .accordion:first-child {
+                margin-top: 0;
+            }
+            .accordion {
+                border-bottom: 1px solid $fog;
+            }
+            .accord-content {
+                margin-bottom: $pad;
+            }
+            .date {
+                color: $fog;
+            }
+            .date .arrow-close {
+                padding-top: 4px;
+            }
+        }
+        .profile-view {
+            .profile-pic {
+                .col:first-child {
+                    padding: 0;
+                }
+                .col {
+                    padding: $mod-pad 0;
+                    font-size: 16px;
+                }
+                /* .email a{ color:$metal;} */
+            }
+            .profile-info {
+                .col {
+                    padding: 6px 0;
+                    border-bottom: 1px solid $fog;
+                }
+                .result {
+                    float: right;
+                    text-align: right;
+                    font-size: 16px;
+                }
+                .result > .result {
+                    padding-left: 2em;
+                }
+                .title {
+                    color: $soft-grey;
+                    margin-right: 2em;
+                    font-size: 14px;
+                }
+                .price {
+                    color: $red-clr;
+                }
+                .spacer {
+                    height: 1.9375rem;
+                }
+            }
+        }
+    }
+    // #footer .middle{ background-color:$ozone;}
+    .badge {
+        display: block;
+        position: absolute;
+        right: -10px;
+        top: -10px;
+    }
+}

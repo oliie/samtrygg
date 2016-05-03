@@ -1,0 +1,145 @@
+header.hero {
+    width: 100%;
+    height: 600px;
+    background-color: $vapor;
+    position: relative;
+    span.icon {
+        font-size: 23px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .hero-text {
+        z-index: 1000;
+        text-align: center;
+        margin-top: 10.6rem;
+        h1, h2 {
+            color: #fff;
+            line-height: 4rem;
+            font-size: 62px;
+            text-shadow: $text-shadow;
+            /* pointer-events: none */
+
+            ;
+        }
+        h1 {
+            font-family: $lato;
+            font-weight: 900;
+            letter-spacing: .15rem;
+        }
+        a.button {
+            padding-left: 4em;
+            padding-right: 4em;
+        }
+    }
+    .searchbar {
+        width: 100%;
+        position: absolute;
+        overflow: hidden;
+        margin-top: 21.5rem;
+        input[type=text]:focus, textarea:focus {
+            border: 1px solid $blue-clr;
+            box-shadow: inset 0 0 4px rgba(84, 151, 255, 43);
+            background-color: #fff;
+        }
+        input,
+        a.button {
+            height: 60px;
+        }
+        input {
+            @include border-radius(0px);
+            background-color: $trans-black;
+            border: none;
+        }
+        input:focus {
+            background-color: #fff;
+        }
+        a.button {
+            width: 100%;
+            @include border-radius(0px);
+            background-color: $red-clr;
+            padding: 11%;
+            span {
+                color: #fff;
+            }
+        }
+        a.button:hover {
+            background-color: $red-clr-hover
+        }
+        .button .icon-magnifier {
+            color: #fff;
+            display: none;
+        }
+        .search input[type=text] {
+            padding-left: 60px;
+            color: $fog;
+            margin-bottom: 0;
+        }
+        input:focus[type=text] {
+            color: $soft-black;
+        }
+        @include placeholder($fog);
+        .results {
+            display: none;
+            background-color: #fff;
+            overflow: visible;
+            padding: 0;
+            z-index: 1001;
+            box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.08);
+            border: 1px solid $vapor;
+            border-radius: 0 0 3px 3px;
+            ul {
+                margin: 0;
+                a:hover {
+                    background-color: $vapor;
+                }
+                a {
+                    height: 60px;
+                    width: 100%;
+                    border-bottom: 1px solid $fog;
+                    pointer-events: all!important;
+                    height: 60px;
+                    display: inline-block;
+                    padding-top: 12px;
+                }
+            }
+            .icon-magnifier {
+                color: $fog;
+                margin-left: 24px;
+                margin-right: 20px;
+            }
+            .location {
+                display: inline-block;
+                width: 30%;
+            }
+            a:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    div.searchbar > div.row {
+        margin: 22px auto 0 auto;
+    }
+    .icon-MAPPIN {
+        color: $fog;
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 23px;
+    }
+}
+.hero-bkground {
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    video {
+        height: auto;
+        width: 100%;
+        background-color: $vapor;
+    }
+}

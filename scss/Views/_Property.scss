@@ -1,0 +1,257 @@
+#property {
+    margin-top: 20px;
+    .featherlight .featherlight-content {
+        overflow: auto;
+    }
+    .des-wrap {
+        margin: 40px auto 40px auto;
+    }
+    .icon {
+        font-size: 30px;
+        color: $metal;
+        margin: 4px 8px 0 0;
+        vertical-align: top;
+    }
+    .not-included {
+        text-decoration: line-through;
+        color: $fog;
+        .icon {
+            color: $fog;
+        }
+    }
+    .gallery {
+        max-height: 580px;
+        #p-gallery {
+            margin-left: 0;
+            max-height: 580px;
+            width: 100%;
+            overflow: hidden;
+            background-color: $fog;
+            img {
+                min-height: 580px;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        .owl-pagination {
+            display: none;
+        }
+        .owl-wrapper-outer {
+            max-height: 580px;
+        }
+        .owl-buttons {
+            position: absolute;
+            margin-top: -324px;
+            width: 100%;
+            color: #fff;
+            div {
+                margin: 0;
+                padding: 0;
+            }
+            .owl-prev {
+                float: left;
+                background-color: transparent;
+            }
+            .owl-next {
+                float: right;
+                background-color: transparent;
+            }
+        }
+        .g-price {
+            color: #fff;
+            font-weight: bold;
+            background: $trans-black;
+            width: 250px;
+            height: 60px;
+            text-align: center;
+            font-size: 22px;
+            position: relative;
+            top: -60px;
+            line-height: 60px;
+        }
+        .icon-chevron-right,
+        .icon-chevron-left {
+            font-size: 47px;
+            color: #fff;
+            /* width:90px; height:111px; */
+
+            padding: 35px;
+        }
+    }
+    .description {
+        padding-left: 0;
+        h1:first-child {
+            margin-top: 0;
+            font-size: 37px;
+        }
+        h2.location {
+            font-size: 24px;
+        }
+        .icon-MAPPIN {
+            color: $fog;
+            margin-right: 20px;
+            font-size: 23px;
+        }
+        p {
+            clear: both;
+        }
+        .see-gallery {
+            display: none;
+        }
+    }
+    .details {
+        padding-right: 0;
+        button.book, a.button.book {
+            width: 100%;
+            background-color: $red-clr;
+            margin-bottom: 0;
+        }
+        button.book:hover,
+        a.button.book:hover {
+            background-color: $red-clr-hover;
+        }
+        .row {
+            margin: 20px auto 0 auto;
+            background-color: $vapor;
+            padding: 1em;
+        }
+        .d-price {
+            margin-top: 20px;
+            h5 {
+                margin-bottom: 1px;
+                background-color: transparent;
+            }
+            span {
+                color: $red-clr;
+                font-weight: bold;
+                font-size: 28px;
+                margin-left: 20px;
+            }
+            small {
+                font-size: 14px;
+                display: block;
+                margin-top: -6px;
+            }
+        }
+        .boendet,
+        .ammenities,
+        .options {
+            h5 {
+                float: left;
+                background-color: $vapor;
+                z-index: 8;
+                position: relative;
+                padding-right: 20px;
+                margin-bottom: 10px;
+            }
+            .clear-float {
+                display: block;
+                clear: both;
+            }
+            .columns {
+                margin-top: 20px;
+            }
+            ul {
+                margin-left: 0;
+                li {
+                    line-height: 50px;
+                    font-size: 14px;
+                    a {
+                        color: $blue-clr;
+                    }
+                }
+            }
+        }
+        .options {
+            margin-bottom: 20px;
+            .icon {
+                color: $fog;
+            }
+            .icon-paperclip {
+                color: $blue-clr;
+                display: block;
+                margin: 0 auto 20px auto;
+                width: 45px;
+                height: 45px;
+                font-size: 45px;
+            }
+            ul li {
+                cursor: pointer;
+                display: block;
+            }
+        }
+    }
+    span.h-line {
+        display: block;
+        border-bottom: 1px solid $fog;
+        position: absolute;
+        margin-top: 16px;
+        z-index: 0;
+        width: 86%;
+    }
+    #sup-gallery {
+        min-width: 100%;
+        a {
+            display: block;
+        }
+        div.sup-gallery {
+            background-color: $vapor;
+        }
+        .owl-item {
+            height: 125px;
+            width: 125px!important;
+            margin-right: 10px;
+            overflow: hidden;
+            background-color: $vapor;
+            img {
+                min-height: 125px;
+                width: auto;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        .owl-pagination {
+            display: none;
+        }
+        .owl-buttons {
+            position: absolute;
+            margin-top: -94px;
+            width: 100%;
+            color: #fff;
+            height: 55px;
+            pointer-events: none;
+            div {
+                margin: 0;
+                padding: 0;
+                opacity: 1;
+            }
+            .owl-prev {
+                float: left;
+                background: none;
+                height: inherit;
+                pointer-events: visible;
+            }
+            .owl-next {
+                float: right;
+                background: none;
+                height: inherit;
+                pointer-events: visible;
+            }
+        }
+        .icon-chevron-right,
+        .icon-chevron-left {
+            color: #fff;
+            font-size: 40px;
+            opacity: 1;
+            padding: 10px;
+        }
+        .icon-chevron-right:hover,
+        .icon-chevron-left:hover {
+            opacity: 0.8;
+        }
+    }
+    .map {
+        height: 480px;
+        width: 100%;
+    }
+}

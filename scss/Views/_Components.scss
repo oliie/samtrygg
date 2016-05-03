@@ -1,0 +1,47 @@
+.rental-view {
+    @include border-radius(3px);
+    .rental-pic {
+        min-height: 180px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+    }
+    table {
+        border: none;
+        margin-bottom: 0;
+        width: 100%;
+    }
+    button,
+    a.button {
+        height: 33px;
+        background-color: $red-clr;
+        margin-bottom: 0;
+        font-size: 14px;
+        padding: 0.43rem 1rem 1.0625rem 1rem;
+        float: right;
+    }
+    table tr.even,
+    table tr.alt,
+    table tr:nth-of-type(even) {
+        background-color: #fff;
+    }
+    table tr {
+        padding: 0 .5em;
+    }
+    table tr th,
+    table tr td {
+        color: $metal;
+        padding: 0.5625rem 0.85rem;
+    }
+    .address,
+    .area {
+        padding-bottom: 0;
+    }
+    .dates {
+        font-weight: bold;
+    }
+}
+.rental-view.arrow-box {
+    max-width: 300px;
+    min-height: 200px;
+}

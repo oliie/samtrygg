@@ -1,0 +1,125 @@
+.login {
+    background-color: $vapor;
+}
+#login {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    max-width: 350px;
+    margin: 0 auto;
+    h3 {
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    .button {
+        width: 100%;
+    }
+    .log-facebook {
+        background-color: $facebook;
+    }
+    .log-facebook:hover {
+        background-color: $facebook-hover;
+    }
+    .log-google {
+        background-color: #fff;
+        border: 1px solid $metal;
+        color: $metal;
+    }
+    .log-google:hover {
+        background-color: $vapor;
+    }
+    div {
+        text-align: center;
+        width: 350px;
+        margin-bottom: 1.25rem;
+    }
+    .breakline {
+        width: 100%;
+        border-bottom: 1px solid $fog;
+        float: left;
+        margin-top: -11px;
+    }
+    .center-form {
+        background-color: $vapor;
+        padding: 0 20px;
+        z-index: 100;
+    }
+    .login {
+        background-color: $red-clr;
+        @include border-radius(3px);
+        margin-bottom: 0;
+    }
+    .login:hover {
+        background-color: $red-clr-hover;
+    }
+    .psswd-reset {
+        color: $red-clr;
+        float: right;
+        font-size: 16px;
+        margin-top: 2px;
+    }
+    .psswd-reset:hover {
+        text-decoration: underline;
+    }
+    .create-account {
+        color: $red-clr;
+        font-size: 16px;
+        /*  float:right; clear:both; */
+
+        margin-left: 10px;
+    }
+    a.create-account:hover {
+        text-decoration: underline;
+    }
+    #save-password + label {
+        font-size: 16px;
+    }
+    @include placeholder($soft-grey);
+    @include placeholder-size(0px,
+    16px);
+    span.google,
+    span.facebook,
+    {
+        display: block;
+        position: absolute;
+        width: 33px;
+        height: 33px;
+        z-index: 100;
+        margin: -63px 0 0 20px;
+    }
+    span.google {
+        background: url('../img/google.png') no-repeat;
+        background-size: contain;
+    }
+    span.facebook {
+        background: url('../img/facebook.png') no-repeat;
+        background-size: contain;
+        background-position: 8px 0;
+    }
+    span.icon-email,
+    span.icon-lock {
+        position: absolute;
+        color: $fog;
+        font-size: 26px;
+        text-align: center;
+    }
+    span.icon-email {
+        margin: 14px 0 0 16px;
+    }
+    span.icon-lock {
+        margin: 14px 0 0 15px;
+    }
+    input[type=text],
+    input[type=password] {
+        padding-left: 60px;
+    }
+    input[type="password"] {
+        margin-bottom: 0.6rem;
+    }
+    p {
+        margin-bottom: 0;
+        font-size: 16px;
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}

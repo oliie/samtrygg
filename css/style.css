@@ -1590,60 +1590,6 @@ span.ui-datepicker-year {
 .icon-wash-machine:before {
   content: "\e91b"; }
 
-.icon--big {
-  font-size: 40px;
-  width: auto;
-  height: 100%;
-  margin-top: 10px; }
-
-.padded {
-  padding: 20px 0; }
-
-.margin-bottom-fix {
-  margin-bottom: 3px; }
-
-.bold-text {
-  font-weight: bold; }
-
-@media screen and (max-width: 834px) {
-  .icon--big {
-    font-size: 70px;
-    padding: 30px 0;
-    margin-top: 20px; } }
-
-/*
- * Landing Page
- */
-#landing {
-  padding-top: 0; }
-  #landing section {
-    margin-top: 60px;
-    margin-bottom: 60px; }
-  #landing #lightbox-video {
-    display: none; }
-  #landing a.close-reveal-modal {
-    text-decoration: none; }
-  #landing .accordion-navigation a {
-    text-decoration: none; }
-  #landing #steps {
-    margin-bottom: 0; }
-  #landing nav.dashboard.nav-top#nav.top-bar .nav-search {
-    display: none; }
-  #landing nav.dashboard.nav-top#nav.top-bar ul.title-area {
-    border: none; }
-  #landing nav.dashboard.nav-top#nav.top-bar ul li.logged-user {
-    border: none; }
-  #landing nav.dashboard.nav-top#nav.top-bar ul li ul.dropdown {
-    background-color: rgba(0, 0, 0, 0.4);
-    border: none;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    border-radius: 3px;
-    margin-top: 0; }
-  #landing nav.dashboard.nav-top#nav.top-bar ul li ul.dropdown li:hover {
-    background: transparent; }
-
 header.hero {
   width: 100%;
   height: 600px;
@@ -1680,7 +1626,8 @@ header.hero {
       border: 1px solid #5497FF;
       box-shadow: inset 0 0 4px #5497ff;
       background-color: #fff; }
-    header.hero .searchbar input, header.hero .searchbar a.button {
+    header.hero .searchbar input,
+    header.hero .searchbar a.button {
       height: 60px; }
     header.hero .searchbar input {
       -webkit-border-radius: 0px;
@@ -1691,8 +1638,6 @@ header.hero {
       border: none; }
     header.hero .searchbar input:focus {
       background-color: #fff; }
-    header.hero .searchbar input:focus + .results {
-      /* display: block; */ }
     header.hero .searchbar a.button {
       width: 100%;
       -webkit-border-radius: 0px;
@@ -1747,8 +1692,6 @@ header.hero {
           height: 60px;
           display: inline-block;
           padding-top: 12px; }
-        header.hero .searchbar .results ul span {
-          /* float: right; margin-right: 200px; */ }
       header.hero .searchbar .results .icon-magnifier {
         color: #D8D8D8;
         margin-left: 24px;
@@ -1780,10 +1723,39 @@ header.hero {
     width: 100%;
     background-color: #F6F6F6; }
 
+#landing {
+  padding-top: 0; }
+  #landing section {
+    margin-top: 60px;
+    margin-bottom: 60px; }
+  #landing #lightbox-video {
+    display: none; }
+  #landing a.close-reveal-modal {
+    text-decoration: none; }
+  #landing .accordion-navigation a {
+    text-decoration: none; }
+  #landing #steps {
+    margin-bottom: 0; }
+  #landing nav.dashboard.nav-top#nav.top-bar .nav-search {
+    display: none; }
+  #landing nav.dashboard.nav-top#nav.top-bar ul.title-area {
+    border: none; }
+  #landing nav.dashboard.nav-top#nav.top-bar ul li.logged-user {
+    border: none; }
+  #landing nav.dashboard.nav-top#nav.top-bar ul li ul.dropdown {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    margin-top: 0; }
+  #landing nav.dashboard.nav-top#nav.top-bar ul li ul.dropdown li:hover {
+    background: transparent; }
+
 .offset-vid {
   margin-top: -100px; }
 
-/* How Section */
 #how div.video .large-8.columns {
   padding: 0; }
 
@@ -1814,164 +1786,11 @@ header.hero {
 #how a.vid-play-button:hover {
   opacity: 0.8; }
 
-/* Visit / Featured Apartments - Section */
-#visit {
-  text-align: center; }
-  #visit .columns {
-    padding: 0; }
-  #visit div:first-of-type {
-    margin-top: 0 !important; }
-  #visit p:first-child {
-    margin-bottom: 2.25rem; }
-  #visit div {
-    margin-top: 2.5em;
-    overflow: hidden; }
-  #visit div.clearfix {
-    overflow: visible; }
-  #visit .apt div > *, #visit .apt div span, #visit .apt div sup {
-    color: #fff; }
-  #visit .apt div h3 {
-    margin-top: 0;
-    padding-top: 10.4rem; }
-  #visit .apt div h3, #visit .apt div p {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
-  #visit .apt div p {
-    line-height: 1.25rem; }
-  #visit .apt div span.price {
-    display: block;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: .5em 2em;
-    top: 0;
-    left: 1px; }
-  #visit .apt div span {
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
-  #visit .apt div .overlay-wrapper {
-    height: inherit;
-    width: inherit;
-    background: transparent; }
-  #visit a:hover {
-    text-decoration: none; }
-    #visit a:hover .overlay-wrapper {
-      background: rgba(0, 0, 0, 0.2);
-      -webkit-transition: background-color 100ms ease;
-      -moz-transition: background-color 100ms ease;
-      -o-transition: background-color 100ms ease;
-      -ms-transition: background-color 100ms ease;
-      transition: background-color 100ms ease; }
-  #visit .search-more {
-    clear: both;
-    padding-top: 3.5em; }
-
-#visit.row .row {
-  margin: 0 0; }
-
-div.visit-wrap-even {
-  margin: 0;
-  text-align: center;
-  background: none; }
-  div.visit-wrap-even div {
-    height: inherit;
-    width: inherit;
-    display: inline-block;
-    padding: 0 !important; }
-    div.visit-wrap-even div h2 {
-      color: #fff;
-      text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-      font-family: "Lato", sans-serif;
-      font-weight: 900;
-      height: inherit;
-      width: inherit;
-      margin-top: 0;
-      vertical-align: middle;
-      display: table-cell; }
-  div.visit-wrap-even .plholder.columns {
-    padding: 0; }
-  div.visit-wrap-even a {
-    display: inline-block;
-    height: 362px;
-    width: 320px;
-    float: left;
-    margin-right: 2.2em; }
-  div.visit-wrap-even a:last-child {
-    margin-right: 0; }
-  div.visit-wrap-even a:after {
-    content: '\A';
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    opacity: 0;
-    -webkit-transition: background-color 100ms ease;
-    -moz-transition: background-color 100ms ease;
-    -o-transition: background-color 100ms ease;
-    -ms-transition: background-color 100ms ease;
-    transition: background-color 100ms ease; }
-  div.visit-wrap-even a:hover h2 {
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-    background: rgba(0, 0, 0, 0.2);
-    -webkit-transition: background-color 100ms ease;
-    -moz-transition: background-color 100ms ease;
-    -o-transition: background-color 100ms ease;
-    -ms-transition: background-color 100ms ease;
-    transition: background-color 100ms ease; }
-
-div.visit-wrap-odd {
-  margin: 0;
-  text-align: center;
-  background: none; }
-  div.visit-wrap-odd .medium-4 {
-    width: 320px; }
-  div.visit-wrap-odd .medium-8 {
-    max-width: 680px; }
-  div.visit-wrap-odd .plholder.columns {
-    padding: 0; }
-  div.visit-wrap-odd div {
-    height: 100%;
-    width: 100%;
-    padding: 0 !important; }
-    div.visit-wrap-odd div h2 {
-      color: #fff;
-      text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-      font-family: "Lato", sans-serif;
-      font-weight: 900;
-      height: 362px;
-      width: 680px;
-      margin-top: 0;
-      display: table-cell;
-      vertical-align: middle;
-      display: table-cell; }
-  div.visit-wrap-odd a {
-    height: 362px;
-    float: left; }
-  div.visit-wrap-odd a:last-child {
-    margin-right: 0; }
-  div.visit-wrap-odd a:after {
-    content: '\A';
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    opacity: 0;
-    -webkit-transition: background-color 100ms ease;
-    -moz-transition: background-color 100ms ease;
-    -o-transition: background-color 100ms ease;
-    -ms-transition: background-color 100ms ease;
-    transition: background-color 100ms ease; }
-  div.visit-wrap-odd a:hover h2 {
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-    background: rgba(0, 0, 0, 0.2);
-    -webkit-transition: background-color 100ms ease;
-    -moz-transition: background-color 100ms ease;
-    -o-transition: background-color 100ms ease;
-    -ms-transition: background-color 100ms ease;
-    transition: background-color 100ms ease; }
-
-/*  Hood Revise of visit  */
 #hood h1, #hood p {
   text-align: center; }
 
-#hood a.rental, #hood a.destination {
+#hood a.rental,
+#hood a.destination {
   display: inline-block;
   height: 362px; }
 
@@ -2027,7 +1846,8 @@ div.visit-wrap-odd {
     #hood .rental div.wrap h3 {
       margin-top: 0;
       padding-top: 8.4rem; }
-    #hood .rental div.wrap h3, #hood .rental div.wrap p {
+    #hood .rental div.wrap h3,
+    #hood .rental div.wrap p {
       text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
     #hood .rental div.wrap p {
       line-height: 1.25rem; }
@@ -2052,7 +1872,6 @@ div.visit-wrap-odd {
   text-align: center;
   margin-bottom: 50px; }
 
-/*  Steps Section  */
 #steps {
   width: 100%;
   background-color: #F6F6F6;
@@ -2074,7 +1893,8 @@ div.visit-wrap-odd {
     -ms-animation-iteration-count: 1; }
   #steps .steps h1 {
     margin-top: 60px; }
-  #steps .steps h1, #steps .steps p {
+  #steps .steps h1,
+  #steps .steps p {
     color: #5A5A5A;
     text-align: center; }
   #steps .steps hr {
@@ -2084,23 +1904,30 @@ div.visit-wrap-odd {
   #steps .steps p {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem; }
-  #steps .steps a, #steps .steps u {
+  #steps .steps a,
+  #steps .steps u {
     color: #5497FF;
     text-decoration: none; }
   #steps .steps a:hover u {
     text-decoration: underline; }
   #steps .steps .overlay-wrapper {
     height: 500px; }
-  #steps .steps .step1, #steps .steps .step2, #steps .steps .step3 {
+  #steps .steps .step1,
+  #steps .steps .step2,
+  #steps .steps .step3 {
     min-height: 500px;
     background-color: #D8D8D8;
     margin: 0 20px;
     max-width: 306px; }
-    #steps .steps .step1 p, #steps .steps .step2 p, #steps .steps .step3 p {
+    #steps .steps .step1 p,
+    #steps .steps .step2 p,
+    #steps .steps .step3 p {
       color: #fff;
       margin-top: 250px;
       text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
-    #steps .steps .step1 span, #steps .steps .step2 span, #steps .steps .step3 span {
+    #steps .steps .step1 span,
+    #steps .steps .step2 span,
+    #steps .steps .step3 span {
       color: #fff;
       font-weight: bold;
       font-size: 1.2rem;
@@ -2142,12 +1969,6 @@ div.visit-wrap-odd {
     -o-transition: all 100ms ease;
     transition: all 100ms ease; }
 
-/*
-
-Login Page
-==============
-
-*/
 .login {
   background-color: #F6F6F6; }
 
@@ -2233,7 +2054,8 @@ Login Page
   #login :-ms-input-placeholder, #signup :-ms-input-placeholder {
     padding-left: 0px;
     font-size: 16px; }
-  #login span.google, #signup span.google, #login span.facebook, #signup span.facebook {
+  #login span.google, #signup span.google,
+  #login span.facebook, #signup span.facebook {
     display: block;
     position: absolute;
     width: 33px;
@@ -2247,7 +2069,8 @@ Login Page
     background: url("../img/facebook.png") no-repeat;
     background-size: contain;
     background-position: 8px 0; }
-  #login span.icon-email, #signup span.icon-email, #login span.icon-lock, #signup span.icon-lock {
+  #login span.icon-email, #signup span.icon-email,
+  #login span.icon-lock, #signup span.icon-lock {
     position: absolute;
     color: #D8D8D8;
     font-size: 26px;
@@ -2256,7 +2079,8 @@ Login Page
     margin: 14px 0 0 16px; }
   #login span.icon-lock, #signup span.icon-lock {
     margin: 14px 0 0 15px; }
-  #login input[type=text], #signup input[type=text], #login input[type=password], #signup input[type=password] {
+  #login input[type=text], #signup input[type=text],
+  #login input[type=password], #signup input[type=password] {
     padding-left: 60px; }
   #login input[type="password"], #signup input[type="password"] {
     margin-bottom: 0.6rem; }
@@ -2266,12 +2090,6 @@ Login Page
     #login p a:hover, #signup p a:hover {
       text-decoration: underline; }
 
-/*
-
-Signup Page
-==============
-
-*/
 #signup span.icon {
   margin: 14px 0 0 16px;
   position: absolute;
@@ -2279,17 +2097,22 @@ Signup Page
   font-size: 26px;
   text-align: center; }
 
-#signup input[name=first-name][type=text], #signup input[name=last-name][type=text], #signup input[name=mobile][type=text] {
+#signup input[name=first-name][type=text],
+#signup input[name=last-name][type=text],
+#signup input[name=mobile][type=text] {
   padding-left: 20px; }
 
-#signup input[type="password"], #signup .login {
+#signup input[type="password"],
+#signup .login {
   margin-bottom: 1.25rem; }
 
-#signup nput.custom-toggle[type="checkbox"] + label, #signup input.custom-toggle[type="radio"] + label {
+#signup nput.custom-toggle[type="checkbox"] + label,
+#signup input.custom-toggle[type="radio"] + label {
   margin: 0;
   width: 100%; }
 
-#signup input.custom-toggle[type="checkbox"]:checked + label, #signup input.custom-toggle[type="radio"]:checked + label {
+#signup input.custom-toggle[type="checkbox"]:checked + label,
+#signup input.custom-toggle[type="radio"]:checked + label {
   text-decoration: none; }
 
 #signup input#landlord[type=radio]:checked + label span {
@@ -2329,12 +2152,6 @@ Signup Page
   #signup div.right label {
     padding-left: 10px; }
 
-/*
-
-Property Page
-==============
-
-*/
 #property {
   margin-top: 20px; }
   #property .featherlight .featherlight-content {
@@ -2392,7 +2209,8 @@ Property Page
       position: relative;
       top: -60px;
       line-height: 60px; }
-    #property .gallery .icon-chevron-right, #property .gallery .icon-chevron-left {
+    #property .gallery .icon-chevron-right,
+    #property .gallery .icon-chevron-left {
       font-size: 47px;
       color: #fff;
       /* width:90px; height:111px; */
@@ -2418,7 +2236,8 @@ Property Page
       width: 100%;
       background-color: #D8523D;
       margin-bottom: 0; }
-    #property .details button.book:hover, #property .details .book.button-outline:hover, #property .details a.button.book:hover {
+    #property .details button.book:hover, #property .details .book.button-outline:hover,
+    #property .details a.button.book:hover {
       background-color: #F26954; }
     #property .details .row {
       margin: 20px auto 0 auto;
@@ -2438,24 +2257,36 @@ Property Page
         font-size: 14px;
         display: block;
         margin-top: -6px; }
-    #property .details .boendet h5, #property .details .ammenities h5, #property .details .options h5 {
+    #property .details .boendet h5,
+    #property .details .ammenities h5,
+    #property .details .options h5 {
       float: left;
       background-color: #F6F6F6;
       z-index: 8;
       position: relative;
       padding-right: 20px;
       margin-bottom: 10px; }
-    #property .details .boendet .clear-float, #property .details .ammenities .clear-float, #property .details .options .clear-float {
+    #property .details .boendet .clear-float,
+    #property .details .ammenities .clear-float,
+    #property .details .options .clear-float {
       display: block;
       clear: both; }
-    #property .details .boendet .columns, #property .details .ammenities .columns, #property .details .options .columns {
+    #property .details .boendet .columns,
+    #property .details .ammenities .columns,
+    #property .details .options .columns {
       margin-top: 20px; }
-    #property .details .boendet ul, #property .details .ammenities ul, #property .details .options ul {
+    #property .details .boendet ul,
+    #property .details .ammenities ul,
+    #property .details .options ul {
       margin-left: 0; }
-      #property .details .boendet ul li, #property .details .ammenities ul li, #property .details .options ul li {
+      #property .details .boendet ul li,
+      #property .details .ammenities ul li,
+      #property .details .options ul li {
         line-height: 50px;
         font-size: 14px; }
-        #property .details .boendet ul li a, #property .details .ammenities ul li a, #property .details .options ul li a {
+        #property .details .boendet ul li a,
+        #property .details .ammenities ul li a,
+        #property .details .options ul li a {
           color: #5497FF; }
     #property .details .options {
       margin-bottom: 20px; }
@@ -2518,23 +2349,19 @@ Property Page
         background: none;
         height: inherit;
         pointer-events: visible; }
-    #property #sup-gallery .icon-chevron-right, #property #sup-gallery .icon-chevron-left {
+    #property #sup-gallery .icon-chevron-right,
+    #property #sup-gallery .icon-chevron-left {
       color: #fff;
       font-size: 40px;
       opacity: 1;
       padding: 10px; }
-    #property #sup-gallery .icon-chevron-right:hover, #property #sup-gallery .icon-chevron-left:hover {
+    #property #sup-gallery .icon-chevron-right:hover,
+    #property #sup-gallery .icon-chevron-left:hover {
       opacity: 0.8; }
   #property .map {
     height: 480px;
     width: 100%; }
 
-/*
-
-Search Page
-==============
-
-*/
 #search section {
   margin-bottom: 60px; }
 
@@ -2672,7 +2499,9 @@ Search Page
 #filters select {
   font-size: 18px; }
 
-#filters .hyra select, #filters .size select, #filters .rm-amount select {
+#filters .hyra select,
+#filters .size select,
+#filters .rm-amount select {
   font-size: 18px;
   text-indent: 50px; }
 
@@ -2690,15 +2519,19 @@ Search Page
     margin-bottom: 20px; }
     #results .title h2 {
       margin-right: 40px; }
-    #results .title h2, #results .title h5 {
+    #results .title h2,
+    #results .title h5 {
       display: inline; }
     #results .title .icon {
       color: #D8D8D8;
       display: inline-block;
       font-size: 33px; }
-    #results .title .list-view:hover .icon, #results .title .grid-view:hover .icon {
+    #results .title .list-view:hover .icon,
+    #results .title .grid-view:hover .icon {
       color: #D8523D; }
-    #results .title button.list-view, #results .title .list-view.button-outline, #results .title button.grid-view, #results .title .grid-view.button-outline {
+    #results .title button.list-view, #results .title .list-view.button-outline,
+    #results .title button.grid-view,
+    #results .title .grid-view.button-outline {
       float: right;
       margin-right: 20px;
       background-color: transparent;
@@ -2785,21 +2618,28 @@ Search Page
     #results #grid-view table td {
       padding: 0;
       color: #5A5A5A; }
-    #results #grid-view table .address, #results #grid-view table .dates {
+    #results #grid-view table .address,
+    #results #grid-view table .dates {
       font-weight: bold; }
-    #results #grid-view table .area, #results #grid-view table .rooms, #results #grid-view table .book {
+    #results #grid-view table .area,
+    #results #grid-view table .rooms,
+    #results #grid-view table .book {
       text-align: right; }
-    #results #grid-view table button, #results #grid-view table .button-outline, #results #grid-view table a.button {
+    #results #grid-view table button, #results #grid-view table .button-outline,
+    #results #grid-view table a.button {
       height: 33px;
       background-color: #D8523D;
       margin-bottom: 0;
       font-size: 14px;
       padding: 0.43rem 2rem 1.0625rem 2rem; }
-    #results #grid-view table button, #results #grid-view table .button-outline, #results #grid-view table a.button:hover {
+    #results #grid-view table button, #results #grid-view table .button-outline,
+    #results #grid-view table a.button:hover {
       background-color: #F26954; }
     #results #grid-view table .last {
       border-top: 10px solid transparent; }
-  #results #grid-view table tr.even, #results #grid-view table tr.alt, #results #grid-view table tr:nth-of-type(even) {
+  #results #grid-view table tr.even,
+  #results #grid-view table tr.alt,
+  #results #grid-view table tr:nth-of-type(even) {
     background-color: #fff; }
   #results #list-view table {
     border: none;
@@ -2815,7 +2655,8 @@ Search Page
       border-top: none; }
     #results #list-view table tbody tr:nth-of-type(2n) {
       cursor: pointer; }
-  #results #list-view .accordion:before, #results #list-view .accordion:after {
+  #results #list-view .accordion:before,
+  #results #list-view .accordion:after {
     display: none; }
   #results #list-view .accordion {
     border-top: 1px solid #D8D8D8;
@@ -2833,7 +2674,8 @@ Search Page
     color: #D8523D;
     font-weight: bold;
     font-size: 18px; }
-  #results #list-view .address, #results #list-view .dates {
+  #results #list-view .address,
+  #results #list-view .dates {
     font-weight: bold; }
   #results #list-view .expand {
     text-align: right; }
@@ -2843,7 +2685,8 @@ Search Page
     border-bottom: 1px solid #D8D8D8; }
   #results #list-view .pic img {
     max-height: 60px; }
-  #results #list-view .map, #results #list-view #map {
+  #results #list-view .map,
+  #results #list-view #map {
     height: 140px;
     max-width: 400px;
     background-color: #D8D8D8; }
@@ -2897,21 +2740,26 @@ Search Page
     border: none;
     margin-bottom: 0;
     width: 100%; }
-  .rental-view button, .rental-view .button-outline, .rental-view a.button {
+  .rental-view button, .rental-view .button-outline,
+  .rental-view a.button {
     height: 33px;
     background-color: #D8523D;
     margin-bottom: 0;
     font-size: 14px;
     padding: 0.43rem 1rem 1.0625rem 1rem;
     float: right; }
-  .rental-view table tr.even, .rental-view table tr.alt, .rental-view table tr:nth-of-type(even) {
+  .rental-view table tr.even,
+  .rental-view table tr.alt,
+  .rental-view table tr:nth-of-type(even) {
     background-color: #fff; }
   .rental-view table tr {
     padding: 0 .5em; }
-  .rental-view table tr th, .rental-view table tr td {
+  .rental-view table tr th,
+  .rental-view table tr td {
     color: #5A5A5A;
     padding: 0.5625rem 0.85rem; }
-  .rental-view .address, .rental-view .area {
+  .rental-view .address,
+  .rental-view .area {
     padding-bottom: 0; }
   .rental-view .dates {
     font-weight: bold; }
@@ -2920,12 +2768,6 @@ Search Page
   max-width: 300px;
   min-height: 200px; }
 
-/*
-
-Landlord Page
-==============
-
-*/
 #landlord header {
   height: 680px;
   z-index: 0;
@@ -3035,12 +2877,27 @@ Landlord Page
 #landlord #points .icon {
   font-size: 48px; }
 
-/*
+#landlord .icon--big {
+  font-size: 40px;
+  width: auto;
+  height: 100%;
+  margin-top: 10px; }
 
-Help Pages
-==============
+#landlord .padded {
+  padding: 20px 0; }
 
-*/
+#landlord .margin-bottom-fix {
+  margin-bottom: 3px; }
+
+#landlord .bold-text {
+  font-weight: bold; }
+
+@media screen and (max-width: 834px) {
+  #landlord .icon--big {
+    font-size: 70px;
+    padding: 30px 0;
+    margin-top: 20px; } }
+
 #support #results {
   background-color: #fff;
   margin-top: 0; }
@@ -3117,7 +2974,8 @@ Help Pages
   background-color: #fff; }
   #support header + div .accordion .accordion-navigation > a, #support header + div .accordion dd > a {
     padding: 1.2rem 1.2rem 1.2rem 1rem; }
-  #support header + div .accordion .accordion-navigation > .content, #support header + div .accordion dd > .content {
+  #support header + div .accordion .accordion-navigation > .content,
+  #support header + div .accordion dd > .content {
     padding: 1rem; }
 
 #support address {
@@ -3163,7 +3021,8 @@ Help Pages
 #support .info-drop .tabs-content li:first-child {
   border-top: 1px solid #D8D8D8; }
 
-#support .info-drop .tabs-content li.active, #support .info-drop .tabs-content .accordion-navigation.active div.active {
+#support .info-drop .tabs-content li.active,
+#support .info-drop .tabs-content .accordion-navigation.active div.active {
   background-color: #F6F6F6; }
 
 #support .info-drop .tabs-content span.icon-arrow_right_gallery.arrow-close {
@@ -3181,13 +3040,10 @@ Help Pages
 #support.destination header h1 {
   font-weight: 900; }
 
-/*
-
-Dashboard
-==============
-
-*/
-div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard.rebook {
+div#dashboard.booking,
+div#dashboard.show-profile,
+#dashboard.cancel,
+#dashboard.rebook {
   background-color: #fff; }
 
 #dashboard {
@@ -3198,7 +3054,9 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
     float: right; }
   #dashboard div#ui-datepicker-div {
     z-index: 1000000000000000000 !important; }
-  #dashboard .ui-datepicker-calendar td:hover a, #dashboard a.ui-datepicker-calendar td:hover a, #dashboard td.ui-datepicker-current-day a {
+  #dashboard .ui-datepicker-calendar td:hover a,
+  #dashboard a.ui-datepicker-calendar td:hover a,
+  #dashboard td.ui-datepicker-current-day a {
     color: #fff;
     text-decoration: none; }
   #dashboard .featherlight .featherlight-inner {
@@ -3410,7 +3268,8 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
       -webkit-box-sizing: border-box;
       text-decoration: none;
       padding: 0.3rem 2rem 0.66rem 2rem; }
-    #dashboard .booking .time-slot .date, #dashboard .booking .time-slot .time {
+    #dashboard .booking .time-slot .date,
+    #dashboard .booking .time-slot .time {
       display: block;
       padding-left: 10px; }
   #dashboard .module .profile-card.checked-card {
@@ -3447,7 +3306,8 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
     #dashboard .module .profile-card .name, #dashboard .module .profile-card .name a {
       font-size: 14px;
       margin-bottom: 10px; }
-    #dashboard .module .profile-card .phone, #dashboard .module .profile-card .email a {
+    #dashboard .module .profile-card .phone,
+    #dashboard .module .profile-card .email a {
       font-size: 12px; }
     #dashboard .module .profile-card .email {
       line-height: 10px;
@@ -3466,10 +3326,12 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
         height: 150px;
         vertical-align: middle;
         text-align: center; }
-    #dashboard .module .profile-card div.yes, #dashboard .module .profile-card div.no {
+    #dashboard .module .profile-card div.yes,
+    #dashboard .module .profile-card div.no {
       float: left;
       display: inline-block; }
-    #dashboard .module .profile-card input[type="checkbox"] + label, #dashboard .module .profile-card input[type="radio"] + label {
+    #dashboard .module .profile-card input[type="checkbox"] + label,
+    #dashboard .module .profile-card input[type="radio"] + label {
       margin: 0; }
     #dashboard .module .profile-card input[type="checkbox"] {
       display: block;
@@ -3525,10 +3387,12 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
     #dashboard .module.alert h1 {
       display: block;
       margin-top: 0.9375rem; }
-    #dashboard .module.alert h1, #dashboard .module.alert h2 {
+    #dashboard .module.alert h1,
+    #dashboard .module.alert h2 {
       width: 100%;
       text-align: center; }
-    #dashboard .module.alert a.close-module, #dashboard .module.alert a.min-module {
+    #dashboard .module.alert a.close-module,
+    #dashboard .module.alert a.min-module {
       margin: 0;
       padding: 0.9375rem; }
   #dashboard .settings .mod-content.settings {
@@ -3615,7 +3479,8 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
       border: 1px solid #D8D8D8; }
       #dashboard .rental-times .block.time-select input[type="checkbox"]:checked + label span, #dashboard .rental-times .block.time-select input[type="checkbox"]:checked + label span em {
         color: #5A5A5A; }
-  #dashboard .rental-times .block.time-select:hover, #dashboard .rental-times .block.time-select.checked {
+  #dashboard .rental-times .block.time-select:hover,
+  #dashboard .rental-times .block.time-select.checked {
     background: #F6F6F6; }
   #dashboard .rental-times .block.checked {
     border: 4px solid #D8523D;
@@ -3659,7 +3524,10 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
     width: 80%;
     float: left;
     margin-right: 0; }
-  #dashboard span#cancel-time, #dashboard span#cancel-name, #dashboard span#rebook-name, #dashboard span#rebook-time {
+  #dashboard span#cancel-time,
+  #dashboard span#cancel-name,
+  #dashboard span#rebook-name,
+  #dashboard span#rebook-time {
     font-weight: bold;
     font-size: 18px; }
   #dashboard #cancel p {
@@ -3687,7 +3555,9 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
       margin-bottom: 0.9375rem; }
     #dashboard .module a:hover {
       text-decoration: underline; }
-    #dashboard .module input[type=text], #dashboard .module input[type=password], #dashboard .module select {
+    #dashboard .module input[type=text],
+    #dashboard .module input[type=password],
+    #dashboard .module select {
       margin-bottom: 1rem;
       height: 2.5rem;
       font-size: 16px;
@@ -3738,7 +3608,8 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
       font-size: 18px;
       margin: 0;
       display: inline-block; }
-    #dashboard .module a.close-module, #dashboard .module a.min-module {
+    #dashboard .module a.close-module,
+    #dashboard .module a.min-module {
       font-size: 20px;
       margin-top: -43px;
       display: inline-block;
@@ -3797,9 +3668,11 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
         position: absolute; }
       #dashboard .module .profile-controls a.remove:hover {
         text-decoration: none; }
-      #dashboard .module .profile-controls a.edit, #dashboard .module .profile-controls a.remove {
+      #dashboard .module .profile-controls a.edit,
+      #dashboard .module .profile-controls a.remove {
         font-size: 14px; }
-      #dashboard .module .profile-controls .remove .icon, #dashboard .module .profile-controls .edit .icon {
+      #dashboard .module .profile-controls .remove .icon,
+      #dashboard .module .profile-controls .edit .icon {
         width: 20px;
         height: 20px; }
       #dashboard .module .profile-controls .remove .icon {
@@ -3838,7 +3711,10 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
         padding-left: 0; }
     #dashboard .module .specs .col.medium-12 {
       padding-left: 0; }
-    #dashboard .module .specs input[type=text], #dashboard .module .specs input[type=password], #dashboard .module .specs select, #dashboard .module .specs label {
+    #dashboard .module .specs input[type=text],
+    #dashboard .module .specs input[type=password],
+    #dashboard .module .specs select,
+    #dashboard .module .specs label {
       font-size: 14px; }
     #dashboard .module .specs ::-webkit-input-placeholder {
       padding-left: 0px;
@@ -3959,7 +3835,8 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
       margin-right: 1.5rem; }
     #dashboard .module .rental-info .amenities input[type="checkbox"] + input[type="checkbox"] {
       margin-right: 1.75rem; }
-    #dashboard .module .rental-info .amenities input[placeholder="available"]:checked ~ span span, #dashboard .module .rental-info .amenities input[placeholder="available"]:checked ~ span {
+    #dashboard .module .rental-info .amenities input[placeholder="available"]:checked ~ span span,
+    #dashboard .module .rental-info .amenities input[placeholder="available"]:checked ~ span {
       color: #5A5A5A;
       text-decoration: none; }
     #dashboard .module .rental-info .amenities input[type="checkbox"]:checked ~ a {
@@ -4161,12 +4038,6 @@ div#dashboard.booking, div#dashboard.show-profile, #dashboard.cancel, #dashboard
     right: -10px;
     top: -10px; }
 
-/*
-
-Mobile / Media Queries
-==============
-
-*/
 @media only screen and (max-width: 850px) {
   .featherlight-iframe .featherlight-content {
     width: 100%; }
