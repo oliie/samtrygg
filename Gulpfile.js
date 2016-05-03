@@ -6,7 +6,7 @@
         sass    = require('gulp-sass'),
         paths   = {
             kit:  './kit/*.kit',
-            sass: './scss/*.scss'
+            sass: [ './scss/**/*.scss', './scss/*.scss' ]
         };
 
     gulp.task('kit', function initKit() {
