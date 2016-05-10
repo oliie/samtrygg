@@ -2940,11 +2940,13 @@ header.hero {
 #support .section-wrapper--even {
   background-color: #F6F6F6; }
 
-#support .coverage-list__item:before {
-  margin-right: 10px;
-  color: forestgreen;
-  font-weight: bold;
-  content: "\2713"; }
+#support .coverage-list {
+  margin-left: 0px; }
+  #support .coverage-list__item:before {
+    margin-right: 10px;
+    color: forestgreen;
+    font-weight: bold;
+    content: "\2713"; }
 
 #support header {
   height: 440px;
