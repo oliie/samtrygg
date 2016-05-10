@@ -40,8 +40,18 @@
     .button.red:hover {
         background-color: $red-clr-hover;
     }
-    .section-wrapper:nth-child(even) {
+    .section-wrapper--even {
         background-color: $vapor;
+    }
+    .coverage-list {
+        &__item {
+            &:before {
+                margin-right: 10px;
+                color: forestgreen;
+                font-weight: bold;
+                content: "\2713";
+            }
+        }
     }
     header {
         height: 440px;
