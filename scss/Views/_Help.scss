@@ -44,6 +44,8 @@
         background-color: $vapor;
     }
     .coverage-list {
+        margin-left: 0px;
+
         &__item {
             &:before {
                 margin-right: 10px;
