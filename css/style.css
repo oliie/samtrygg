@@ -3021,9 +3021,13 @@ header.hero {
 #support .info-drop .tabs-content p {
   font-size: 16px; }
 
+#support .info-drop .tabs-content a.link {
+  color: #fff; }
+  #support .info-drop .tabs-content a.link:hover {
+    text-decoration: underline; }
+
 #support .info-drop .tabs-content li {
   border-bottom: 1px solid #D8D8D8;
-  /* background-color: #fff;  */
   font-size: 18px; }
 
 #support .info-drop .tabs-content li:first-child {
@@ -3041,9 +3045,28 @@ header.hero {
   color: #D8523D;
   font-size: 16px; }
 
+#support .accordion-date {
+  font-size: 14px;
+  color: #bbb;
+  vertical-align: 1px; }
+  #support .accordion-date:after {
+    content: " - "; }
+
 #support .map {
   height: 480px;
   width: 100%; }
+
+#support .contact-image {
+  max-width: 80px;
+  border-radius: 40px; }
+
+#support .contact-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 24px 10px; }
+
+#support .articles-block {
+  margin-top: 30px; }
 
 #support.destination header h1 {
   font-weight: 900; }
