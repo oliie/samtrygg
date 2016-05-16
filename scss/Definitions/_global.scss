@@ -87,10 +87,10 @@ nav#nav.top-bar.page-bar{ @extend nav#nav.top-bar;}
 
 span.icon-cross2{ display: none;}
 
-nav#nav.top-bar.expanded{ 
+nav#nav.top-bar.expanded{
   a{ text-decoration:none;}
   ul li a.button.rent{ background-color: #fff;}
-  .toggle-topbar.menu-icon{ 
+  .toggle-topbar.menu-icon{
     span.icon-hamburger_menu{ display: none;}
     span.icon-cross2{ display: block; margin-top: 10px;}
   }
@@ -125,7 +125,7 @@ nav#nav.top-bar.dashboard{
     span.icon-email{ color:$fog; position:absolute; margin-top:22px; margin-left:-34px;}
     i.circle{ display:inline-block; width:6px; height:6px; background-color:$red-clr; position:absolute; margin:12px 0 0 -14px;}
   }
-  
+
   .nav-search{ float:left; width:40%;
     input#search{ /* position: absolute;  */width: 100%; height: 60px; top: 0; /* margin-left: 154px; */ border:none;}
     input#search[type=text]{ margin-bottom:0; padding-left:60px; }
@@ -369,7 +369,7 @@ select:focus{ border: 1px solid $blue-clr; -webkit-appearance:none; outline:-web
 
 a.tooltips {outline:none; }
 a.tooltips strong {line-height:30px;}
-a.tooltips:hover {text-decoration:none;} 
+a.tooltips:hover {text-decoration:none;}
 a.tooltips span { z-index:10; display:none; padding:40px 20px; margin-top:-264px; margin-left:-90px; width:300px; line-height:1.5rem;}
 a.tooltips:hover span{ display:block; position:absolute; color:$metal; border:1px solid $fog; background:#fff; z-index:100; line-height: 1.5rem;}
 .callout {z-index:100; position:absolute; top:30px; border:0; left:-12px;}
@@ -435,7 +435,7 @@ span.help:hover{ pointer:cursor;}
 
 /* Special / Custom Checkboxes */
 input.custom-toggle[type="checkbox"]:not(old), input.custom-toggle[type="radio"]:not(old){ display:none;}
-input.custom-toggle[type="checkbox"] + label , input.custom-toggle[type="radio"] + label{ } 
+input.custom-toggle[type="checkbox"] + label , input.custom-toggle[type="radio"] + label{ }
 input.custom-toggle[type="checkbox"]:checked + label, input.custom-toggle[type="radio"]:checked + label{ text-decoration:underline;}
 
 /* Featherlight Lightbox Styling */
@@ -471,7 +471,7 @@ div.featherlight-content iframe html body{ background-color:#fff!important; }
 /*  Datepicker Styling  */
 div#ui-datepicker-div{ display: none; background-color:#fff; z-index:1000; padding:10px; z-index: 21!important; @include border-radius(3px); border:1px solid $fog; box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .08);}
 table.ui-datepicker-calendar{ border:none; margin-bottom:0;}
-.ui-datepicker-calendar{  
+.ui-datepicker-calendar{
   td{ text-align:center;
     a{ color:$blue-clr;}
     a:hover{ color: #fff; text-decoration:none;}
@@ -480,7 +480,7 @@ table.ui-datepicker-calendar{ border:none; margin-bottom:0;}
     a{ color:#fff;}
   }
 }
-td.ui-datepicker-today{ background-color: $blue-clr; 
+td.ui-datepicker-today{ background-color: $blue-clr;
   a{ color:#fff;}
 }
 td.ui-datepicker-current-day a.ui-state-active{ font-weight:bold; color:$metal!important;}
@@ -507,7 +507,7 @@ span.ui-datepicker-year{ float:left; margin:5px 0 0 20px;}
     float: right;
     background-position: 18px 6px;
 }
-.ui-datepicker {width: 250px; overflow:hidden; 
+.ui-datepicker {width: 250px; overflow:hidden;
     table{ table-layout:fixed; width:228px;}
 }
 
@@ -525,7 +525,7 @@ span.ui-datepicker-year{ float:left; margin:5px 0 0 20px;}
   .dzscalendar.mode-datepicker .main-mon .mon-body .week-day.tag-important{ cursor:pointer;}
   .dzscalendar{
     .week-day.tag-important.datepicker-selected .divimage-overlay{ background-color:$red-clr;}
-    .week-day.tag-important{ 
+    .week-day.tag-important{
       .the-number{ color:#fff;}
       .divimage-overlay{ background-color:$blue-clr;}
     }
@@ -552,4 +552,6 @@ span.ui-datepicker-year{ float:left; margin:5px 0 0 20px;}
     min-width: 8px;
 }
 
-
+.underlined {
+    text-decoration: underline;
+}
