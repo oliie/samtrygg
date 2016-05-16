@@ -1,0 +1,178 @@
+#guest {
+    .btn-search-apartment {
+        background-color: $red-clr;
+
+        &:hover {
+            background-color: $red-clr-hover
+        }
+    }
+
+    header {
+        height: 440px;
+        width: 100%;
+        z-index: 0;
+        background-color: $vapor;
+        padding-top: 20px;
+        display: table;
+        .header-wrap {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+            text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
+            font-size: 62px;
+        }
+        h2 {
+            text-align: center;
+            color: #fff;
+            text-shadow: $text-shadow;
+            font-size: 42px;
+        }
+    }
+    .info-circle {
+        background-color: $bahama-blue;
+        width: 230px;
+        height: 230px;
+        padding: 26px;
+        text-align: center;
+        z-index: 20;
+        position: absolute;
+        margin: -60px 0 0 420px;
+        h3, p {
+            color: #fff;
+        }
+        p {
+            line-height: 1.4rem;
+            font-size: 16px;
+        }
+        h3 {
+            font-size: 52px;
+            font-weight: bold;
+            margin-top: 50px;
+            line-height: 26px;
+        }
+        hr {
+            border-color: #fff;
+            width: 20px;
+            display: inline-block;
+            margin: 4px auto;
+        }
+    }
+    .calculator {
+        background-color: $vapor;
+        border: 1px solid $fog;
+        @include border-radius(3px);
+        text-align: center;
+        /* max-width: 48.4615385%; */
+
+        max-width: 504px;
+        margin-top: 5px;
+        padding: 0 1.75rem 0.5rem 1.75rem;
+        h1 {
+            font-size: 64px;
+            font-weight: bold;
+            margin: 40px 0 10px 0;
+            line-height: 60px;
+        }
+        h1 ~ p {
+            margin-bottom: 1.2rem;
+        }
+        input[type=submit] {
+            background-color: $blue-clr;
+            @include border-radius(3px);
+            width: 100%;
+        }
+        input[type=submit]:hover {
+            background-color: $blue-clr-hover;
+        }
+        select {
+            font-size: 18px;
+        }
+        select[name=area] {
+            margin-bottom: 0;
+        }
+        select option:disabled {
+            color: $fog;
+        }
+        .icon {
+            font-size: 23px;
+            display: block;
+            position: absolute;
+            margin-top: 15px;
+            margin-left: 10px;
+            color: $fog;
+        }
+        input.location[type=text] {
+            padding-left: 50px;
+        }
+    }
+    #points {
+        text-align: center;
+        padding-top: 50px;
+        div.columns {
+            margin-bottom: 50px;
+        }
+        h1 {
+            margin: 0;
+        }
+        h1 ~ p {
+            margin-bottom: 2.5rem;
+        }
+        p {
+            margin-top: 20px;
+        }
+        em {
+            display: block;
+            font-weight: bold;
+            font-style: normal;
+        }
+        hr {
+            width: 200px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    #info-text {
+        background-color: $vapor;
+        margin-top: 50px;
+        padding-bottom: 50px;
+        div.row {
+            padding-top: 50px;
+        }
+        p {
+            text-indent: 20px;
+        }
+    }
+    #points .icon {
+        font-size: 48px;
+    }
+
+    .icon--big {
+        font-size: 40px;
+        width: auto;
+        height: 100%;
+        margin-top: 10px;
+    }
+
+    .padded {
+        padding: 20px 0;
+    }
+
+    .margin-bottom-fix {
+        margin-bottom: 3px;
+    }
+
+    .bold-text {
+        font-weight: bold;
+    }
+
+    @media screen and (max-width: 834px) {
+        .icon--big {
+            font-size: 70px;
+            padding: 30px 0;
+            margin-top: 20px;
+        }
+    }
+}
