@@ -1075,6 +1075,10 @@ span.ui-datepicker-year {
 .underlined {
   text-decoration: underline; }
 
+.step-printscreen {
+  max-width: 600px;
+  margin: 0 auto; }
+
 @font-face {
   font-family: 'icons';
   src: url("../fonts/icons.eot?e4wivw");
@@ -2898,6 +2902,11 @@ header.hero {
     padding: 30px 0;
     margin-top: 20px; } }
 
+#support .icon--big {
+  font-size: 45px;
+  margin: 14px;
+  display: inline-block; }
+
 #support #results {
   background-color: #fff;
   margin-top: 0; }
@@ -4075,6 +4084,154 @@ div#dashboard.show-profile,
 .calculation-example {
   margin: 10px 0 25px 0;
   display: block; }
+
+#guest .btn-search-apartment {
+  background-color: #D8523D; }
+  #guest .btn-search-apartment:hover {
+    background-color: #F26954; }
+
+#guest header {
+  height: 440px;
+  width: 100%;
+  z-index: 0;
+  background-color: #F6F6F6;
+  padding-top: 20px;
+  display: table; }
+  #guest header .header-wrap {
+    display: table-cell;
+    vertical-align: middle; }
+  #guest header h1 {
+    text-align: center;
+    color: #fff;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
+    font-size: 62px; }
+  #guest header h2 {
+    text-align: center;
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    font-size: 42px; }
+
+#guest .info-circle {
+  background-color: #46C6E3;
+  width: 230px;
+  height: 230px;
+  padding: 26px;
+  text-align: center;
+  z-index: 20;
+  position: absolute;
+  margin: -60px 0 0 420px; }
+  #guest .info-circle h3, #guest .info-circle p {
+    color: #fff; }
+  #guest .info-circle p {
+    line-height: 1.4rem;
+    font-size: 16px; }
+  #guest .info-circle h3 {
+    font-size: 52px;
+    font-weight: bold;
+    margin-top: 50px;
+    line-height: 26px; }
+  #guest .info-circle hr {
+    border-color: #fff;
+    width: 20px;
+    display: inline-block;
+    margin: 4px auto; }
+
+#guest .calculator {
+  background-color: #F6F6F6;
+  border: 1px solid #D8D8D8;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+  /* max-width: 48.4615385%; */
+  max-width: 504px;
+  margin-top: 5px;
+  padding: 0 1.75rem 0.5rem 1.75rem; }
+  #guest .calculator h1 {
+    font-size: 64px;
+    font-weight: bold;
+    margin: 40px 0 10px 0;
+    line-height: 60px; }
+  #guest .calculator h1 ~ p {
+    margin-bottom: 1.2rem; }
+  #guest .calculator input[type=submit] {
+    background-color: #5497FF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    width: 100%; }
+  #guest .calculator input[type=submit]:hover {
+    background-color: #82B2FD; }
+  #guest .calculator select {
+    font-size: 18px; }
+  #guest .calculator select[name=area] {
+    margin-bottom: 0; }
+  #guest .calculator select option:disabled {
+    color: #D8D8D8; }
+  #guest .calculator .icon {
+    font-size: 23px;
+    display: block;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 10px;
+    color: #D8D8D8; }
+  #guest .calculator input.location[type=text] {
+    padding-left: 50px; }
+
+#guest #points {
+  text-align: center;
+  padding-top: 50px; }
+  #guest #points div.columns {
+    margin-bottom: 50px; }
+  #guest #points h1 {
+    margin: 0; }
+  #guest #points h1 ~ p {
+    margin-bottom: 2.5rem; }
+  #guest #points p {
+    margin-top: 20px; }
+  #guest #points em {
+    display: block;
+    font-weight: bold;
+    font-style: normal; }
+  #guest #points hr {
+    width: 200px;
+    display: block;
+    margin: 0 auto; }
+
+#guest #info-text {
+  background-color: #F6F6F6;
+  margin-top: 50px;
+  padding-bottom: 50px; }
+  #guest #info-text div.row {
+    padding-top: 50px; }
+  #guest #info-text p {
+    text-indent: 20px; }
+
+#guest #points .icon {
+  font-size: 48px; }
+
+#guest .icon--big {
+  font-size: 40px;
+  width: auto;
+  height: 100%;
+  margin-top: 10px; }
+
+#guest .padded {
+  padding: 20px 0; }
+
+#guest .margin-bottom-fix {
+  margin-bottom: 3px; }
+
+#guest .bold-text {
+  font-weight: bold; }
+
+@media screen and (max-width: 834px) {
+  #guest .icon--big {
+    font-size: 70px;
+    padding: 30px 0;
+    margin-top: 20px; } }
 
 @media only screen and (max-width: 850px) {
   .featherlight-iframe .featherlight-content {
