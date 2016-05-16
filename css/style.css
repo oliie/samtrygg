@@ -1075,6 +1075,9 @@ span.ui-datepicker-year {
   text-align: center;
   min-width: 8px; }
 
+.underlined {
+  text-decoration: underline; }
+
 @font-face {
   font-family: 'icons';
   src: url("../fonts/icons.eot?e4wivw");
@@ -4068,6 +4071,13 @@ div#dashboard.show-profile,
     position: absolute;
     right: -10px;
     top: -10px; }
+
+.equivalent-apartment-specs .equivalent-apartment-specs__item {
+  list-style: disc !important; }
+
+.calculation-example {
+  margin: 10px 0 25px 0;
+  display: block; }
 
 @media only screen and (max-width: 850px) {
   .featherlight-iframe .featherlight-content {
