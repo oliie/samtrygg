@@ -330,8 +330,6 @@ nav#nav.top-bar.dashboard .nav-search {
       height: 60px;
       display: inline-block;
       padding-top: 12px; }
-    .results ul span {
-      /* float: right; margin-right: 200px; */ }
   .results .icon-magnifier {
     color: #D8D8D8;
     margin-left: 24px;
@@ -439,7 +437,6 @@ footer#footer {
       color: #fff;
       font-size: 35px;
       display: inline-block;
-      float: left;
       width: 106px; }
   footer#footer .press div {
     float: left;
@@ -838,7 +835,7 @@ span.help {
   margin: 0 10px; }
 
 span.help:hover {
-  pointer: cursor; }
+  cursor: pointer; }
 
 /* Accordions */
 .accordion .arrow-open, .accordion .arrow-close {
