@@ -556,3 +556,10 @@ span.ui-datepicker-year{ float:left; margin:5px 0 0 20px;}
     max-width: 600px;
     margin: 0 auto;
 }
+
+.link-breadcrumb {
+    display: list-item;
+    &:hover {
+        text-decoration: underline;
+    }
+}

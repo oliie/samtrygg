@@ -1079,6 +1079,11 @@ span.ui-datepicker-year {
   max-width: 600px;
   margin: 0 auto; }
 
+.link-breadcrumb {
+  display: list-item; }
+  .link-breadcrumb:hover {
+    text-decoration: underline; }
+
 @font-face {
   font-family: 'icons';
   src: url("../fonts/icons.eot?e4wivw");
