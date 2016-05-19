@@ -561,6 +561,6 @@ span.ui-datepicker-year{ float:left; margin:5px 0 0 20px;}
     display: list-item;
     list-style-type: square;
     &:hover {
-        text-decoration: underline;
+        text-decoration: underline !important;
     }
 }

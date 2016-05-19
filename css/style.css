@@ -1083,7 +1083,7 @@ span.ui-datepicker-year {
   display: list-item;
   list-style-type: square; }
   .link-breadcrumb:hover {
-    text-decoration: underline; }
+    text-decoration: underline !important; }
 
 @font-face {
   font-family: 'icons';
