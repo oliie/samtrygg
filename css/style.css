@@ -1080,7 +1080,8 @@ span.ui-datepicker-year {
   margin: 0 auto; }
 
 .link-breadcrumb {
-  display: list-item; }
+  display: list-item;
+  list-style-type: square; }
   .link-breadcrumb:hover {
     text-decoration: underline; }
 
