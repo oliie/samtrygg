@@ -2894,7 +2894,16 @@ header.hero {
   margin-bottom: 3px; }
 
 #landlord .bold-text {
-  font-weight: bold; }
+  font-weight: bold;
+  font-style: normal; }
+
+#landlord .block-step {
+  margin-bottom: 40px; }
+
+#landlord .block-step-buttons {
+  margin-top: 20px; }
+  #landlord .block-step-buttons__next-step {
+    text-align: right; }
 
 @media screen and (max-width: 834px) {
   #landlord .icon--big {
@@ -4225,7 +4234,16 @@ div#dashboard.show-profile,
   margin-bottom: 3px; }
 
 #guest .bold-text {
-  font-weight: bold; }
+  font-weight: bold;
+  font-style: normal; }
+
+#guest .block-step {
+  margin-bottom: 40px; }
+
+#guest .block-step-buttons {
+  margin-top: 20px; }
+  #guest .block-step-buttons__next-step {
+    text-align: right; }
 
 @media screen and (max-width: 834px) {
   #guest .icon--big {
