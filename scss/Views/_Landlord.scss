@@ -142,6 +142,18 @@
 
     .bold-text {
         font-weight: bold;
+        font-style: normal;
+    }
+
+    .block-step {
+        margin-bottom: 40px;
+    }
+
+    .block-step-buttons {
+        margin-top: 20px;
+        &__next-step {
+            text-align: right;
+        }
     }
 
     @media screen and (max-width: 834px) {
