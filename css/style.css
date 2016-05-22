@@ -1077,7 +1077,7 @@ span.ui-datepicker-year {
 
 .step-printscreen {
   max-width: 600px;
-  margin: 0 auto; }
+  margin: 0 auto 20px auto; }
 
 .link-breadcrumb {
   display: list-item;
@@ -2911,6 +2911,9 @@ header.hero {
   #landlord .block-step-buttons__next-step {
     text-align: right; }
 
+#landlord .btn-step {
+  width: 100% !important; }
+
 @media screen and (max-width: 834px) {
   #landlord .icon--big {
     font-size: 70px;
@@ -4246,10 +4249,8 @@ div#dashboard.show-profile,
 #guest .block-step {
   margin-bottom: 40px; }
 
-#guest .block-step-buttons {
-  margin-top: 20px; }
-  #guest .block-step-buttons__next-step {
-    text-align: right; }
+#guest .btn-step {
+  width: 100% !important; }
 
 @media screen and (max-width: 834px) {
   #guest .icon--big {
