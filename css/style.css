@@ -4258,6 +4258,41 @@ div#dashboard.show-profile,
     padding: 30px 0;
     margin-top: 20px; } }
 
+.coverage-list {
+  margin-left: 0px; }
+  .coverage-list__item {
+    font-size: 18px;
+    margin-bottom: 10px; }
+    .coverage-list__item:before {
+      margin-right: 10px;
+      color: forestgreen;
+      font-weight: bold;
+      content: "\2713"; }
+
+.table-statistics {
+  width: 100%;
+  border: none; }
+  .table-statistics thead {
+    background: none; }
+  .table-statistics th {
+    text-align: center; }
+  .table-statistics td {
+    padding: 20px 25px;
+    font-size: 18px; }
+  .table-statistics__value {
+    text-align: center; }
+    .table-statistics__value--good {
+      font-weight: bold; }
+
+.block-ad-choice {
+  margin-top: 20px; }
+  .block-ad-choice__button {
+    width: 100%; }
+    .block-ad-choice__button--guest {
+      background: #D8523D; }
+      .block-ad-choice__button--guest:hover {
+        background: #F26954; }
+
 @media only screen and (max-width: 850px) {
   .featherlight-iframe .featherlight-content {
     width: 100%; }
