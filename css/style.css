@@ -40,6 +40,9 @@ table {
 h1 ~ p {
   margin-bottom: 2.1rem; }
 
+a {
+  word-break: break-all !important; }
+
 textarea {
   border-color: #D8D8D8;
   padding: 0.5rem; }
@@ -4101,7 +4104,8 @@ div#dashboard.show-profile,
 
 .calculation-example {
   margin: 10px 0 25px 0;
-  display: block; }
+  display: block;
+  padding: 20px; }
 
 #guest .btn-search-apartment {
   background-color: #D8523D; }

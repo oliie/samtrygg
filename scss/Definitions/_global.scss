@@ -10,6 +10,10 @@ table{ border-color: $fog;}
 
 h1 ~ p{ margin-bottom: 2.1rem; }
 
+a {
+    word-break: break-all !important;
+}
+
 textarea{ border-color:$fog; padding:0.5rem;}
 
 .border-r{ border-right:1px solid $fog;}
